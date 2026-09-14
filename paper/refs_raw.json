@@ -1380,5 +1380,91 @@
   "article": null,
   "type": "journal-article",
   "abstract": "Abstract Market efficiency assumes that prices in financial markets are perfectly informative and, therefore, it is not possible to design trading strategies that outperform the market. The concept of efficiency has important implications for financial stability and, consequently, for financial policies. If asset returns exhibit persistent or anti-persistent behavior, then predictability based on past returns might be possible, which would be a clear violation of the weak form of efficiency. Many studies rely on the Hurst exponent to evaluate the level of memory of financial returns, and the purpose of this paper is to show that long memory or anti-persistence of financial returns is not incompatible with the random walk model or the efficient market hypothesis (EMH). The use of the Hurst exponent to demonstrate the inefficiency of financial markets using common estimators is troublesome, especially when applied to financial returns, since values of $$\\hat{H} \\ne 0.5$$ H ^ ≠ 0.5 are not evidence against the random walk model or the EMH. Moreover, the high variability of Hurst exponent estimates and their dependence on the chosen algorithm should motivate careful use of this tool. This study proposes a simple theoretical explanation and an extensive simulation study to show that $$\\hat{H} \\ne 0.5$$ H ^ ≠ 0.5 for financial returns is perfectly compatible with the random walk model. As a robustness check, both the traditional rescaled range and the wavelet lifting algorithms are used. Applications to real data are also discussed to show that the empirical values of the Hurst exponent are in the range suggested by the simulations, providing evidence that over-reliance on the Hurst exponent could lead to erroneous rejection of the random walk model. Specifically, the paper presents an application to the daily returns of stock market indices (DJIA and S&P 500) over a period of more than 30 years and cryptocurrencies (Bitcoin and Ethereum) over a period of more than 5 years."
+ },
+ "10.1016/j.knosys.2022.109324": {
+  "doi": "10.1016/j.knosys.2022.109324",
+  "title": "A stock price prediction method based on meta-learning and variational mode decomposition",
+  "authors": [
+   "Tengteng Liu",
+   "Xiang Ma",
+   "Shuo Li",
+   "Xuemei Li",
+   "Caiming Zhang"
+  ],
+  "venue": "Knowledge-Based Systems",
+  "year": 2022,
+  "online": [
+   null
+  ],
+  "volume": "252",
+  "issue": null,
+  "page": "109324",
+  "article": "109324",
+  "type": "journal-article"
+ },
+ "10.1016/j.eswa.2023.121708": {
+  "doi": "10.1016/j.eswa.2023.121708",
+  "title": "A stock series prediction model based on variational mode decomposition and dual-channel attention network",
+  "authors": [
+   "Yepeng Liu",
+   "Siyuan Huang",
+   "Xiaoyi Tian",
+   "Fan Zhang",
+   "Feng Zhao",
+   "Caiming Zhang"
+  ],
+  "venue": "Expert Systems with Applications",
+  "year": 2024,
+  "online": [
+   null
+  ],
+  "volume": "238",
+  "issue": null,
+  "page": "121708",
+  "article": "121708",
+  "type": "journal-article"
+ },
+ "10.1155/2024/1124822": {
+  "doi": "10.1155/2024/1124822",
+  "title": "A Multilevel Wavelet Decomposition Network Hybrid Model Utilizing Cyclic Patterns for Stock Price Prediction",
+  "authors": [
+   "H. R. Wen",
+   "Mingchuan Yuan",
+   "Shuxin Wang",
+   "Lixin Liang",
+   "Xianghua Fu"
+  ],
+  "venue": "Complexity",
+  "year": 2024,
+  "online": [
+   null
+  ],
+  "volume": "2024",
+  "issue": null,
+  "page": "1-19",
+  "article": null,
+  "type": "journal-article",
+  "abstract": "Stock price prediction is an important and complex time-series problem in academia and financial industries. Stock market prices are voted by all kinds of investors and are influenced by various factors. According to the literature studies, such as Elliott’s wave theory and Howard’s market cycle investment theory, the cyclic patterns are significant characteristics of the stock market. However, even several studies that do consider cyclic patterns (or similar concepts) suffered from the data leakage or boundary problems, which could be impractical for real applications. Inspired by the abovementioned, we propose a hybrid deep learning model called mWDN-LSTM, which correctly utilizes the cyclic patterns’ information to predict stock price while avoiding the data leakage and alleviating boundary problems. According to the experiments on two different datasets, our model mWDN-LSTM outperforms the well-known benchmarks such as CNN-LSTM on the same experimental setup and demonstrates the effectiveness of utilizing cyclic patterns in stock price prediction."
+ },
+ "10.1007/s10614-024-10732-z": {
+  "doi": "10.1007/s10614-024-10732-z",
+  "title": "Realized Volatility Forecasting for Stocks and Futures Indices with Rolling CEEMDAN and Machine Learning Models",
+  "authors": [
+   "Yuetong Zhang",
+   "Ying Peng",
+   "Yuping Song"
+  ],
+  "venue": "Computational Economics",
+  "year": 2025,
+  "online": [
+   2024,
+   10,
+   12
+  ],
+  "volume": "66",
+  "issue": "2",
+  "page": "1215-1268",
+  "article": null,
+  "type": "journal-article"
  }
 }

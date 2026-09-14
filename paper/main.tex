@@ -178,12 +178,15 @@ of accuracy in water quality prediction~\cite{emdleak2024}; and several recent
 studies design decomposition schemes that keep future samples out of the model
 inputs~\cite{wang2024,yao2025,pang2026}. Look ahead bias is also a recognised
 concern in financial backtesting, most recently for signals extracted by large
-language models~\cite{glasserman2024}. Yet this particular route for future
-information has received far less systematic attention in equity forecasting,
-where the same pipelines are used and where, under the random walk and
-efficient market hypotheses, future prices cannot be systematically
-predicted~\cite{pernagallo2025}, even though machine learning classifiers have
-been reported to beat random choice on longer horizon relative
+language models~\cite{glasserman2024}, and a few stock forecasting studies have
+replaced full series decomposition with sliding window or rolling decomposition
+for exactly this reason~\cite{liu2022,liu2024,wen2024,zhang2025}. What we could not
+find for equity indices is a measurement of how much of the accuracy of an
+existing model the leak accounts for, or a test of whether such a model still
+beats persistence once the leak is removed. That question matters because,
+under the random walk and efficient market hypotheses, future prices cannot be
+systematically predicted~\cite{pernagallo2025}, even though machine learning
+classifiers have been reported to beat random choice on longer horizon relative
 returns~\cite{finrel2024}.
 
 This paper measures how much of the apparent skill of a decomposition ensemble
@@ -272,11 +275,18 @@ it~\cite{emdleak2024}. Other remedies include cascade decomposition designed to
 avoid information leakage~\cite{wang2024}, rolling decomposition in which the
 point to be predicted never enters the decomposition~\cite{yao2025}, and
 explicit guidance on preprocessing that prevents future data from leaking into
-wind speed forecasts~\cite{pang2026}. The walk forward protocol used here
-follows the same principle and matches recommended practice for partitioning
-time series in forecast evaluation~\cite{hewamalage2022}. What none of this
-work provides is a measurement, on equity indices, of how much of a published
-model's accuracy the leak accounts for; that is the gap this paper addresses.
+wind speed forecasts~\cite{pang2026}. In stock forecasting, Liu \emph{et al.}
+decompose sliding windows rather than the full series to remove the
+leak~\cite{liu2022,liu2024}, Wen \emph{et al.} design a wavelet network that avoids
+it~\cite{wen2024}, and Zhang \emph{et al.} apply rolling CEEMDAN to realised
+volatility~\cite{zhang2025}. The walk forward protocol used here follows the
+same principle and matches recommended practice for partitioning time series
+in forecast evaluation~\cite{hewamalage2022}. These studies propose designs that
+avoid the leak and report the accuracy of the new design. We found none that
+measures, on equity indices, how much of the accuracy of an existing published
+model the leak accounts for under otherwise identical training, that tests the
+causal version against persistence, or that shows the leak in the inputs before
+any network is trained; those are the gaps this paper addresses.
 
 \subsection{Benchmarks and network heads}
 Under the random walk and efficient market hypotheses future index levels
