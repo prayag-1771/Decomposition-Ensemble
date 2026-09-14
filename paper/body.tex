@@ -1,0 +1,435 @@
+\section{Introduction}\label{sec:intro}
+
+Forecasting daily stock index levels is a problem where small reported gains
+attract a great deal of attention, because a model that is even slightly more
+accurate than its competitors has obvious value to anyone managing risk.
+Machine learning for stock market prediction is by now a large literature, with
+well over a hundred journal articles reviewed in a single survey~\cite{kumbure2022},
+and over the past decade one design has come to dominate the applied part of
+it: split the price series into simpler subseries with a signal decomposition,
+forecast each subseries with its own neural network, and add the forecasts back
+together. Empirical mode decomposition (EMD) and its interpolation and noise
+assisted variants~\cite{akimaemd2023,gruceemdan2023,ceemdanstock2025} and
+variational mode decomposition (VMD)~\cite{jiang2025,wangwang2026} are the usual
+front ends, and recurrent and convolutional networks, often with attention, are
+the usual back ends~\cite{gong2024,zhao2025,ning2025}. Reported accuracies are
+often high, with coefficients of determination close to
+one~\cite{ning2025,jiang2025}.
+
+Numbers of that kind deserve a second look for a specific reason. A signal
+decomposition is not a causal filter: the value of a component at time $t$
+depends on the whole stretch of data that was decomposed, including samples
+after $t$. When a study decomposes the complete series first and only then
+separates training from test data, every input the model sees at test time has
+been computed with knowledge of the prices it is asked to predict. Leakage of
+this general kind has produced overoptimistic conclusions in many fields that
+adopted machine learning~\cite{kapoor2023}. For decomposition based
+forecasters it is well documented in wind power forecasting, where it is known
+as the boundary issue~\cite{chen2022}; it has been shown to create an illusion
+of accuracy in water quality prediction~\cite{emdleak2024}; and several recent
+studies design decomposition schemes that keep future samples out of the model
+inputs~\cite{wang2024,yao2025,pang2026}. Look ahead bias is also a recognised
+concern in financial backtesting, most recently for signals extracted by large
+language models~\cite{glasserman2024}. Yet this particular route for future
+information has received far less systematic attention in equity forecasting,
+where the same pipelines are used and where, under the random walk and
+efficient market hypotheses, future prices cannot be systematically
+predicted~\cite{pernagallo2025}, even though machine learning classifiers have
+been reported to beat random choice on longer horizon relative
+returns~\cite{finrel2024}.
+
+This paper measures how much of the apparent skill of a decomposition ensemble
+stock forecaster survives when the decomposition is made strictly causal. We
+work with a published redecomposition model that combines improved complete
+ensemble EMD with adaptive noise (ICEEMDAN), a second VMD stage tuned by
+particle swarm optimisation (PSO), and a bidirectional long short term memory
+(BiLSTM) network with self attention feeding a temporal convolutional network
+(TCN)~\cite{gong2024}, together with a variant that replaces the convolutional
+head with a Tiny Recursive Model (TRM)~\cite{jolicoeur2025}. On the daily
+highest and lowest prices of the S\&P~500 and the Shanghai Stock Exchange
+Composite Index (SSEC) we compare two protocols that differ in one respect
+only: whether the series is decomposed once in full or redecomposed from the
+available history at every forecast origin. The contributions are as follows.
+\begin{enumerate}
+\item We show, before any network is trained, that full series decomposition
+places information about the next day's price change into the model inputs,
+and that walk forward decomposition removes it.
+\item We quantify the accuracy attributable to decomposing the full series,
+as the ratio of out of sample error under walk forward decomposition to the
+error under full series decomposition, measured on identical test dates for
+every index, price series and network.
+\item We evaluate both forecasters against persistence, drift, moving average
+and exponential smoothing benchmarks with the modified Diebold and Mariano
+(MDM) test~\cite{hewamalage2022,mdmindex2023}, so that any claimed advantage is
+judged against forecasts that require no model at all.
+\item In reproducing the pipeline we identified fourteen issues. Twelve were
+corrected, several of which would on their own have changed the central
+comparison, and two are modelling choices of the source model that we keep
+and report. Section~\ref{sec:audit} documents each one, so that the
+reproduction can be checked rather than trusted.
+\item We give both network heads identical training budgets, schedules and
+postprocessing, which the source comparison did not, and report whether the
+ranking of the two heads depends on the protocol.
+\end{enumerate}
+Section~\ref{sec:related} reviews the related work, Section~\ref{sec:data}
+describes the data and the two protocols, Section~\ref{sec:setup} the
+networks, training, measures and the audit of the reproduced pipeline,
+Section~\ref{sec:results} the results, Section~\ref{sec:discussion} their
+interpretation and limits, and Section~\ref{sec:conclusion} concludes.
+
+\section{Related work and its limitations}\label{sec:related}
+
+This section covers three topics in turn: the decomposition ensemble design
+and its recent extensions, the evidence that a decomposition can carry future
+information into a forecaster, and the benchmarks and network heads that this
+study uses.
+
+\subsection{Decomposition ensemble forecasting}
+EMD represents a nonstationary series as a sum of intrinsic mode functions
+extracted by an iterative, spline based sifting procedure whose behaviour at
+the boundaries of the data needs particular care~\cite{emdtutorial2023}. Plain
+EMD is prone to mode mixing, and ICEEMDAN is one of the variants adopted to
+counter it~\cite{iceemdanbridge2022}; such noise assisted methods decompose
+noise added copies of the signal, together with the added noise itself, using
+classical EMD~\cite{ceemdanpaa2022}. VMD extracts a preset number of modes and
+cannot choose its input parameters by itself~\cite{vmdmssr2022}, so they are
+frequently tuned by an optimiser such as PSO~\cite{psovmdtcn2023}.
+Decomposition based hybrids have become very popular~\cite{chen2022}, and
+recent work continues to extend them: EMD with long short term memory (LSTM)
+networks for the KSE-100 index~\cite{akimaemd2023}, complete ensemble EMD with
+adaptive noise (CEEMDAN) with wavelet denoising and gated recurrent units for
+the S\&P~500 and CSI~300~\cite{gruceemdan2023}, CEEMDAN with LSTM and
+backpropagation networks for the DAX~\cite{ceemdanstock2025}, a second VMD
+stage applied to the high frequency modes of a CEEMDAN decomposition for wind
+power~\cite{ning2025}, VMD followed by convolutional, bidirectional recurrent
+and attention layers for natural gas futures prices~\cite{jiang2025}, adaptive
+VMD with feature selection and a BiLSTM for stock prices~\cite{wangwang2026},
+PSO tuned VMD with an attention TCN for electricity load~\cite{psovmdtcn2023},
+wavelet denoising combined with an attention BiLSTM, an autoregressive
+integrated moving average (ARIMA) model and gradient boosting for the CSI~300
+index~\cite{zhao2025}, metaheuristic tuning of decomposition aided attention
+recurrent networks for solar and wind generation~\cite{damasevicius2024}, and
+decomposition blocks placed inside general forecasting
+architectures~\cite{kreuzer2025}.
+
+\subsection{Future information in decomposition}
+Chen \emph{et al.} reviewed decomposition based wind power models and noted
+that existing studies usually decompose data that would not be available at
+forecast time, so the reported accuracy is higher than what can be achieved in
+practice~\cite{chen2022}. Yang \emph{et al.} found the same effect in EMD
+based water quality prediction, where decomposing before the split let test
+information into training and produced an illusion of accuracy, and they
+proposed sliding window and repeated decomposition schemes to remove
+it~\cite{emdleak2024}. Other remedies include cascade decomposition designed to
+avoid information leakage~\cite{wang2024}, rolling decomposition in which the
+point to be predicted never enters the decomposition~\cite{yao2025}, and
+explicit guidance on preprocessing that prevents future data from leaking into
+wind speed forecasts~\cite{pang2026}. The walk forward protocol used here
+follows the same principle and matches recommended practice for partitioning
+time series in forecast evaluation~\cite{hewamalage2022}. What none of this
+work provides is a measurement, on equity indices, of how much of a published
+model's accuracy the leak accounts for; that is the gap this paper addresses.
+
+\subsection{Benchmarks and network heads}
+Under the random walk and efficient market hypotheses future index levels
+cannot be systematically predicted~\cite{pernagallo2025}, so persistence is a
+demanding benchmark, and simple models deserve a place in any comparison: a one
+layer linear model outperformed sophisticated Transformer based forecasters on
+nine real datasets~\cite{zeng2023}, and a large comparison on the M3 competition
+series found that deep learning adds value mainly in combination and at a
+considerable computational cost~\cite{makridakis2022}. Machine learning
+studies often adopt evaluation practices that make uncompetitive methods look
+competitive, and we follow published guidance on data partitioning, error
+measures and statistical testing~\cite{hewamalage2022}; a systematic survey of
+deep learning in the stock market likewise calls for more reproducible,
+explainable and accountable models~\cite{olorunnimbe2022}. Forecasts are
+compared with the MDM test, which has been used to compare daily index price
+forecasts~\cite{mdmindex2023}. The encoder combines a BiLSTM with attention, a
+combination covered in recent reviews of recurrent
+architectures~\cite{rnnreview2024} and the one used by the source
+model~\cite{gong2024}. One head is a TCN, which recent decomposition based
+forecasters also pair with attention~\cite{psovmdtcn2023,emdleak2024}; the
+other adapts the recursive latent refinement of the TRM~\cite{jolicoeur2025}.
+
+\section{Data and decomposition protocols}\label{sec:data}
+
+The experiment is defined by the price series, the two stage decomposition
+applied to them, and the two protocols under which that decomposition is run.
+Five subsections describe them: the series, the decomposition, protocol A,
+protocol B, and how results under the two protocols are matched.
+
+\subsection{Price series}
+The data are the daily highest and lowest prices of the S\&P~500 (ticker
+\texttt{\textasciicircum GSPC}) and of the SSEC (\texttt{000001.SS}) over a
+ten year window, downloaded once as unadjusted values and cached, so that
+every experiment uses the same array. Rows with a missing highest or lowest
+price were removed jointly, keeping the two series of an index aligned by
+trading day. The S\&P~500 series contain $2513$ observations and the SSEC
+series $2425$. Each series is forecast one step ahead from a window of the
+previous $30$ values. Of the windowed samples, the first $80\%$ form the
+training set and the rest the test set, giving $497$ test days for the
+S\&P~500 and $479$ for the SSEC.
+
+\subsection{Two stage decomposition}
+The first stage applies ICEEMDAN~\cite{colominas2014} to the price
+series, producing intrinsic mode functions ordered from highest to lowest
+frequency and a final residual. Sifting stops when the normalised squared
+difference between successive iterates falls below $0.2$, with at most $100$
+sifting iterations and $10$ modes. The second stage decomposes the highest
+frequency mode again with VMD~\cite{dragomiretskiy2014}, with the number of modes $K$
+and the bandwidth penalty $\alpha$ chosen by PSO~\cite{psosurvey2022} over
+$K\in[3,10]$ and $\alpha\in[100,5000]$ (twenty particles, thirty iterations,
+inertia $0.7$, both acceleration coefficients $1.5$). The $K$ VMD modes, the
+remaining ICEEMDAN modes and the residual form the $C$ subseries that are
+forecast, with $C$ equal to $16$ or $17$ here.
+
+Two properties of this pipeline, inherited from the source model and kept
+unchanged so that the reproduction stays faithful, matter for the
+interpretation of the results. First, the swarm minimises the reconstruction
+error of the decomposed mode, and that error falls monotonically as $K$ grows
+and $\alpha$ shrinks. The search therefore returned the bounds $K=10$ and
+$\alpha=100$ on all eight decompositions, so the optimisation step does not in
+practice select anything. Second, the noise added in each ICEEMDAN realisation
+has a fixed standard deviation of $0.2$ price units, between
+$2\times10^{-4}$ and $8\times10^{-4}$ of the standard deviation of the
+training series. This amplitude is small, although it still alters the
+sifting: two runs that differ only in their random seed disagree by up to
+$1.5\%$ of the price range in individual components. Our results should
+therefore be read as describing ICEEMDAN at this noise level.
+
+\subsection{Protocol A: full series decomposition}
+Let $x_1,\dots,x_N$ be a price series, $\mathcal{D}$ the two stage
+decomposition, and $c_k(t)$ the value of component $k$ at time $t$. A
+forecast of $x_t$ is formed from component forecasts,
+\begin{equation}
+\hat{x}_t=\sum_{k=1}^{C}\hat{c}_k(t),\qquad
+\hat{c}_k(t)=f_k\bigl(c_k(t-30),\dots,c_k(t-1)\bigr),
+\label{eq:ensemble}
+\end{equation}
+where each $f_k$ is a separately trained network. The protocols differ only in
+how the component values entering $f_k$ are computed. Under protocol A the
+whole series is decomposed once, $c_k(\cdot)=\mathcal{D}_k(x_{1:N})$, and the
+resulting components are then divided into training and test windows. Both the
+swarm search and every component value, including those inside test windows,
+depend on all $N$ observations. This is the protocol of the source model and of
+much of the literature reviewed above.
+
+\subsection{Protocol B: walk forward decomposition}
+Under protocol B the training portion alone is decomposed, and the swarm
+search runs on it alone; the resulting $K$, $\alpha$ and $C$ are then held
+fixed. For every test origin $t$ the available history is decomposed afresh
+and the last $30$ rows of that decomposition form the input,
+\begin{equation}
+c_k^{(t)}(s)=\mathcal{D}_k\bigl(x_{a_t:t-1}\bigr)(s),\qquad s\le t-1,
+\label{eq:walkforward}
+\end{equation}
+so no value at or after $t$ is ever used to build an input. VMD needs an input
+of even length, and $a_t\in\{1,2\}$ is chosen to provide one: when the history
+has odd length its oldest observation is left out, so the newest observation
+$x_{t-1}$ is always kept. Decomposing histories of different lengths can yield
+a different number of intrinsic mode functions; surplus low frequency columns
+are added to the residual and a shortfall is filled with a zero column
+immediately before it, which leaves the sum of the components unchanged. Each
+series needs one decomposition per test day plus one, $498$ for the S\&P~500
+and $480$ for the SSEC.
+
+\subsection{Matching the two protocols}
+Two practical differences between the protocols were measured rather than
+assumed away. Protocol A was run with $50$ noise realisations, as in the
+source model, and protocol B with $20$ to keep the $1956$ walk forward
+decompositions tractable. Decomposing the training portion of the highest
+price series both ways, the largest difference in any component was $1.3\%$
+of the price range, comparable to the $1.5\%$ separating two realisation runs
+of $50$ that differ only in their seed, so the smaller ensemble adds about as
+much variation as a change of seed and no more. In addition, the full series
+decomposition trims the series to an even length at its end, so the two
+protocols place their split one day apart. All comparisons between protocols
+are therefore computed on the dates both protocols test, $496$ for the
+S\&P~500 and $478$ for the SSEC.
+
+\section{Experimental setup}\label{sec:setup}
+
+Five subsections describe the setup: the two networks, their training, the
+evaluation measures, the issues identified in the reproduced pipeline and how
+each was resolved, and what a complete run of the study consists of.
+
+\subsection{Networks}
+Both forecasters share an encoder: a two layer BiLSTM with $64$ units per
+direction and dropout of $0.1$ between layers~\cite{rnnreview2024}, followed by
+four head self attention with a residual connection and layer normalisation,
+as in the source model~\cite{gong2024}. The \emph{TCN head} applies a causal
+dilated convolution (kernel $3$, dilation $2$) with a rectified linear unit,
+dropout of $0.1$ and a residual linear path, and reads the forecast from the
+last position. The \emph{TRM head} projects the last encoder state and refines
+a latent state $z$ and an answer state $y$ recursively, applying a two layer
+latent network six times per cycle and an answer network once, for three
+cycles of which only the last is differentiated~\cite{jolicoeur2025}.
+
+\subsection{Training}
+One network is trained per component, so each protocol, index, price series
+and head involves $16$ or $17$ networks and the study trains $262$ in total.
+Each input window is expressed relative to its own last value, and the network
+$g_k$ forecasts the change from that value to the next one,
+\begin{equation}
+\tilde{u}_j=\frac{c_k(t-31+j)-c_k(t-1)}{\sigma_{\mathrm{in}}},\quad j=1,\dots,30,
+\qquad
+\hat{c}_k(t)=c_k(t-1)+\sigma_{\mathrm{out}}\,g_k(\tilde{u}),
+\label{eq:scaling}
+\end{equation}
+where $\sigma_{\mathrm{in}}$ and $\sigma_{\mathrm{out}}$ are the standard
+deviations of the input deviations and of the one step changes over the
+training windows. Component forecasts from~\eqref{eq:scaling} are then summed
+as in~\eqref{eq:ensemble}. Section~\ref{sec:audit} explains why this replaces
+the min max scaling of the source model. The two heads receive identical
+treatment: the Adam optimiser with learning rate $5\times10^{-4}$ and weight
+decay $10^{-5}$, minibatches of $64$, gradient clipping at norm $1$, up to
+$150$ epochs with early stopping after $20$ epochs without improvement in the
+training loss, and the learning rate halved after $8$ such epochs. Because
+stopping is decided on the training loss, no data outside the training windows
+influence any network. The weights used for prediction are an exponential
+moving average with decay $\beta=0.999$, corrected for its initialisation,
+\begin{equation}
+\bar{\theta}_T=\frac{(1-\beta)\sum_{t=1}^{T}\beta^{\,T-t}\theta_t}{1-\beta^{T}},
+\label{eq:ema}
+\end{equation}
+so that the average is taken over the weights actually visited and does not
+depend on how long a component trained. Seeds are fixed per component. All
+networks were trained on a single NVIDIA GeForce GTX~1650 graphics card.
+
+\subsection{Evaluation measures}
+Accuracy is reported as root mean squared error (RMSE), mean absolute error
+(MAE), mean absolute percentage error (MAPE) and the coefficient of
+determination $R^2$, following guidance on choosing error measures for
+forecast evaluation~\cite{hewamalage2022}. Five benchmarks need no learning:
+persistence, $\hat{x}_t=x_{t-1}$; a random walk with drift estimated on the
+training data; moving averages of the last $5$ and $20$ values; and
+exponential smoothing with span $10$. Two forecasts $a$ and $b$ are compared
+with the MDM test~\cite{mdmindex2023}. With squared error loss differential
+$d_t=e_{a,t}^2-e_{b,t}^2$ over $T$ test days and horizon $h=1$, the statistic is
+\begin{equation}
+\mathrm{MDM}=\sqrt{\frac{T+1-2h+h(h-1)/T}{T}}\;
+\frac{\bar{d}}{\sqrt{\hat{\gamma}_0/T}},
+\label{eq:mdm}
+\end{equation}
+where $\bar{d}$ is the mean and $\hat{\gamma}_0$ the variance of $d_t$, and
+the statistic is referred to a Student $t$ distribution with $T-1$ degrees of
+freedom. A positive value means that $a$ has the larger loss. The effect of the
+protocol is summarised by the leakage inflation ratio
+\begin{equation}
+\rho=\frac{\mathrm{RMSE}_{\mathrm{B}}}{\mathrm{RMSE}_{\mathrm{A}}},
+\label{eq:rho}
+\end{equation}
+computed on common test dates for each index, price series and head. A value
+of $\rho=1$ means that decomposing the full series gave no advantage; a value
+above one measures how much of the full series accuracy depends on future
+data.
+
+\subsection{Issues identified in the reproduced pipeline}\label{sec:audit}
+The reproduction started from the source implementation and changed it only
+where a change was needed for the comparison to be valid.
+Tables~\ref{tab:audit_decomp} and~\ref{tab:audit_train} list every issue we
+identified, its consequence, and how it was resolved, the first for the
+decomposition and data handling stages and the second for training, so that a
+reader can judge which of the differences between our numbers and the source's
+are due to which change. Where the original behaviour was a modelling choice
+rather than a fault, it was kept and reported.
+
+\begin{table}[ht]
+\caption{Issues identified in the decomposition and data handling stages of the source pipeline, and their resolution.}
+\label{tab:audit_decomp}
+\small
+\begin{tabular}{@{}L{0.30\textwidth}L{0.39\textwidth}L{0.23\textwidth}@{}}
+\toprule
+Issue & Consequence & Resolution \\
+\midrule
+ICEEMDAN returned its components in reverse order &
+VMD redecomposed the lowest frequency residual instead of the highest frequency mode &
+Order corrected \\
+Realisations with fewer modes were padded after the residual &
+Averaging mixed one realisation's residual with another's mode &
+Padding placed before the residual \\
+Swarm leader compared against its own overwritten fitness &
+The global best could not improve once it led &
+Global best tracked separately \\
+Walk forward component target copied from the last input value &
+Component level scores trivially perfect; price level scores unaffected &
+Target taken from the decomposition that includes day $t$ \\
+Walk forward test days dropped when the mode count changed &
+Up to $96.5\%$ of test days discarded (SSEC highest: $17$ of $479$ kept) &
+Mode count reconciled; all test days kept \\
+Walk forward histories of odd length trimmed at their newest end &
+On alternate test days the input window ended at $t-2$, turning half the walk forward forecasts into two step forecasts &
+Oldest observation left out instead, Eq.~\eqref{eq:walkforward}; every window ends at $t-1$ \\
+Highest and lowest prices cleaned of missing rows separately &
+The two series could refer to different trading days &
+Missing rows removed jointly \\
+Protocols split one day apart &
+Row $i$ of each protocol refers to a different date &
+Comparisons on common dates \\
+Swarm objective decreases monotonically in $K$ and $1/\alpha$ &
+Search returns the bounds $K=10$, $\alpha=100$ on every run &
+Kept as published; reported \\
+ICEEMDAN noise fixed at $0.2$ price units &
+Noise is $2$ to $8\times10^{-4}$ of the series standard deviation &
+Kept as published; reported \\
+\botrule
+\end{tabular}
+\end{table}
+
+\begin{table}[ht]
+\caption{Issues identified in the training stage of the source pipeline, and their resolution.}
+\label{tab:audit_train}
+\small
+\begin{tabular}{@{}L{0.30\textwidth}L{0.39\textwidth}L{0.23\textwidth}@{}}
+\toprule
+Issue & Consequence & Resolution \\
+\midrule
+Moving average of the weights initialised at the random initialisation &
+After $930$ updates, $39\%$ of the averaged weights were still the random initialisation &
+Bias correction, Eq.~\eqref{eq:ema} \\
+Heads trained differently (TCN: $50$ epochs at learning rate $10^{-3}$, no early stopping, clipping or averaging; TRM: $150$ epochs at $5\times10^{-4}$ with all three, and a bias correction applied to it alone) &
+Head comparison confounded with training treatment &
+Identical training for both heads \\
+Components min max scaled on their training rows &
+The S\&P~500 trend component lay entirely above its training maximum throughout the test period; full series S\&P~500 high forecasts reached RMSE $198$ (TCN) and $915$ (TRM) against $47$ for persistence &
+Windows taken relative to their last value, Eq.~\eqref{eq:scaling} \\
+TRM head under min max scaling &
+Constant forecasts for $11$ of the $16$ S\&P~500 high components &
+Resolved by the same change \\
+\botrule
+\end{tabular}
+\end{table}
+
+\subsection{Reproducibility}
+A single run of the study consists of five steps, and the counts below are
+read from the files each step saves.
+\begin{enumerate}
+\item Download the unadjusted daily highest and lowest prices of both indices
+once, remove rows with a missing value jointly, and cache the four series
+($2513$ observations for each S\&P~500 series and $2425$ for each SSEC series).
+\item For protocol A, decompose each full series once with $50$ noise
+realisations, search $K$ and $\alpha$ with PSO, and window the components,
+giving $497$ test days per S\&P~500 series and $479$ per SSEC series.
+\item For protocol B, decompose the training portion with $20$ realisations,
+fix $K$, $\alpha$ and $C$, and decompose every history from the split onward:
+$498$ decompositions per S\&P~500 series and $480$ per SSEC series, $1956$ in
+all.
+\item Train one network per component, protocol, series and head, each with a
+fixed seed: $16$ or $17$ components, two protocols, four series and two heads,
+$262$ networks in all, producing $16$ forecast files.
+\item Score every forecast file against the price on the dates shared by both
+protocols ($496$ per S\&P~500 series and $478$ per SSEC series), together with
+the five benchmarks and the MDM test.
+\end{enumerate}
+Five secondary experiments support the main comparison: the input diagnostic,
+which asks whether the inputs alone predict the next day's change before any
+network is trained (Table~\ref{tab:diagnostic}, Fig.~\ref{fig:mechanism}); the
+realisation count check, which asks whether $20$ realisations in protocol B
+change the components relative to $50$ (Section~\ref{sec:data}); the boundary
+amplitude comparison, which asks how variable freshly decomposed components are
+at the newest end of the history (Section~\ref{sec:results}); the input
+persistence check, which asks what a network would score by copying its own
+inputs (Section~\ref{sec:discussion}); and the archived run under the source
+model's min max scaling, whose outcome is recorded in Table~\ref{tab:audit_train}.
+Every table and figure in this paper is generated by script from the saved
+forecast files.

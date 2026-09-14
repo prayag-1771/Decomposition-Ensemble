@@ -1,0 +1,63 @@
+====================================================================
+RECOVER TEST INDICES -- 8 file(s)
+====================================================================
+
+onetime_SPX_High
+    test rows 497, first index 2015, last index 2511
+    expected 497 contiguous from train_end=2015 -> 0 dropped
+    wrote test_index into the npz and the meta
+
+onetime_SPX_Low
+    test rows 497, first index 2015, last index 2511
+    expected 497 contiguous from train_end=2015 -> 0 dropped
+    wrote test_index into the npz and the meta
+
+onetime_SSEC_High
+    test rows 479, first index 1945, last index 2423
+    expected 479 contiguous from train_end=1945 -> 0 dropped
+    wrote test_index into the npz and the meta
+
+onetime_SSEC_Low
+    test rows 479, first index 1945, last index 2423
+    expected 479 contiguous from train_end=1945 -> 0 dropped
+    wrote test_index into the npz and the meta
+
+walkforward_SPX_High
+    test rows 489, first index 2016, last index 2512
+    expected 497 contiguous from train_end=2016 -> 8 dropped
+    dropped indices: 2067, 2068, 2069, 2077, 2078, 2079, 2085, 2086
+    wrote test_index into the npz and the meta
+
+walkforward_SPX_Low
+    test rows 318, first index 2021, last index 2512
+    expected 497 contiguous from train_end=2016 -> 179 dropped
+    dropped indices: 2022, 2023, 2025, 2026, 2030, 2031, 2032, 2033, 2034, 2036, 2037, 2038, 2040, 2041, 2042, 2043, 2044, 2047, 2048, 2049 ... (+154 more)
+    wrote test_index into the npz and the meta
+
+walkforward_SSEC_High
+    test rows 17, first index 1946, last index 1967
+    expected 479 contiguous from train_end=1946 -> 462 dropped
+    dropped indices: 1948, 1949, 1952, 1953, 1954
+    wrote test_index into the npz and the meta
+
+walkforward_SSEC_Low
+    test rows 427, first index 1963, last index 2424
+    expected 479 contiguous from train_end=1946 -> 52 dropped
+    dropped indices: 1970, 1971, 1972, 1973, 1974, 1979, 1980, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1990, 1991, 1992, 1993, 1994, 1995 ... (+15 more)
+    wrote test_index into the npz and the meta
+
+====================================================================
+PROTOCOL A vs B OVERLAP
+====================================================================
+SPX_High: A 497 rows [2015..2511], B 489 rows [2016..2512], common 488
+        only in A: 9, only in B: 1
+SPX_Low: A 497 rows [2015..2511], B 318 rows [2021..2512], common 317
+        only in A: 180, only in B: 1
+SSEC_High: A 479 rows [1945..2423], B 17 rows [1946..1967], common 17
+        only in A: 462, only in B: 0
+SSEC_Low: A 479 rows [1945..2423], B 427 rows [1963..2424], common 426
+        only in A: 53, only in B: 1
+
+====================================================================
+OK -- every file now carries test_index.
+====================================================================

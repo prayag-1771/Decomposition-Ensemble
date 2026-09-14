@@ -1,0 +1,36 @@
+# byte code and editor files
+__pycache__/
+*.pyc
+.vscode/
+
+# working material that is not part of the released study
+_veer_incoming/
+_smoke/
+paper/_old/
+paper/candidates_2022plus*.json
+paper/fix_claims.py
+paper/early/
+results/parts_stale_walkforward/
+results/logs/stalled_run_1254/
+run_walkforward.log
+
+# team logistics, not research artefacts
+*.docx
+*.pdf
+*.xlsx
+*.zip
+g17_paper.txt
+g17_code.txt
+PROMPT_for_Veer_packaging.txt
+make_briefs.py
+make_ayush_zip.py
+package_deliverable.py
+
+# Springer Nature template files: download them from the link in
+# paper/template/SOURCE.txt rather than from this repository
+paper/template/*
+!paper/template/SOURCE.txt
+paper/overleaf/
+
+# stalled first run, superseded by run_final.log
+run_full.log

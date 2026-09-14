@@ -1,0 +1,32 @@
+device: cuda | torch 2.6.0+cu124 | NVIDIA GeForce GTX 1650
+13:22:04  onetime_SPX_High       tcn c02  loss 0.000412  150 epochs   147 s  peak  292 MB
+13:23:18  onetime_SPX_High       tcn c08  loss 0.000363   79 epochs    74 s  peak  408 MB
+13:25:39  onetime_SPX_High       tcn c10  loss 0.000171  150 epochs   141 s  peak  408 MB
+13:28:01  walkforward_SPX_High   tcn c00  loss 0.000082  150 epochs   142 s  peak  442 MB
+13:30:22  walkforward_SPX_High   tcn c05  loss 0.000105  150 epochs   141 s  peak  408 MB
+13:32:44  walkforward_SPX_High   tcn c12  loss 0.000066  150 epochs   141 s  peak  408 MB
+13:35:18  onetime_SPX_High       trm c01  loss 0.012997   83 epochs   154 s  peak  410 MB
+device: cuda | torch 2.6.0+cu124 | NVIDIA GeForce GTX 1650
+13:42:07  onetime_SPX_High       trm c07  loss 0.020170  105 epochs   193 s  peak  420 MB
+13:44:28  onetime_SPX_High       trm c11  loss 0.001306   72 epochs   141 s  peak  408 MB
+13:47:13  onetime_SPX_High       trm c15  loss 0.024086   81 epochs   165 s  peak  410 MB
+13:49:46  onetime_SPX_Low        tcn c04  loss 0.000370  150 epochs   152 s  peak  292 MB
+13:52:22  onetime_SPX_Low        tcn c10  loss 0.000156  150 epochs   156 s  peak  408 MB
+13:54:41  onetime_SPX_Low        tcn c15  loss 0.000023  130 epochs   139 s  peak  408 MB
+14:01:24  onetime_SPX_Low        trm c04  loss 0.014219  150 epochs   402 s  peak  410 MB
+14:03:57  onetime_SPX_Low        trm c10  loss 0.011396   57 epochs   153 s  peak  410 MB
+14:06:00  onetime_SPX_Low        trm c14  loss 0.002568   47 epochs   123 s  peak  410 MB
+14:08:33  onetime_SSEC_High      tcn c02  loss 0.000537  150 epochs   153 s  peak  302 MB
+14:11:00  onetime_SSEC_High      tcn c06  loss 0.000139  150 epochs   147 s  peak  406 MB
+14:13:46  onetime_SSEC_High      tcn c11  loss 0.000072  150 epochs   166 s  peak  406 MB
+14:15:12  onetime_SSEC_High      tcn c16  loss 0.021823   77 epochs    85 s  peak  406 MB
+14:20:03  onetime_SSEC_High      trm c01  loss 0.009694  106 epochs   291 s  peak  406 MB
+14:25:45  onetime_SSEC_High      trm c07  loss 0.023272  127 epochs   342 s  peak  406 MB
+14:29:49  onetime_SSEC_High      trm c14  loss 0.001054  110 epochs   244 s  peak  406 MB
+14:31:57  onetime_SSEC_Low       tcn c01  loss 0.000085  150 epochs   128 s  peak  406 MB
+14:34:14  onetime_SSEC_Low       tcn c06  loss 0.000092  150 epochs   137 s  peak  406 MB
+14:36:12  onetime_SSEC_Low       tcn c11  loss 0.000075  129 epochs   118 s  peak  406 MB
+14:38:14  onetime_SSEC_Low       tcn c15  loss 0.000059  150 epochs   122 s  peak  406 MB
+14:41:28  onetime_SSEC_Low       trm c04  loss 0.017868  102 epochs   194 s  peak  406 MB
+14:44:38  onetime_SSEC_Low       trm c09  loss 0.010122   95 epochs   190 s  peak  406 MB
+14:47:06  onetime_SSEC_Low       trm c14  loss 0.001292   76 epochs   148 s  peak  406 MB

@@ -1,0 +1,82 @@
+{
+ "SPX_High_tcn": {
+  "common_dates": 496,
+  "onetime_only": 1,
+  "walkforward_only": 1,
+  "onetime_RMSE": 5.831065202788091,
+  "walkforward_RMSE": 60.65678020719744,
+  "inflation_ratio": 10.402349844792464,
+  "onetime_MAPE": 0.06637492213882971,
+  "walkforward_MAPE": 0.7235154344003023
+ },
+ "SPX_High_trm": {
+  "common_dates": 496,
+  "onetime_only": 1,
+  "walkforward_only": 1,
+  "onetime_RMSE": 7.254667090271808,
+  "walkforward_RMSE": 60.46944111760853,
+  "inflation_ratio": 8.33524686455915,
+  "onetime_MAPE": 0.08432549706304525,
+  "walkforward_MAPE": 0.7195062297960684
+ },
+ "SPX_Low_tcn": {
+  "common_dates": 496,
+  "onetime_only": 1,
+  "walkforward_only": 1,
+  "onetime_RMSE": 7.52713559055164,
+  "walkforward_RMSE": 68.52256497612565,
+  "inflation_ratio": 9.103405160143243,
+  "onetime_MAPE": 0.0854925046505428,
+  "walkforward_MAPE": 0.8080612781733107
+ },
+ "SPX_Low_trm": {
+  "common_dates": 496,
+  "onetime_only": 1,
+  "walkforward_only": 1,
+  "onetime_RMSE": 10.741854250072663,
+  "walkforward_RMSE": 65.2507651067522,
+  "inflation_ratio": 6.074441487260993,
+  "onetime_MAPE": 0.11551893483154776,
+  "walkforward_MAPE": 0.7761235775342932
+ },
+ "SSEC_High_tcn": {
+  "common_dates": 478,
+  "onetime_only": 1,
+  "walkforward_only": 1,
+  "onetime_RMSE": 7.126545977137199,
+  "walkforward_RMSE": 45.60462350510932,
+  "inflation_ratio": 6.399260406291399,
+  "onetime_MAPE": 0.10165610922567038,
+  "walkforward_MAPE": 0.8288995728329553
+ },
+ "SSEC_High_trm": {
+  "common_dates": 478,
+  "onetime_only": 1,
+  "walkforward_only": 1,
+  "onetime_RMSE": 9.286938804378961,
+  "walkforward_RMSE": 45.298641144463346,
+  "inflation_ratio": 4.877671975517295,
+  "onetime_MAPE": 0.13164131535747065,
+  "walkforward_MAPE": 0.8197684522598077
+ },
+ "SSEC_Low_tcn": {
+  "common_dates": 478,
+  "onetime_only": 1,
+  "walkforward_only": 1,
+  "onetime_RMSE": 4.991280921829692,
+  "walkforward_RMSE": 42.520969361164475,
+  "inflation_ratio": 8.519049523980156,
+  "onetime_MAPE": 0.09090818007992538,
+  "walkforward_MAPE": 0.8064681027108157
+ },
+ "SSEC_Low_trm": {
+  "common_dates": 478,
+  "onetime_only": 1,
+  "walkforward_only": 1,
+  "onetime_RMSE": 7.819339111949276,
+  "walkforward_RMSE": 42.53616572440872,
+  "inflation_ratio": 5.439867118617,
+  "onetime_MAPE": 0.13414314242501207,
+  "walkforward_MAPE": 0.8066877928845408
+ }
+}

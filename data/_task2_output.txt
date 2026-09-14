@@ -1,0 +1,17 @@
+
+=== onetime_SPX_High  (2513 observations) ===
+  components 16 | K=10 alpha=100.0 | recon 0.0584% of range
+  train windows 1985, test windows 497 | 334 s | onetime_SPX_High.npz (0.4 MB)
+
+=== onetime_SPX_Low  (2513 observations) ===
+  components 16 | K=10 alpha=100.0 | recon 0.0962% of range
+  train windows 1985, test windows 497 | 577 s | onetime_SPX_Low.npz (0.4 MB)
+
+=== onetime_SSEC_High  (2425 observations) ===
+  components 17 | K=10 alpha=100.0 | recon 0.2260% of range
+  train windows 1915, test windows 479 | 285 s | onetime_SSEC_High.npz (0.4 MB)
+
+=== onetime_SSEC_Low  (2425 observations) ===
+  components 17 | K=10 alpha=100.0 | recon 0.1641% of range
+  train windows 1915, test windows 479 | 289 s | onetime_SSEC_Low.npz (0.4 MB)
+WALL_CLOCK_SECONDS=1488

@@ -1,0 +1,64 @@
+====================================================================
+VERIFY -- 8 npz file(s) in data/
+====================================================================
+
+onetime_SPX_High.npz
+    components 16
+    train rows 1985, test rows 497
+    train reconstruction: max err 3.338135 = 0.093489% of range
+    test_index 2015..2511, matches target_test exactly
+    meta: K=10 alpha=100.0 stride=n/a
+
+onetime_SPX_Low.npz
+    components 16
+    train rows 1985, test rows 497
+    train reconstruction: max err 4.839355 = 0.136119% of range
+    test_index 2015..2511, matches target_test exactly
+    meta: K=10 alpha=100.0 stride=n/a
+
+onetime_SSEC_High.npz
+    components 17
+    train rows 1915, test rows 479
+    train reconstruction: max err 2.757568 = 0.221811% of range
+    test_index 1945..2423, matches target_test exactly
+    meta: K=10 alpha=100.0 stride=n/a
+
+onetime_SSEC_Low.npz
+    components 17
+    train rows 1915, test rows 479
+    train reconstruction: max err 2.800781 = 0.223720% of range
+    test_index 1945..2423, matches target_test exactly
+    meta: K=10 alpha=100.0 stride=n/a
+
+walkforward_SPX_High.npz
+    components 16
+    train rows 1986, test rows 497
+    train reconstruction: max err 3.680664 = 0.103083% of range
+    test_index 2016..2512, matches target_test exactly
+    meta: K=10 alpha=100.0 stride=1
+
+walkforward_SPX_Low.npz
+    components 16
+    train rows 1986, test rows 497
+    train reconstruction: max err 4.386719 = 0.123388% of range
+    test_index 2016..2512, matches target_test exactly
+    meta: K=10 alpha=100.0 stride=1
+
+walkforward_SSEC_High.npz
+    components 16
+    train rows 1916, test rows 479
+    train reconstruction: max err 2.787354 = 0.224207% of range
+    test_index 1946..2424, matches target_test exactly
+    meta: K=10 alpha=100.0 stride=1
+
+walkforward_SSEC_Low.npz
+    components 17
+    train rows 1916, test rows 479
+    train reconstruction: max err 2.813232 = 0.224715% of range
+    test_index 1946..2424, matches target_test exactly
+    meta: K=10 alpha=100.0 stride=1
+
+====================================================================
+All 8 expected .npz files are present.
+VERIFY PASSED -- every file is well formed.
+====================================================================

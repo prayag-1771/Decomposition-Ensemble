@@ -1,0 +1,31 @@
+==========================================================================
+A. One training at a time: seconds per epoch, and loss after 15 epochs
+==========================================================================
+  config     head     s / epoch      best loss
+  baseline   tcn        0.928 s       0.000289
+  baseline   trm        1.326 s       0.001772
+  fused      tcn        0.398 s       0.000279
+  fused      trm        1.049 s       0.001967
+  fused+amp  tcn        0.653 s       0.000278
+  fused+amp  trm        1.242 s       0.005396
+
+  fastest single-process config: fused
+
+==========================================================================
+B. Sharing the GPU (fused, TRM, 1 CPU thread per process)
+==========================================================================
+  parallel    s/epoch each    VRAM MB   throughput     status
+  1                1.033 s        573        1.00x         ok
+  2                1.362 s        573        1.52x         ok
+  3                1.567 s        573        1.98x         ok
+  4                1.725 s        573        2.39x         ok
+  5                1.960 s        573        2.63x         ok
+  6                2.495 s        573        2.48x         ok
+
+==========================================================================
+C. Whole job: 131 components x 2 heads
+==========================================================================
+  baseline   one at a time:   9.9 h
+  fused      one at a time:   6.7 h
+  fused+amp  one at a time:   8.5 h
+  fused      5 in parallel:   2.5 h   <- recommended

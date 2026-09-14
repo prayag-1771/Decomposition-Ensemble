@@ -1,0 +1,44 @@
+====================================================================
+SELF-TEST -- decomposition work package
+====================================================================
+
+[env] interpreter and machine
+  python      : 3.13.3 (tags/v3.13.3:6280bb5, Apr  8 2025, 14:47:33) [MSC v.1943 64 bit (AMD64)]
+  executable  : C:\Program Files\Python313\python.exe
+  platform    : Windows-11-10.0.26200-SP0
+  processor   : AMD64 Family 23 Model 160 Stepping 0, AuthenticAMD
+  cpu cores   : 8 logical
+
+[1] required libraries
+  [PASS] python >= 3.9  --  3.13.3
+  [PASS] numpy  --  2.2.6
+  [PASS] scipy  --  1.16.2
+  [PASS] yfinance  --  1.7.0
+
+[2] project modules import
+  [PASS] shared/decomp.py
+  [PASS] shared/walkforward.py  --  WINDOW=30
+
+[3] numerical core on a 400-point synthetic series
+  [PASS] EMD components sum back to the signal  --  max err 2.842e-14
+  [PASS] ICEEMDAN reconstructs  --  max err 1.421e-14
+  [PASS] ICEEMDAN returns (N, n_imf)  --  shape (400, 6), 0.24 s for 10 realisations
+  [PASS] column 0 is the highest-frequency IMF  --  zero-crossings by column: [213, 67, 23, 4, 1, 199]
+  [PASS] VMD modes recover the signal scale  --  residual 0.201 of one sigma (VMD is lossy by design)
+  [PASS] PSO returns usable (K, alpha)  --  K=10 alpha=100.0
+  [PASS] decompose() returns (N, C)  --  shape (400, 9) in 0.18 s
+  [PASS] decompose() reconstruction is small  --  3.4241% of range
+
+[4] both protocols run and produce aligned arrays
+  [PASS] protocol A (one-time)  --  15 components, X_test[0] (54, 30, 1), target_test (54,)
+  [PASS] protocol B (walk-forward)  --  14 components, 12 decompositions, X_test[0] (54, 30, 1)
+  [PASS] protocol A target is not a copy of the last input  --  fraction identical 0.000
+  [PASS] protocol B target is not a copy of the last input  --  fraction identical 0.000
+
+[5] save() round-trip
+  [PASS] npz written and re-read  --  _selftest_tmp.npz, 0.06 MB, 15 components
+       (temporary files removed)
+
+====================================================================
+SELF-TEST PASSED -- environment is ready for tasks 1, 2 and 3.
+====================================================================

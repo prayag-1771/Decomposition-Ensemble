@@ -1,0 +1,7 @@
+Official Springer Nature LaTeX template package, version December 2024
+(sn-article.tex header: "%Version 3.1 December 2024").
+Downloaded 14 Sep 2026 from the Springer Nature LaTeX author support page:
+https://www.springernature.com/gp/authors/campaigns/latex-author-support
+(package link: https://cms-resources.apps.public.k8s.springernature.io/springer-cms/rest/v1/content/18782940/data/v12)
+Files here are byte-identical copies: sn-jnl.cls, bst/sn-mathphys-num.bst,
+user-manual.pdf, and the sample article (renamed sn-article-official-sample.tex).

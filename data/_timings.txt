@@ -1,0 +1,5 @@
+Self-test (shared/_selftest.py) = 139 s  (2 min 19 s)
+Task 1  validate = 5 s
+Task 2  one-time protocol, all four series = 1488 s  (24 min 48 s)
+Task 3  walk-forward protocol, all four series = 5434 s  (90 min 34 s)
+Task 3  first (uncorrected) pass, superseded = 3400 s  (56 min 40 s)

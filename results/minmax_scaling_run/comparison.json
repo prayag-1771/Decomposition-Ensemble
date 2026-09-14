@@ -1,0 +1,374 @@
+{
+ "metrics": {
+  "onetime_SPX_High_tcn": {
+   "RMSE": 198.36686616584743,
+   "MAE": 146.69239364630505,
+   "MAPE": 2.0790224309144985,
+   "R2": 0.9075140602074061
+  },
+  "onetime_SPX_High_trm": {
+   "RMSE": 915.4308557874589,
+   "MAE": 753.6367283224947,
+   "MAPE": 10.898060505116645,
+   "R2": -0.9696476532478242
+  },
+  "onetime_SPX_Low_tcn": {
+   "RMSE": 187.4170578505901,
+   "MAE": 161.90871464638974,
+   "MAPE": 2.398716360777392,
+   "R2": 0.9191377795796961
+  },
+  "onetime_SPX_Low_trm": {
+   "RMSE": 979.5384361196554,
+   "MAE": 844.3965784277536,
+   "MAPE": 12.461858022155278,
+   "R2": -1.2088712101806403
+  },
+  "onetime_SSEC_High_tcn": {
+   "RMSE": 19.18474036063921,
+   "MAE": 17.140347039397597,
+   "MAPE": 0.47648842615938314,
+   "R2": 0.9967697633283211
+  },
+  "onetime_SSEC_High_trm": {
+   "RMSE": 58.352604642966874,
+   "MAE": 42.132867311749564,
+   "MAPE": 1.1278961452532499,
+   "R2": 0.9701157071619622
+  },
+  "onetime_SSEC_Low_tcn": {
+   "RMSE": 17.782710137926614,
+   "MAE": 15.821086850443955,
+   "MAPE": 0.4378188709275319,
+   "R2": 0.9972262960533403
+  },
+  "onetime_SSEC_Low_trm": {
+   "RMSE": 83.04866992016773,
+   "MAE": 74.86221727368117,
+   "MAPE": 2.041743924051919,
+   "R2": 0.9395035948937143
+  }
+ },
+ "dm_rows": [
+  {
+   "model": "onetime_SPX_High_tcn",
+   "baseline": "Persistence",
+   "DM": 17.11279533470863,
+   "p": 0.0,
+   "significant_5pct": true,
+   "model_worse": true
+  },
+  {
+   "model": "onetime_SPX_High_tcn",
+   "baseline": "Drift",
+   "DM": 17.11577041313089,
+   "p": 0.0,
+   "significant_5pct": true,
+   "model_worse": true
+  },
+  {
+   "model": "onetime_SPX_High_tcn",
+   "baseline": "MA-5",
+   "DM": 15.566913571588195,
+   "p": 0.0,
+   "significant_5pct": true,
+   "model_worse": true
+  },
+  {
+   "model": "onetime_SPX_High_tcn",
+   "baseline": "MA-20",
+   "DM": 8.618836573686835,
+   "p": 0.0,
+   "significant_5pct": true,
+   "model_worse": true
+  },
+  {
+   "model": "onetime_SPX_High_tcn",
+   "baseline": "EWMA-10",
+   "DM": 14.45886003885693,
+   "p": 0.0,
+   "significant_5pct": true,
+   "model_worse": true
+  },
+  {
+   "model": "onetime_SPX_High_trm",
+   "baseline": "Persistence",
+   "DM": 20.322460623269873,
+   "p": 0.0,
+   "significant_5pct": true,
+   "model_worse": true
+  },
+  {
+   "model": "onetime_SPX_High_trm",
+   "baseline": "Drift",
+   "DM": 20.322516979187117,
+   "p": 0.0,
+   "significant_5pct": true,
+   "model_worse": true
+  },
+  {
+   "model": "onetime_SPX_High_trm",
+   "baseline": "MA-5",
+   "DM": 20.25594675532239,
+   "p": 0.0,
+   "significant_5pct": true,
+   "model_worse": true
+  },
+  {
+   "model": "onetime_SPX_High_trm",
+   "baseline": "MA-20",
+   "DM": 19.986436306603757,
+   "p": 0.0,
+   "significant_5pct": true,
+   "model_worse": true
+  },
+  {
+   "model": "onetime_SPX_High_trm",
+   "baseline": "EWMA-10",
+   "DM": 20.21350829472332,
+   "p": 0.0,
+   "significant_5pct": true,
+   "model_worse": true
+  },
+  {
+   "model": "onetime_SPX_Low_tcn",
+   "baseline": "Persistence",
+   "DM": 23.399072473391566,
+   "p": 0.0,
+   "significant_5pct": true,
+   "model_worse": true
+  },
+  {
+   "model": "onetime_SPX_Low_tcn",
+   "baseline": "Drift",
+   "DM": 23.39103640616203,
+   "p": 0.0,
+   "significant_5pct": true,
+   "model_worse": true
+  },
+  {
+   "model": "onetime_SPX_Low_tcn",
+   "baseline": "MA-5",
+   "DM": 15.940632101138677,
+   "p": 0.0,
+   "significant_5pct": true,
+   "model_worse": true
+  },
+  {
+   "model": "onetime_SPX_Low_tcn",
+   "baseline": "MA-20",
+   "DM": 4.314045816551632,
+   "p": 1.9352541565265113e-05,
+   "significant_5pct": true,
+   "model_worse": true
+  },
+  {
+   "model": "onetime_SPX_Low_tcn",
+   "baseline": "EWMA-10",
+   "DM": 13.59616206110766,
+   "p": 0.0,
+   "significant_5pct": true,
+   "model_worse": true
+  },
+  {
+   "model": "onetime_SPX_Low_trm",
+   "baseline": "Persistence",
+   "DM": 25.441043902463853,
+   "p": 0.0,
+   "significant_5pct": true,
+   "model_worse": true
+  },
+  {
+   "model": "onetime_SPX_Low_trm",
+   "baseline": "Drift",
+   "DM": 25.440837544000793,
+   "p": 0.0,
+   "significant_5pct": true,
+   "model_worse": true
+  },
+  {
+   "model": "onetime_SPX_Low_trm",
+   "baseline": "MA-5",
+   "DM": 25.268149051556502,
+   "p": 0.0,
+   "significant_5pct": true,
+   "model_worse": true
+  },
+  {
+   "model": "onetime_SPX_Low_trm",
+   "baseline": "MA-20",
+   "DM": 24.841729552363386,
+   "p": 0.0,
+   "significant_5pct": true,
+   "model_worse": true
+  },
+  {
+   "model": "onetime_SPX_Low_trm",
+   "baseline": "EWMA-10",
+   "DM": 25.213448967784327,
+   "p": 0.0,
+   "significant_5pct": true,
+   "model_worse": true
+  },
+  {
+   "model": "onetime_SSEC_High_tcn",
+   "baseline": "Persistence",
+   "DM": -3.2129983960813275,
+   "p": 0.0014022738519237077,
+   "significant_5pct": true,
+   "model_worse": false
+  },
+  {
+   "model": "onetime_SSEC_High_tcn",
+   "baseline": "Drift",
+   "DM": -3.2142819259935895,
+   "p": 0.001396153506890263,
+   "significant_5pct": true,
+   "model_worse": false
+  },
+  {
+   "model": "onetime_SSEC_High_tcn",
+   "baseline": "MA-5",
+   "DM": -3.4324856132370765,
+   "p": 0.0006500294932902939,
+   "significant_5pct": true,
+   "model_worse": false
+  },
+  {
+   "model": "onetime_SSEC_High_tcn",
+   "baseline": "MA-20",
+   "DM": -5.670922298353927,
+   "p": 2.4616320759562882e-08,
+   "significant_5pct": true,
+   "model_worse": false
+  },
+  {
+   "model": "onetime_SSEC_High_tcn",
+   "baseline": "EWMA-10",
+   "DM": -3.6641124948134767,
+   "p": 0.00027597142704305355,
+   "significant_5pct": true,
+   "model_worse": false
+  },
+  {
+   "model": "onetime_SSEC_High_trm",
+   "baseline": "Persistence",
+   "DM": 5.961073540927252,
+   "p": 4.871767655956205e-09,
+   "significant_5pct": true,
+   "model_worse": true
+  },
+  {
+   "model": "onetime_SSEC_High_trm",
+   "baseline": "Drift",
+   "DM": 5.9621992815623415,
+   "p": 4.840623901714025e-09,
+   "significant_5pct": true,
+   "model_worse": true
+  },
+  {
+   "model": "onetime_SSEC_High_trm",
+   "baseline": "MA-5",
+   "DM": -0.22149794267060374,
+   "p": 0.824799329635604,
+   "significant_5pct": false,
+   "model_worse": false
+  },
+  {
+   "model": "onetime_SSEC_High_trm",
+   "baseline": "MA-20",
+   "DM": -5.235818396169466,
+   "p": 2.46544985982311e-07,
+   "significant_5pct": true,
+   "model_worse": false
+  },
+  {
+   "model": "onetime_SSEC_High_trm",
+   "baseline": "EWMA-10",
+   "DM": -1.7617279248489326,
+   "p": 0.0787544844337178,
+   "significant_5pct": false,
+   "model_worse": false
+  },
+  {
+   "model": "onetime_SSEC_Low_tcn",
+   "baseline": "Persistence",
+   "DM": -4.667331381406452,
+   "p": 3.968514915131394e-06,
+   "significant_5pct": true,
+   "model_worse": false
+  },
+  {
+   "model": "onetime_SSEC_Low_tcn",
+   "baseline": "Drift",
+   "DM": -4.6727782558283435,
+   "p": 3.8691596733198e-06,
+   "significant_5pct": true,
+   "model_worse": false
+  },
+  {
+   "model": "onetime_SSEC_Low_tcn",
+   "baseline": "MA-5",
+   "DM": -5.5996960815016665,
+   "p": 3.6268375858128366e-08,
+   "significant_5pct": true,
+   "model_worse": false
+  },
+  {
+   "model": "onetime_SSEC_Low_tcn",
+   "baseline": "MA-20",
+   "DM": -8.747960432468236,
+   "p": 0.0,
+   "significant_5pct": true,
+   "model_worse": false
+  },
+  {
+   "model": "onetime_SSEC_Low_tcn",
+   "baseline": "EWMA-10",
+   "DM": -6.037500654675771,
+   "p": 3.1450577697711424e-09,
+   "significant_5pct": true,
+   "model_worse": false
+  },
+  {
+   "model": "onetime_SSEC_Low_trm",
+   "baseline": "Persistence",
+   "DM": 17.14026410708536,
+   "p": 0.0,
+   "significant_5pct": true,
+   "model_worse": true
+  },
+  {
+   "model": "onetime_SSEC_Low_trm",
+   "baseline": "Drift",
+   "DM": 17.15069412475582,
+   "p": 0.0,
+   "significant_5pct": true,
+   "model_worse": true
+  },
+  {
+   "model": "onetime_SSEC_Low_trm",
+   "baseline": "MA-5",
+   "DM": 8.490345775166405,
+   "p": 2.220446049250313e-16,
+   "significant_5pct": true,
+   "model_worse": true
+  },
+  {
+   "model": "onetime_SSEC_Low_trm",
+   "baseline": "MA-20",
+   "DM": -3.0279567145605557,
+   "p": 0.002595218231200569,
+   "significant_5pct": true,
+   "model_worse": false
+  },
+  {
+   "model": "onetime_SSEC_Low_trm",
+   "baseline": "EWMA-10",
+   "DM": 4.85450920727805,
+   "p": 1.6371333440012847e-06,
+   "significant_5pct": true,
+   "model_worse": true
+  }
+ ]
+}

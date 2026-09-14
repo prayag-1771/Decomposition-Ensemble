@@ -1,0 +1,8 @@
+{
+ "emd_recon_err": 2.842170943040401e-14,
+ "iceemdan_recon_err": 1.4210854715202004e-14,
+ "iceemdan_n_imfs": 7,
+ "original_recon_err": 0.09483055537020846,
+ "original_recon_pct": 0.004394188912794571,
+ "original_n_points": 1200
+}

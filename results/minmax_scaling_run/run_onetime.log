@@ -1,0 +1,293 @@
+========================================================================
+CHECKING VEER'S FILES
+========================================================================
+  dataset                   comps    train     test
+  onetime_SPX_High             16     1985      497
+  walkforward_SPX_High         16     1986      497
+  onetime_SPX_Low              16     1985      497
+  walkforward_SPX_Low          16     1986      497
+  onetime_SSEC_High            17     1915      479
+  walkforward_SSEC_High        16     1916      479
+  onetime_SSEC_Low             17     1915      479
+  walkforward_SSEC_Low         17     1916      479
+
+  all files present and consistent
+  131 components x 2 heads = 262 models to train
+
+========================================================================
+TRAINING
+========================================================================
+  132 component models, 20 already saved; 5 GPU workers; logs in G:\VSC_NEW\CONFERENCE\Decomposition_Forecasting\results\logs
+  [  0/112]    0.0 min elapsed, eta     ?   GPU 0%, 79 of 4096 MB
+  [  3/112]    3.3 min elapsed, eta 121.5 min   GPU 97%, 1065 of 4096 MB
+  [  4/112]    4.4 min elapsed, eta 117.5 min   GPU 90%, 1053 of 4096 MB
+  [  5/112]    4.7 min elapsed, eta 100.4 min   GPU 96%, 1041 of 4096 MB
+  [  6/112]    5.0 min elapsed, eta  88.9 min   GPU 95%, 1043 of 4096 MB
+  [  7/112]    5.7 min elapsed, eta  85.5 min   GPU 97%, 1045 of 4096 MB
+  [  9/112]    6.7 min elapsed, eta  76.8 min   GPU 98%, 1110 of 4096 MB
+  [ 10/112]    7.0 min elapsed, eta  71.9 min   GPU 98%, 1112 of 4096 MB
+  [ 12/112]    8.7 min elapsed, eta  72.7 min   GPU 99%, 1216 of 4096 MB
+  [ 14/112]    9.1 min elapsed, eta  63.4 min   GPU 98%, 1148 of 4096 MB
+  [ 15/112]    9.4 min elapsed, eta  60.8 min   GPU 98%, 1114 of 4096 MB
+  [ 16/112]   10.8 min elapsed, eta  64.5 min   GPU 94%, 1114 of 4096 MB
+  [ 18/112]   11.1 min elapsed, eta  57.9 min   GPU 87%, 1046 of 4096 MB
+  [ 19/112]   11.4 min elapsed, eta  56.0 min   GPU 91%, 1046 of 4096 MB
+  [ 20/112]   11.8 min elapsed, eta  54.2 min   GPU 99%, 1046 of 4096 MB
+  [ 21/112]   12.8 min elapsed, eta  55.4 min   GPU 98%, 1046 of 4096 MB
+  [ 22/112]   13.5 min elapsed, eta  55.1 min   GPU 93%, 1046 of 4096 MB
+  [ 23/112]   13.8 min elapsed, eta  53.4 min   GPU 96%, 1046 of 4096 MB
+  [ 25/112]   14.1 min elapsed, eta  49.2 min   GPU 93%, 1050 of 4096 MB
+  [ 26/112]   15.2 min elapsed, eta  50.1 min   GPU 95%, 1056 of 4096 MB
+  [ 28/112]   16.2 min elapsed, eta  48.5 min   GPU 85%, 1060 of 4096 MB
+  [ 29/112]   18.2 min elapsed, eta  52.1 min   GPU 91%, 1060 of 4096 MB
+  [ 31/112]   19.5 min elapsed, eta  51.0 min   GPU 86%, 1060 of 4096 MB
+  [ 33/112]   21.9 min elapsed, eta  52.4 min   GPU 94%, 1056 of 4096 MB
+  [ 34/112]   22.9 min elapsed, eta  52.5 min   GPU 91%, 1056 of 4096 MB
+  [ 37/112]   24.2 min elapsed, eta  49.1 min   GPU 88%, 1063 of 4096 MB
+  [ 38/112]   25.2 min elapsed, eta  49.2 min   GPU 89%, 1063 of 4096 MB
+  [ 39/112]   25.9 min elapsed, eta  48.5 min   GPU 85%, 1063 of 4096 MB
+  [ 42/112]   27.3 min elapsed, eta  45.5 min   GPU 85%, 1194 of 4096 MB
+  [ 43/112]   27.9 min elapsed, eta  44.8 min   GPU 95%, 1240 of 4096 MB
+  [ 45/112]   29.6 min elapsed, eta  44.1 min   GPU 93%, 1148 of 4096 MB
+  [ 46/112]   30.0 min elapsed, eta  43.0 min   GPU 86%, 1102 of 4096 MB
+  [ 47/112]   30.7 min elapsed, eta  42.4 min   GPU 97%, 1053 of 4096 MB
+  [ 48/112]   31.7 min elapsed, eta  42.2 min   GPU 99%, 1102 of 4096 MB
+  [ 49/112]   32.0 min elapsed, eta  41.1 min   GPU 92%, 1100 of 4096 MB
+  [ 51/112]   32.4 min elapsed, eta  38.7 min   GPU 76%, 1102 of 4096 MB
+  [ 52/112]   32.7 min elapsed, eta  37.7 min   GPU 93%, 1102 of 4096 MB
+  [ 53/112]   34.4 min elapsed, eta  38.3 min   GPU 92%, 1059 of 4096 MB
+  [ 56/112]   35.1 min elapsed, eta  35.1 min   GPU 91%, 1078 of 4096 MB
+  [ 57/112]   35.5 min elapsed, eta  34.2 min   GPU 84%, 1050 of 4096 MB
+  [ 58/112]   36.5 min elapsed, eta  34.0 min   GPU 83%, 1050 of 4096 MB
+  [ 59/112]   36.8 min elapsed, eta  33.1 min   GPU 89%, 1050 of 4096 MB
+  [ 61/112]   37.8 min elapsed, eta  31.6 min   GPU 88%, 1049 of 4096 MB
+  [ 62/112]   39.2 min elapsed, eta  31.6 min   GPU 80%, 1049 of 4096 MB
+  [ 63/112]   40.9 min elapsed, eta  31.8 min   GPU 87%, 1065 of 4096 MB
+  [ 64/112]   41.6 min elapsed, eta  31.2 min   GPU 90%, 1265 of 4096 MB
+  [ 65/112]   42.9 min elapsed, eta  31.0 min   GPU 81%, 1069 of 4096 MB
+  [ 66/112]   43.6 min elapsed, eta  30.4 min   GPU 76%, 1072 of 4096 MB
+  [ 67/112]   45.3 min elapsed, eta  30.4 min   GPU 75%, 1072 of 4096 MB
+  [ 68/112]   45.7 min elapsed, eta  29.5 min   GPU 91%, 1072 of 4096 MB
+  [ 70/112]   46.7 min elapsed, eta  28.0 min   GPU 92%, 1072 of 4096 MB
+  [ 71/112]   47.0 min elapsed, eta  27.1 min   GPU 79%, 1072 of 4096 MB
+  [ 72/112]   48.0 min elapsed, eta  26.7 min   GPU 81%, 1058 of 4096 MB
+  [ 73/112]   49.4 min elapsed, eta  26.4 min   GPU 96%, 1057 of 4096 MB
+  [ 74/112]   50.0 min elapsed, eta  25.7 min   GPU 76%, 1057 of 4096 MB
+  [ 75/112]   51.0 min elapsed, eta  25.2 min   GPU 94%, 1055 of 4096 MB
+  [ 76/112]   51.4 min elapsed, eta  24.3 min   GPU 93%, 1057 of 4096 MB
+  [ 77/112]   51.7 min elapsed, eta  23.5 min   GPU 95%, 1057 of 4096 MB
+  [ 78/112]   52.4 min elapsed, eta  22.8 min   GPU 93%, 1057 of 4096 MB
+  [ 79/112]   53.1 min elapsed, eta  22.2 min   GPU 94%, 1265 of 4096 MB
+  [ 80/112]   53.4 min elapsed, eta  21.4 min   GPU 99%, 1275 of 4096 MB
+  [ 82/112]   53.7 min elapsed, eta  19.7 min   GPU 94%, 1081 of 4096 MB
+  [ 83/112]   54.8 min elapsed, eta  19.1 min   GPU 98%, 1269 of 4096 MB
+  [ 84/112]   55.4 min elapsed, eta  18.5 min   GPU 98%, 1262 of 4096 MB
+  [ 86/112]   55.8 min elapsed, eta  16.9 min   GPU 98%, 1266 of 4096 MB
+  [ 87/112]   56.1 min elapsed, eta  16.1 min   GPU 100%, 1262 of 4096 MB
+  [ 88/112]   57.1 min elapsed, eta  15.6 min   GPU 99%, 1281 of 4096 MB
+  [ 89/112]   57.5 min elapsed, eta  14.8 min   GPU 100%, 1281 of 4096 MB
+  [ 91/112]   57.8 min elapsed, eta  13.3 min   GPU 96%, 1078 of 4096 MB
+  [ 92/112]   58.1 min elapsed, eta  12.6 min   GPU 96%, 1078 of 4096 MB
+  [ 94/112]   59.1 min elapsed, eta  11.3 min   GPU 98%, 1078 of 4096 MB
+  [ 95/112]   59.5 min elapsed, eta  10.6 min   GPU 97%, 1078 of 4096 MB
+  [ 96/112]   60.8 min elapsed, eta  10.1 min   GPU 94%, 1078 of 4096 MB
+  [ 97/112]   61.2 min elapsed, eta   9.5 min   GPU 98%, 1078 of 4096 MB
+  [ 98/112]   61.8 min elapsed, eta   8.8 min   GPU 95%, 1078 of 4096 MB
+  [ 99/112]   62.2 min elapsed, eta   8.2 min   GPU 94%, 1078 of 4096 MB
+  [100/112]   62.8 min elapsed, eta   7.5 min   GPU 95%, 1078 of 4096 MB
+  [101/112]   63.2 min elapsed, eta   6.9 min   GPU 94%, 1078 of 4096 MB
+  [102/112]   64.2 min elapsed, eta   6.3 min   GPU 93%, 1078 of 4096 MB
+  [104/112]   65.2 min elapsed, eta   5.0 min   GPU 96%, 1078 of 4096 MB
+  [105/112]   65.9 min elapsed, eta   4.4 min   GPU 93%, 1078 of 4096 MB
+  [107/112]   67.9 min elapsed, eta   3.2 min   GPU 97%, 1078 of 4096 MB
+  [108/112]   68.2 min elapsed, eta   2.5 min   GPU 92%, 1016 of 4096 MB
+  [109/112]   68.6 min elapsed, eta   1.9 min   GPU 88%, 685 of 4096 MB
+  [110/112]   68.9 min elapsed, eta   1.3 min   GPU 66%, 488 of 4096 MB
+  [112/112]   70.6 min elapsed, eta   0.0 min   GPU 22%, 359 of 4096 MB
+  [112/112]   70.9 min elapsed, eta   0.0 min   GPU 14%, 281 of 4096 MB
+
+=== onetime_SPX_High | head=tcn | 16 components ===
+  RMSE   198.367 | MAE   146.692 | MAPE  2.0790% | R2  0.90751
+  wrote pred_onetime_SPX_High_tcn.npz
+
+=== onetime_SPX_High | head=trm | 16 components ===
+  RMSE   915.431 | MAE   753.637 | MAPE 10.8981% | R2 -0.96965
+  wrote pred_onetime_SPX_High_trm.npz
+
+=== onetime_SPX_Low | head=tcn | 16 components ===
+  RMSE   187.417 | MAE   161.909 | MAPE  2.3987% | R2  0.91914
+  wrote pred_onetime_SPX_Low_tcn.npz
+
+=== onetime_SPX_Low | head=trm | 16 components ===
+  RMSE   979.538 | MAE   844.397 | MAPE 12.4619% | R2 -1.20887
+  wrote pred_onetime_SPX_Low_trm.npz
+
+=== onetime_SSEC_High | head=tcn | 17 components ===
+  RMSE    19.185 | MAE    17.140 | MAPE  0.4765% | R2  0.99677
+  wrote pred_onetime_SSEC_High_tcn.npz
+
+=== onetime_SSEC_High | head=trm | 17 components ===
+  RMSE    58.353 | MAE    42.133 | MAPE  1.1279% | R2  0.97012
+  wrote pred_onetime_SSEC_High_trm.npz
+
+=== onetime_SSEC_Low | head=tcn | 17 components ===
+  RMSE    17.783 | MAE    15.821 | MAPE  0.4378% | R2  0.99723
+  wrote pred_onetime_SSEC_Low_tcn.npz
+
+=== onetime_SSEC_Low | head=trm | 17 components ===
+  RMSE    83.049 | MAE    74.862 | MAPE  2.0417% | R2  0.93950
+  wrote pred_onetime_SSEC_Low_trm.npz
+  walkforward_SPX_High tcn: components [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15] not trained yet
+  walkforward_SPX_High trm: components [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15] not trained yet
+  walkforward_SPX_Low tcn: components [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15] not trained yet
+  walkforward_SPX_Low trm: components [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15] not trained yet
+  walkforward_SSEC_High tcn: components [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15] not trained yet
+  walkforward_SSEC_High trm: components [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15] not trained yet
+  walkforward_SSEC_Low tcn: components [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16] not trained yet
+  walkforward_SSEC_Low trm: components [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16] not trained yet
+
+assembled 8 prediction file(s)
+
+--- evaluation: baselines ---
+
+=== SPX_High  (2513 obs, 497 test) ===
+  baseline            RMSE       MAE     MAPE%        R2
+  Persistence       46.724    33.596    0.5230   0.99488
+  Drift             46.609    33.353    0.5194   0.99490
+  MA-5              72.799    55.618    0.8670   0.98756
+  MA-20            136.920   107.282    1.6732   0.95601
+  EWMA-10           87.402    68.098    1.0596   0.98207
+  DM vs Persistence (positive = worse than persistence):
+    Drift        DM=  -1.491  p=0.1367  ns
+    MA-5         DM=  +8.016  p=7.772e-15  SIGNIFICANT
+    MA-20        DM= +12.513  p=0  SIGNIFICANT
+    EWMA-10      DM=  +9.679  p=0  SIGNIFICANT
+
+=== SPX_Low  (2513 obs, 497 test) ===
+  baseline            RMSE       MAE     MAPE%        R2
+  Persistence       57.892    42.345    0.6690   0.99230
+  Drift             57.799    42.112    0.6654   0.99233
+  MA-5              92.462    68.218    1.0839   0.98036
+  MA-20            156.740   122.221    1.9380   0.94357
+  EWMA-10          104.707    79.438    1.2582   0.97482
+  DM vs Persistence (positive = worse than persistence):
+    Drift        DM=  -1.199  p=0.231  ns
+    MA-5         DM=  +6.507  p=1.876e-10  SIGNIFICANT
+    MA-20        DM= +10.755  p=0  SIGNIFICANT
+    EWMA-10      DM=  +7.452  p=4.112e-13  SIGNIFICANT
+
+=== SSEC_High  (2425 obs, 479 test) ===
+  baseline            RMSE       MAE     MAPE%        R2
+  Persistence       36.179    22.107    0.6046   0.98832
+  Drift             36.190    22.133    0.6053   0.98832
+  MA-5              59.284    37.611    1.0302   0.96865
+  MA-20            103.500    70.752    1.9315   0.90444
+  EWMA-10           68.388    43.766    1.1923   0.95828
+  DM vs Persistence (positive = worse than persistence):
+    Drift        DM=  +1.565  p=0.1182  ns
+    MA-5         DM=  +3.330  p=0.0009343  SIGNIFICANT
+    MA-20        DM=  +5.987  p=4.205e-09  SIGNIFICANT
+    EWMA-10      DM=  +3.696  p=0.0002444  SIGNIFICANT
+
+=== SSEC_Low  (2425 obs, 479 test) ===
+  baseline            RMSE       MAE     MAPE%        R2
+  Persistence       36.868    24.078    0.6648   0.98788
+  Drift             36.879    24.099    0.6654   0.98787
+  MA-5              56.354    38.941    1.0831   0.97169
+  MA-20             99.227    72.427    2.0105   0.91222
+  EWMA-10           65.158    45.668    1.2665   0.96215
+  DM vs Persistence (positive = worse than persistence):
+    Drift        DM=  +1.572  p=0.1166  ns
+    MA-5         DM=  +4.954  p=1.012e-06  SIGNIFICANT
+    MA-20        DM=  +8.649  p=0  SIGNIFICANT
+    EWMA-10      DM=  +5.638  p=2.943e-08  SIGNIFICANT
+
+saved ../results/baselines.json
+
+--- evaluation: compare ---
+
+=== onetime_SPX_High_tcn ===
+  model    RMSE   198.367  MAE   146.692  MAPE  2.0790%  R2  0.90751
+  vs Persistence  RMSE    46.675 | DM  +17.113 p=0  model worse, SIGNIFICANT
+  vs Drift        RMSE    46.556 | DM  +17.116 p=0  model worse, SIGNIFICANT
+  vs MA-5         RMSE    72.748 | DM  +15.567 p=0  model worse, SIGNIFICANT
+  vs MA-20        RMSE   136.836 | DM   +8.619 p=0  model worse, SIGNIFICANT
+  vs EWMA-10      RMSE    87.222 | DM  +14.459 p=0  model worse, SIGNIFICANT
+
+=== onetime_SPX_High_trm ===
+  model    RMSE   915.431  MAE   753.637  MAPE 10.8981%  R2 -0.96965
+  vs Persistence  RMSE    46.675 | DM  +20.322 p=0  model worse, SIGNIFICANT
+  vs Drift        RMSE    46.556 | DM  +20.323 p=0  model worse, SIGNIFICANT
+  vs MA-5         RMSE    72.748 | DM  +20.256 p=0  model worse, SIGNIFICANT
+  vs MA-20        RMSE   136.836 | DM  +19.986 p=0  model worse, SIGNIFICANT
+  vs EWMA-10      RMSE    87.222 | DM  +20.214 p=0  model worse, SIGNIFICANT
+
+=== onetime_SPX_Low_tcn ===
+  model    RMSE   187.417  MAE   161.909  MAPE  2.3987%  R2  0.91914
+  vs Persistence  RMSE    57.858 | DM  +23.399 p=0  model worse, SIGNIFICANT
+  vs Drift        RMSE    57.762 | DM  +23.391 p=0  model worse, SIGNIFICANT
+  vs MA-5         RMSE    92.544 | DM  +15.941 p=0  model worse, SIGNIFICANT
+  vs MA-20        RMSE   156.708 | DM   +4.314 p=1.935e-05  model worse, SIGNIFICANT
+  vs EWMA-10      RMSE   104.597 | DM  +13.596 p=0  model worse, SIGNIFICANT
+
+=== onetime_SPX_Low_trm ===
+  model    RMSE   979.538  MAE   844.397  MAPE 12.4619%  R2 -1.20887
+  vs Persistence  RMSE    57.858 | DM  +25.441 p=0  model worse, SIGNIFICANT
+  vs Drift        RMSE    57.762 | DM  +25.441 p=0  model worse, SIGNIFICANT
+  vs MA-5         RMSE    92.544 | DM  +25.268 p=0  model worse, SIGNIFICANT
+  vs MA-20        RMSE   156.708 | DM  +24.842 p=0  model worse, SIGNIFICANT
+  vs EWMA-10      RMSE   104.597 | DM  +25.213 p=0  model worse, SIGNIFICANT
+
+=== onetime_SSEC_High_tcn ===
+  model    RMSE    19.185  MAE    17.140  MAPE  0.4765%  R2  0.99677
+  vs Persistence  RMSE    36.193 | DM   -3.213 p=0.001402  model better, SIGNIFICANT
+  vs Drift        RMSE    36.205 | DM   -3.214 p=0.001396  model better, SIGNIFICANT
+  vs MA-5         RMSE    59.285 | DM   -3.432 p=0.00065  model better, SIGNIFICANT
+  vs MA-20        RMSE   103.541 | DM   -5.671 p=2.462e-08  model better, SIGNIFICANT
+  vs EWMA-10      RMSE    68.399 | DM   -3.664 p=0.000276  model better, SIGNIFICANT
+
+=== onetime_SSEC_High_trm ===
+  model    RMSE    58.353  MAE    42.133  MAPE  1.1279%  R2  0.97012
+  vs Persistence  RMSE    36.193 | DM   +5.961 p=4.872e-09  model worse, SIGNIFICANT
+  vs Drift        RMSE    36.205 | DM   +5.962 p=4.841e-09  model worse, SIGNIFICANT
+  vs MA-5         RMSE    59.285 | DM   -0.221 p=0.8248  model better, ns
+  vs MA-20        RMSE   103.541 | DM   -5.236 p=2.465e-07  model better, SIGNIFICANT
+  vs EWMA-10      RMSE    68.399 | DM   -1.762 p=0.07875  model better, ns
+
+=== onetime_SSEC_Low_tcn ===
+  model    RMSE    17.783  MAE    15.821  MAPE  0.4378%  R2  0.99723
+  vs Persistence  RMSE    36.869 | DM   -4.667 p=3.969e-06  model better, SIGNIFICANT
+  vs Drift        RMSE    36.881 | DM   -4.673 p=3.869e-06  model better, SIGNIFICANT
+  vs MA-5         RMSE    56.355 | DM   -5.600 p=3.627e-08  model better, SIGNIFICANT
+  vs MA-20        RMSE    99.308 | DM   -8.748 p=0  model better, SIGNIFICANT
+  vs EWMA-10      RMSE    65.160 | DM   -6.038 p=3.145e-09  model better, SIGNIFICANT
+
+=== onetime_SSEC_Low_trm ===
+  model    RMSE    83.049  MAE    74.862  MAPE  2.0417%  R2  0.93950
+  vs Persistence  RMSE    36.869 | DM  +17.140 p=0  model worse, SIGNIFICANT
+  vs Drift        RMSE    36.881 | DM  +17.151 p=0  model worse, SIGNIFICANT
+  vs MA-5         RMSE    56.355 | DM   +8.490 p=2.22e-16  model worse, SIGNIFICANT
+  vs MA-20        RMSE    99.308 | DM   -3.028 p=0.002595  model better, SIGNIFICANT
+  vs EWMA-10      RMSE    65.160 | DM   +4.855 p=1.637e-06  model worse, SIGNIFICANT
+
+saved ../results/comparison.json
+
+=== leakage inflation (one-time vs walk-forward, common dates) ===
+
+--- evaluation: figures ---
+saved ../results/fig_baselines.png
+saved ../results/fig_models.png
+
+========================================================================
+RESULTS
+========================================================================
+  model                                    RMSE      MAPE%
+  onetime_SPX_High_tcn                  198.367     2.0790
+  onetime_SPX_High_trm                  915.431    10.8981
+  onetime_SPX_Low_tcn                   187.417     2.3987
+  onetime_SPX_Low_trm                   979.538    12.4619
+  onetime_SSEC_High_tcn                  19.185     0.4765
+  onetime_SSEC_High_trm                  58.353     1.1279
+  onetime_SSEC_Low_tcn                   17.783     0.4378
+  onetime_SSEC_Low_trm                   83.049     2.0417
+exit=0

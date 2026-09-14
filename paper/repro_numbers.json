@@ -1,0 +1,51 @@
+{
+ "series": {},
+ "observations": {
+  "SPX_High": 2513,
+  "SPX_Low": 2513,
+  "SSEC_High": 2425,
+  "SSEC_Low": 2425
+ },
+ "walkforward_decompositions": {
+  "SPX_High": 498,
+  "SPX_Low": 498,
+  "SSEC_High": 480,
+  "SSEC_Low": 480
+ },
+ "components": {
+  "onetime_SPX_High": 16,
+  "walkforward_SPX_High": 16,
+  "onetime_SPX_Low": 16,
+  "walkforward_SPX_Low": 16,
+  "onetime_SSEC_High": 17,
+  "walkforward_SSEC_High": 16,
+  "onetime_SSEC_Low": 17,
+  "walkforward_SSEC_Low": 17
+ },
+ "test_days": {
+  "onetime_SPX_High": 497,
+  "walkforward_SPX_High": 497,
+  "onetime_SPX_Low": 497,
+  "walkforward_SPX_Low": 497,
+  "onetime_SSEC_High": 479,
+  "walkforward_SSEC_High": 479,
+  "onetime_SSEC_Low": 479,
+  "walkforward_SSEC_Low": 479
+ },
+ "networks_trained": 262,
+ "prediction_files": 16,
+ "walkforward_decompositions_total": 1956,
+ "common_dates": {
+  "SPX_High": 496,
+  "SPX_Low": 496,
+  "SSEC_High": 478,
+  "SSEC_Low": 478
+ },
+ "seconds_training": 108279.4,
+ "diagnostic_dates": {
+  "SPX_High": 496,
+  "SPX_Low": 496,
+  "SSEC_High": 478,
+  "SSEC_Low": 478
+ }
+}

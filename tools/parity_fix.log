@@ -1,0 +1,45 @@
+  SSEC_High 50/479 rows, 239 s, eta 2050 s
+  SPX_Low 50/497 rows, 257 s, eta 2301 s
+  SPX_High 50/497 rows, 274 s, eta 2450 s
+  SSEC_High 100/479 rows, 440 s, eta 1667 s
+  SPX_Low 100/497 rows, 485 s, eta 1925 s
+  SPX_High 100/497 rows, 520 s, eta 2064 s
+  SSEC_High 150/479 rows, 652 s, eta 1431 s
+  SPX_Low 150/497 rows, 695 s, eta 1608 s
+  SPX_High 150/497 rows, 750 s, eta 1734 s
+  SSEC_High 200/479 rows, 840 s, eta 1171 s
+  SPX_Low 200/497 rows, 889 s, eta 1321 s
+  SPX_High 200/497 rows, 952 s, eta 1414 s
+  SSEC_High 250/479 rows, 1012 s, eta 927 s
+  SPX_Low 250/497 rows, 1072 s, eta 1059 s
+  SPX_High 250/497 rows, 1166 s, eta 1152 s
+  SSEC_High 300/479 rows, 1205 s, eta 719 s
+  SPX_Low 300/497 rows, 1268 s, eta 833 s
+  SPX_High 300/497 rows, 1385 s, eta 909 s
+  SSEC_High 350/479 rows, 1392 s, eta 513 s
+  SPX_Low 350/497 rows, 1468 s, eta 616 s
+  SSEC_High 400/479 rows, 1674 s, eta 331 s
+  SPX_High 350/497 rows, 1706 s, eta 717 s
+  SPX_Low 400/497 rows, 1774 s, eta 430 s
+  SSEC_High 450/479 rows, 1933 s, eta 125 s
+  SPX_High 400/497 rows, 2017 s, eta 489 s
+  SPX_Low 450/497 rows, 2098 s, eta 219 s
+  SPX_High 450/497 rows, 2306 s, eta 241 s
+  SSEC_Low 50/479 rows, 177 s, eta 1518 s
+  SSEC_Low 100/479 rows, 341 s, eta 1293 s
+SPX_High: C=16 K=10 alpha=100 | rows at lag0/lag1 before: 249/248 | even-block reproduction, max |diff| / price: 2.1e-08, 1.8e-08, 3.1e-08
+  PATCHED 497 rows in 2506 s | lag0/lag1 after: 497/0 | window recon max 0.163% | target recon max 0.164%
+SPX_Low: C=16 K=10 alpha=100 | rows at lag0/lag1 before: 249/248 | even-block reproduction, max |diff| / price: 2.1e-08, 1.8e-08, 3.1e-08
+  PATCHED 497 rows in 2319 s | lag0/lag1 after: 497/0 | window recon max 0.261% | target recon max 0.265%
+SSEC_High: C=16 K=10 alpha=100 | rows at lag0/lag1 before: 240/239 | even-block reproduction, max |diff| / price: 4.4e-08, 3.1e-08, 3.1e-08
+  PATCHED 479 rows in 2145 s | lag0/lag1 after: 479/0 | window recon max 0.345% | target recon max 0.323%
+  SSEC_Low 150/479 rows, 511 s, eta 1122 s
+  SSEC_Low 200/479 rows, 730 s, eta 1018 s
+  SSEC_Low 250/479 rows, 942 s, eta 863 s
+  SSEC_Low 300/479 rows, 1134 s, eta 676 s
+  SSEC_Low 350/479 rows, 1321 s, eta 487 s
+  SSEC_Low 400/479 rows, 1494 s, eta 295 s
+  SSEC_Low 450/479 rows, 1608 s, eta 104 s
+SSEC_Low: C=17 K=10 alpha=100 | rows at lag0/lag1 before: 240/239 | even-block reproduction, max |diff| / price: 4.5e-08, 3.1e-08, 3.1e-08
+  PATCHED 479 rows in 1660 s | lag0/lag1 after: 479/0 | window recon max 0.295% | target recon max 0.284%
+exit=0

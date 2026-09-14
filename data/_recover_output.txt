@@ -1,0 +1,59 @@
+====================================================================
+RECOVER TEST INDICES -- 8 file(s)
+====================================================================
+
+onetime_SPX_High
+    test rows 497, first index 2015, last index 2511
+    expected 497 contiguous from train_end=2015 -> 0 dropped
+    wrote test_index into the npz and the meta
+
+onetime_SPX_Low
+    test rows 497, first index 2015, last index 2511
+    expected 497 contiguous from train_end=2015 -> 0 dropped
+    wrote test_index into the npz and the meta
+
+onetime_SSEC_High
+    test rows 479, first index 1945, last index 2423
+    expected 479 contiguous from train_end=1945 -> 0 dropped
+    wrote test_index into the npz and the meta
+
+onetime_SSEC_Low
+    test rows 479, first index 1945, last index 2423
+    expected 479 contiguous from train_end=1945 -> 0 dropped
+    wrote test_index into the npz and the meta
+
+walkforward_SPX_High
+    test rows 497, first index 2016, last index 2512
+    expected 497 contiguous from train_end=2016 -> 0 dropped
+    wrote test_index into the npz and the meta
+
+walkforward_SPX_Low
+    test rows 497, first index 2016, last index 2512
+    expected 497 contiguous from train_end=2016 -> 0 dropped
+    wrote test_index into the npz and the meta
+
+walkforward_SSEC_High
+    test rows 479, first index 1946, last index 2424
+    expected 479 contiguous from train_end=1946 -> 0 dropped
+    wrote test_index into the npz and the meta
+
+walkforward_SSEC_Low
+    test rows 479, first index 1946, last index 2424
+    expected 479 contiguous from train_end=1946 -> 0 dropped
+    wrote test_index into the npz and the meta
+
+====================================================================
+PROTOCOL A vs B OVERLAP
+====================================================================
+SPX_High: A 497 rows [2015..2511], B 497 rows [2016..2512], common 496
+        only in A: 1, only in B: 1
+SPX_Low: A 497 rows [2015..2511], B 497 rows [2016..2512], common 496
+        only in A: 1, only in B: 1
+SSEC_High: A 479 rows [1945..2423], B 479 rows [1946..2424], common 478
+        only in A: 1, only in B: 1
+SSEC_Low: A 479 rows [1945..2423], B 479 rows [1946..2424], common 478
+        only in A: 1, only in B: 1
+
+====================================================================
+OK -- every file now carries test_index.
+====================================================================

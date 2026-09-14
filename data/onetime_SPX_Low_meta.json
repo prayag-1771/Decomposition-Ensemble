@@ -1,0 +1,20 @@
+{
+ "K": 10,
+ "alpha": 100.0,
+ "diag": {
+  "n_components": 16,
+  "recon_max_err": 5.476060659341783,
+  "recon_pct_of_range": 0.09619747740110203
+ },
+ "train_end": 2015,
+ "n": 2512,
+ "n_components": 16,
+ "n_train_windows": 1985,
+ "n_test_windows": 497,
+ "file_mb": 0.38,
+ "test_index_first": 2015,
+ "test_index_last": 2511,
+ "n_test_expected": 497,
+ "n_test_dropped": 0,
+ "dropped_indices": []
+}

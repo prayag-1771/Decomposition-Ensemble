@@ -1,0 +1,54 @@
+
+=== walkforward_SPX_High  (2513 observations) ===
+    one decomposition per test point, 20 realisations, stride 1
+      25/498 decompositions | 54.6 s elapsed | 2.19 s each | eta 1034 s
+      50/498 decompositions | 111.0 s elapsed | 2.22 s each | eta 994 s
+      75/498 decompositions | 168.7 s elapsed | 2.25 s each | eta 951 s
+      100/498 decompositions | 226.3 s elapsed | 2.26 s each | eta 901 s
+       125/498 decompositions | 285.0 s elapsed | 2.28 s each | eta 850 s       150/498 decompositions | 340.2 s elapsed | 2.27 s each | eta 789 s       175/498 decompositions | 394.7 s elapsed | 2.26 s each | eta 728 s       200/498 decompositions | 451.4 s elapsed | 2.26 s each | eta 673 s       225/498 decompositions | 506.8 s elapsed | 2.25 s each | eta 615 s       250/498 decompositions | 565.5 s elapsed | 2.26 s each | eta 561 s       275/498 decompositions | 624.8 s elapsed | 2.27 s each | eta 507 s       300/498 decompositions | 684.4 s elapsed | 2.28 s each | eta 452 s       325/498 decompositions | 741.8 s elapsed | 2.28 s each | eta 395 s       350/498 decompositions | 801.0 s elapsed | 2.29 s each | eta 339 s       375/498 decompositions | 860.4 s elapsed | 2.29 s each | eta 282 s       400/498 decompositions | 918.8 s elapsed | 2.30 s each | eta 225 s       425/498 decompositions | 977.1 s elapsed | 2.30 s each | eta 168 s       450/498 decompositions | 1037.2 s elapsed | 2.30 s each | eta 111 s       475/498 decompositions | 1098.6 s elapsed | 2.31 s each | eta 53 s   498 decompositions in 1170 s (2.3 s each)
+  components 16 | train 1986, test 497 | walkforward_SPX_High.npz (1.2 MB)
+
+=== walkforward_SPX_Low  (2513 observations) ===
+    one decomposition per test point, 20 realisations, stride 1      25/498 decompositions | 46.5 s elapsed | 1.86 s each | eta 880 s
+      50/498 decompositions | 91.9 s elapsed | 1.84 s each | eta 823 s
+      75/498 decompositions | 136.0 s elapsed | 1.81 s each | eta 767 s
+      100/498 decompositions | 190.3 s elapsed | 1.90 s each | eta 757 s
+      125/498 decompositions | 245.3 s elapsed | 1.96 s each | eta 732 s
+      150/498 decompositions | 298.4 s elapsed | 1.99 s each | eta 692 s
+      175/498 decompositions | 357.0 s elapsed | 2.04 s each | eta 659 s
+      200/498 decompositions | 408.5 s elapsed | 2.04 s each | eta 609 s
+      225/498 decompositions | 462.0 s elapsed | 2.05 s each | eta 561 s
+      250/498 decompositions | 517.2 s elapsed | 2.07 s each | eta 513 s
+       275/498 decompositions | 584.1 s elapsed | 2.12 s each | eta 474 s       300/498 decompositions | 637.8 s elapsed | 2.13 s each | eta 421 s       325/498 decompositions | 699.9 s elapsed | 2.15 s each | eta 373 s       350/498 decompositions | 754.9 s elapsed | 2.16 s each | eta 319 s       375/498 decompositions | 810.5 s elapsed | 2.16 s each | eta 266 s       400/498 decompositions | 875.6 s elapsed | 2.19 s each | eta 215 s       425/498 decompositions | 937.4 s elapsed | 2.21 s each | eta 161 s       450/498 decompositions | 997.1 s elapsed | 2.22 s each | eta 106 s       475/498 decompositions | 1053.8 s elapsed | 2.22 s each | eta 51 s   498 decompositions in 1106 s (2.2 s each)
+  components 16 | train 1986, test 497 | walkforward_SPX_Low.npz (1.2 MB)
+
+=== walkforward_SSEC_High  (2425 observations) ===
+    one decomposition per test point, 20 realisations, stride 1      25/480 decompositions | 39.4 s elapsed | 1.57 s each | eta 716 s
+      50/480 decompositions | 79.8 s elapsed | 1.60 s each | eta 686 s
+      75/480 decompositions | 121.0 s elapsed | 1.61 s each | eta 653 s
+      100/480 decompositions | 165.8 s elapsed | 1.66 s each | eta 630 s
+      125/480 decompositions | 214.1 s elapsed | 1.71 s each | eta 608 s
+      150/480 decompositions | 263.1 s elapsed | 1.75 s each | eta 579 s
+      175/480 decompositions | 309.0 s elapsed | 1.77 s each | eta 539 s
+      200/480 decompositions | 367.0 s elapsed | 1.84 s each | eta 514 s
+      225/480 decompositions | 422.3 s elapsed | 1.88 s each | eta 479 s
+      250/480 decompositions | 474.2 s elapsed | 1.90 s each | eta 436 s
+      275/480 decompositions | 519.6 s elapsed | 1.89 s each | eta 387 s
+      300/480 decompositions | 568.8 s elapsed | 1.90 s each | eta 341 s
+      325/480 decompositions | 618.6 s elapsed | 1.90 s each | eta 295 s
+      350/480 decompositions | 669.4 s elapsed | 1.91 s each | eta 249 s
+      375/480 decompositions | 719.0 s elapsed | 1.92 s each | eta 201 s
+      400/480 decompositions | 767.9 s elapsed | 1.92 s each | eta 154 s
+      425/480 decompositions | 823.1 s elapsed | 1.94 s each | eta 107 s
+      450/480 decompositions | 879.8 s elapsed | 1.96 s each | eta 59 s
+      475/480 decompositions | 932.1 s elapsed | 1.96 s each | eta 10 s
+  480 decompositions in 942 s (2.0 s each)
+  components 16 | train 1916, test 479 | walkforward_SSEC_High.npz (1.1 MB)
+
+=== walkforward_SSEC_Low  (2425 observations) ===
+    one decomposition per test point, 20 realisations, stride 1
+      25/480 decompositions | 41.4 s elapsed | 1.66 s each | eta 753 s
+      50/480 decompositions | 82.6 s elapsed | 1.65 s each | eta 711 s
+       75/480 decompositions | 129.3 s elapsed | 1.72 s each | eta 698 s       100/480 decompositions | 174.9 s elapsed | 1.75 s each | eta 665 s       125/480 decompositions | 222.0 s elapsed | 1.78 s each | eta 630 s       150/480 decompositions | 271.1 s elapsed | 1.81 s each | eta 596 s       175/480 decompositions | 325.4 s elapsed | 1.86 s each | eta 567 s       200/480 decompositions | 375.3 s elapsed | 1.88 s each | eta 525 s       225/480 decompositions | 421.4 s elapsed | 1.87 s each | eta 478 s       250/480 decompositions | 475.5 s elapsed | 1.90 s each | eta 437 s       275/480 decompositions | 530.2 s elapsed | 1.93 s each | eta 395 s       300/480 decompositions | 585.4 s elapsed | 1.95 s each | eta 351 s       325/480 decompositions | 633.2 s elapsed | 1.95 s each | eta 302 s       350/480 decompositions | 687.4 s elapsed | 1.96 s each | eta 255 s       375/480 decompositions | 744.0 s elapsed | 1.98 s each | eta 208 s       400/480 decompositions | 794.5 s elapsed | 1.99 s each | eta 159 s       425/480 decompositions | 852.8 s elapsed | 2.01 s each | eta 110 s       450/480 decompositions | 906.7 s elapsed | 2.01 s each | eta 60 s       475/480 decompositions | 957.6 s elapsed | 2.02 s each | eta 10 s
+  480 decompositions in 967 s (2.0 s each)
+  components 17 | train 1916, test 479 | walkforward_SSEC_Low.npz (1.2 MB)

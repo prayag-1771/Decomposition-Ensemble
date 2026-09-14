@@ -1,0 +1,153 @@
+smoke fixtures in G:\VSC_NEW\CONFERENCE\Decomposition_Forecasting\_smoke
+
+========================================================================
+TRAINING
+========================================================================
+  12 component models, 0 already saved; 5 GPU workers; logs in G:\VSC_NEW\CONFERENCE\Decomposition_Forecasting\_smoke\results\logs
+  [  0/12]    0.0 min elapsed, eta     ?   GPU 0%, 107 of 4096 MB
+  [ 12/12]    0.3 min elapsed, eta   0.0 min   GPU 0%, 107 of 4096 MB
+
+=== onetime_SPX_High | head=tcn | 3 components ===
+  RMSE     7.103 | MAE     5.713 | MAPE  0.1116% | R2  0.91140
+  wrote pred_onetime_SPX_High_tcn.npz
+
+=== onetime_SPX_High | head=trm | 3 components ===
+  RMSE     8.104 | MAE     6.646 | MAPE  0.1298% | R2  0.88466
+  wrote pred_onetime_SPX_High_trm.npz
+
+=== walkforward_SPX_High | head=tcn | 3 components ===
+  RMSE     6.735 | MAE     5.430 | MAPE  0.1061% | R2  0.91928
+  wrote pred_walkforward_SPX_High_tcn.npz
+
+=== walkforward_SPX_High | head=trm | 3 components ===
+  RMSE     8.018 | MAE     6.638 | MAPE  0.1296% | R2  0.88561
+  wrote pred_walkforward_SPX_High_trm.npz
+
+assembled 4 prediction file(s)
+
+--- evaluation: baselines ---
+
+=== SPX_High  (260 obs, 46 test) ===
+  baseline            RMSE       MAE     MAPE%        R2
+  Persistence        8.338     6.807    0.1329   0.86451
+  Drift              8.378     6.736    0.1315   0.86321
+  MA-5              15.183    12.311    0.2404   0.55070
+  MA-20             24.420    20.579    0.4015  -0.16230
+  EWMA-10           16.066    12.670    0.2473   0.49694
+  DM vs Persistence (positive = worse than persistence):
+    Drift        DM=  +0.415  p=0.68  ns
+    MA-5         DM=  +4.197  p=0.0001258  SIGNIFICANT
+    MA-20        DM=  +5.922  p=4.074e-07  SIGNIFICANT
+    EWMA-10      DM=  +4.056  p=0.0001958  SIGNIFICANT
+
+=== SPX_Low  (260 obs, 46 test) ===
+  baseline            RMSE       MAE     MAPE%        R2
+  Persistence        8.077     6.827    0.1338   0.94456
+  Drift              8.096     6.876    0.1348   0.94430
+  MA-5              17.384    13.973    0.2740   0.74321
+  MA-20             37.320    32.600    0.6395  -0.18355
+  EWMA-10           22.061    19.390    0.3804   0.58643
+  DM vs Persistence (positive = worse than persistence):
+    Drift        DM=  +0.226  p=0.8222  ns
+    MA-5         DM=  +4.972  p=1.01e-05  SIGNIFICANT
+    MA-20        DM=  +7.302  p=3.64e-09  SIGNIFICANT
+    EWMA-10      DM=  +6.232  p=1.41e-07  SIGNIFICANT
+
+=== SSEC_High  (260 obs, 46 test) ===
+  baseline            RMSE       MAE     MAPE%        R2
+  Persistence        7.043     5.646    0.1102   0.94820
+  Drift              7.064     5.648    0.1102   0.94789
+  MA-5              15.339    12.561    0.2452   0.75430
+  MA-20             32.318    28.800    0.5620  -0.09066
+  EWMA-10           18.972    16.706    0.3261   0.62413
+  DM vs Persistence (positive = worse than persistence):
+    Drift        DM=  +0.216  p=0.8302  ns
+    MA-5         DM=  +4.708  p=2.417e-05  SIGNIFICANT
+    MA-20        DM=  +8.399  p=9.107e-11  SIGNIFICANT
+    EWMA-10      DM=  +6.268  p=1.249e-07  SIGNIFICANT
+
+=== SSEC_Low  (260 obs, 46 test) ===
+  baseline            RMSE       MAE     MAPE%        R2
+  Persistence        7.167     6.163    0.1217   0.91938
+  Drift              7.187     6.177    0.1219   0.91893
+  MA-5              15.492    13.210    0.2609   0.62332
+  MA-20             29.267    25.218    0.4978  -0.34440
+  EWMA-10           18.038    15.165    0.2994   0.48934
+  DM vs Persistence (positive = worse than persistence):
+    Drift        DM=  +0.367  p=0.7154  ns
+    MA-5         DM=  +5.536  p=1.515e-06  SIGNIFICANT
+    MA-20        DM=  +6.934  p=1.278e-08  SIGNIFICANT
+    EWMA-10      DM=  +5.353  p=2.818e-06  SIGNIFICANT
+
+saved ../results/baselines.json
+
+--- evaluation: compare ---
+
+=== onetime_SPX_High_tcn ===
+  model    RMSE     7.103  MAE     5.713  MAPE  0.1116%  R2  0.91140
+  vs Persistence  RMSE     8.657 | DM   -4.017 p=0.0002603  model better, SIGNIFICANT
+  vs Drift        RMSE     8.682 | DM   -3.896 p=0.0003733  model better, SIGNIFICANT
+  vs MA-5         RMSE    15.827 | DM   -4.458 p=6.803e-05  model better, SIGNIFICANT
+  vs MA-20        RMSE    25.760 | DM   -6.270 p=2.183e-07  model better, SIGNIFICANT
+  vs EWMA-10      RMSE    17.211 | DM   -4.534 p=5.377e-05  model better, SIGNIFICANT
+
+=== onetime_SPX_High_trm ===
+  model    RMSE     8.104  MAE     6.646  MAPE  0.1298%  R2  0.88466
+  vs Persistence  RMSE     8.657 | DM   -2.871 p=0.006589  model better, SIGNIFICANT
+  vs Drift        RMSE     8.682 | DM   -2.487 p=0.01726  model better, SIGNIFICANT
+  vs MA-5         RMSE    15.827 | DM   -4.428 p=7.459e-05  model better, SIGNIFICANT
+  vs MA-20        RMSE    25.760 | DM   -6.159 p=3.111e-07  model better, SIGNIFICANT
+  vs EWMA-10      RMSE    17.211 | DM   -4.450 p=6.983e-05  model better, SIGNIFICANT
+
+=== walkforward_SPX_High_tcn ===
+  model    RMSE     6.735  MAE     5.430  MAPE  0.1061%  R2  0.91928
+  vs Persistence  RMSE     8.458 | DM   -4.478 p=6.401e-05  model better, SIGNIFICANT
+  vs Drift        RMSE     8.503 | DM   -4.401 p=8.122e-05  model better, SIGNIFICANT
+  vs MA-5         RMSE    16.080 | DM   -4.849 p=2.013e-05  model better, SIGNIFICANT
+  vs MA-20        RMSE    25.742 | DM   -6.355 p=1.665e-07  model better, SIGNIFICANT
+  vs EWMA-10      RMSE    17.499 | DM   -4.862 p=1.931e-05  model better, SIGNIFICANT
+
+=== walkforward_SPX_High_trm ===
+  model    RMSE     8.018  MAE     6.638  MAPE  0.1296%  R2  0.88561
+  vs Persistence  RMSE     8.458 | DM   -2.472 p=0.01791  model better, SIGNIFICANT
+  vs Drift        RMSE     8.503 | DM   -1.928 p=0.06111  model better, ns
+  vs MA-5         RMSE    16.080 | DM   -4.698 p=3.228e-05  model better, SIGNIFICANT
+  vs MA-20        RMSE    25.742 | DM   -6.182 p=2.893e-07  model better, SIGNIFICANT
+  vs EWMA-10      RMSE    17.499 | DM   -4.671 p=3.511e-05  model better, SIGNIFICANT
+
+saved ../results/comparison.json
+
+=== leakage inflation (one-time vs walk-forward, common dates) ===
+  SPX_High_tcn             39 common dates | one-time RMSE    6.820 -> walk-forward    6.793  (x1.00)
+  SPX_High_trm             39 common dates | one-time RMSE    7.936 -> walk-forward    8.097  (x1.02)
+  saved ../results/leakage_inflation.json
+
+--- evaluation: figures ---
+saved ../results/fig_baselines.png
+saved ../results/fig_models.png
+
+========================================================================
+RESULTS
+========================================================================
+  model                                    RMSE      MAPE%
+  onetime_SPX_High_tcn                    7.103     0.1116
+  onetime_SPX_High_trm                    8.104     0.1298
+  walkforward_SPX_High_tcn                6.735     0.1061
+  walkforward_SPX_High_trm                8.018     0.1296
+
+  leakage inflation (walk-forward RMSE / one-time RMSE):
+    SPX_High_tcn                 x1.00   on 39 common dates
+    SPX_High_trm                 x1.02   on 39 common dates
+
+========================================================================
+SMOKE VERDICT
+========================================================================
+  onetime_SPX_High_tcn         MAPE    0.112%   ok
+  onetime_SPX_High_trm         MAPE    0.130%   ok
+  walkforward_SPX_High_tcn     MAPE    0.106%   ok
+  walkforward_SPX_High_trm     MAPE    0.130%   ok
+  SPX_High_tcn                 39 common dates (expect 39)   ok
+  SPX_High_trm                 39 common dates (expect 39)   ok
+  test_index in every prediction file: yes
+
+  SMOKE PASS

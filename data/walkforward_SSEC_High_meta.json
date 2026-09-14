@@ -1,0 +1,38 @@
+{
+ "K": 10,
+ "alpha": 100.0,
+ "diag": {
+  "n_components": 16,
+  "recon_max_err": 2.7873249565600418,
+  "recon_pct_of_range": 0.22420423123436192
+ },
+ "train_end": 1946,
+ "n": 2425,
+ "n_decompositions": 480,
+ "seconds": 942.0084578990936,
+ "stride": 1,
+ "dropped_indices": [],
+ "n_components": 16,
+ "n_train_windows": 1916,
+ "n_test_windows": 479,
+ "file_mb": 1.15,
+ "test_index_first": 1946,
+ "test_index_last": 2424,
+ "n_test_expected": 479,
+ "n_test_dropped": 0,
+ "parity_fix": {
+  "date": "2026-09-14 14:22",
+  "mode": "odd",
+  "num_realizations": 20,
+  "rows_recomputed": 479,
+  "seconds": 2144.8,
+  "lag0_rows_before": 240,
+  "lag1_rows_before": 239,
+  "lag0_rows_after": 479,
+  "lag1_rows_after": 0,
+  "window_recon_max_pct": 0.3454618331110544,
+  "target_recon_max_pct": 0.3231561415713445,
+  "even_block_reproduction_max_rel_diff": 4.379448939848872e-08,
+  "note": "history slice series[t % 2 : t] so the window always ends at t-1"
+ }
+}

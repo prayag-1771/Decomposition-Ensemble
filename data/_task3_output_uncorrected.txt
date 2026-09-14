@@ -1,0 +1,3 @@
+
+=== walkforward_SPX_High  (2513 observations) ===
+    one decomposition per test point, 20 realisations, stride 1

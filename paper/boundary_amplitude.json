@@ -1,0 +1,22 @@
+{
+ "SPX_High": {
+  "hf_std_onetime": 30.467819213867188,
+  "hf_std_walkforward": 80.64435577392578,
+  "ratio": 2.646869971488512
+ },
+ "SPX_Low": {
+  "hf_std_onetime": 34.11528778076172,
+  "hf_std_walkforward": 88.38804626464844,
+  "ratio": 2.590863276096771
+ },
+ "SSEC_High": {
+  "hf_std_onetime": 21.486982345581055,
+  "hf_std_walkforward": 70.86421966552734,
+  "ratio": 3.2980070689219447
+ },
+ "SSEC_Low": {
+  "hf_std_onetime": 21.84879493713379,
+  "hf_std_walkforward": 54.17717361450195,
+  "ratio": 2.4796412694790537
+ }
+}

@@ -1,0 +1,1384 @@
+{
+ "10.1016/j.energy.2024.133513": {
+  "doi": "10.1016/j.energy.2024.133513",
+  "title": "Implementing ultra-short-term wind power forecasting without information leakage through cascade decomposition and attention mechanism",
+  "authors": [
+   "Jianguo Wang",
+   "Weiru Yuan",
+   "Shude Zhang",
+   "Shun Cheng",
+   "Lincheng Han"
+  ],
+  "venue": "Energy",
+  "year": 2024,
+  "online": [
+   null
+  ],
+  "volume": "312",
+  "issue": null,
+  "page": "133513",
+  "article": "133513",
+  "type": "journal-article"
+ },
+ "10.1007/s10614-025-11148-z": {
+  "doi": "10.1007/s10614-025-11148-z",
+  "title": "Intelligent Stock Price Forecasting Integrating Adaptive VMD and Feature Selection with BiLSTM",
+  "authors": [
+   "Jing-Wen Wang",
+   "Xing-Rui Wang"
+  ],
+  "venue": "Computational Economics",
+  "year": 2026,
+  "online": [
+   2025,
+   11,
+   4
+  ],
+  "volume": "68",
+  "issue": "4",
+  "page": "3119-3153",
+  "article": null,
+  "type": "journal-article"
+ },
+ "10.2139/ssrn.3997405": {
+  "doi": "10.2139/ssrn.3997405",
+  "title": "Unintended Look-Ahead Bias in Out-of-Sample Forecasting",
+  "authors": [
+   "James Yae"
+  ],
+  "venue": "SSRN Electronic Journal",
+  "year": 2021,
+  "online": [
+   null
+  ],
+  "volume": null,
+  "issue": null,
+  "page": null,
+  "article": null,
+  "type": "journal-article"
+ },
+ "10.1016/j.energy.2016.06.075": {
+  "doi": "10.1016/j.energy.2016.06.075",
+  "title": "On practical challenges of decomposition-based hybrid forecasting algorithms for wind speed and solar irradiation",
+  "authors": [
+   "Yamin Wang",
+   "Lei Wu"
+  ],
+  "venue": "Energy",
+  "year": 2016,
+  "online": [
+   null
+  ],
+  "volume": "112",
+  "issue": null,
+  "page": "208-220",
+  "article": null,
+  "type": "journal-article"
+ },
+ "10.1016/j.apm.2025.116376": {
+  "doi": "10.1016/j.apm.2025.116376",
+  "title": "Stop unrealistic data preprocessing in wind speed forecasting: approaches and discussions on preventing future data leakage",
+  "authors": [
+   "Junheng Pang",
+   "Sheng Dong"
+  ],
+  "venue": "Applied Mathematical Modelling",
+  "year": 2026,
+  "online": [
+   null
+  ],
+  "volume": "150",
+  "issue": null,
+  "page": "116376",
+  "article": "116376",
+  "type": "journal-article"
+ },
+ "10.1016/j.apenergy.2018.10.080": {
+  "doi": "10.1016/j.apenergy.2018.10.080",
+  "title": "A review and discussion of decomposition-based hybrid models for wind energy forecasting applications",
+  "authors": [
+   "Zheng Qian",
+   "Yan Pei",
+   "Hamidreza Zareipour",
+   "Niya Chen"
+  ],
+  "venue": "Applied Energy",
+  "year": 2019,
+  "online": [
+   null
+  ],
+  "volume": "235",
+  "issue": null,
+  "page": "939-953",
+  "article": null,
+  "type": "journal-article"
+ },
+ "10.2307/2325486": {
+  "doi": "10.2307/2325486",
+  "title": "Efficient Capital Markets: A Review of Theory and Empirical Work",
+  "authors": [
+   "Eugene F. Fama"
+  ],
+  "venue": "The Journal of Finance",
+  "year": 1970,
+  "online": [
+   null
+  ],
+  "volume": "25",
+  "issue": "2",
+  "page": "383",
+  "article": null,
+  "type": "journal-article",
+  "abstract": "Eugene F. Fama, Efficient Capital Markets: A Review of Theory and Empirical Work, The Journal of Finance, Vol. 25, No. 2, Papers and Proceedings of the Twenty-Eighth Annual Meeting of the American Finance Association New York, N.Y. December, 28-30, 1969 (May, 1970), pp. 383-417"
+ },
+ "10.1111/j.1540-6261.1970.tb00518.x": {
+  "doi": "10.1111/j.1540-6261.1970.tb00518.x",
+  "title": "EFFICIENT CAPITAL MARKETS: A REVIEW OF THEORY AND EMPIRICAL WORK*",
+  "authors": [
+   "Burton G. Malkiel",
+   "Eugene F. Fama"
+  ],
+  "venue": "The Journal of Finance",
+  "year": 1970,
+  "online": [
+   2012,
+   4,
+   30
+  ],
+  "volume": "25",
+  "issue": "2",
+  "page": "383-417",
+  "article": null,
+  "type": "journal-article"
+ },
+ "10.3390/pr13072046": {
+  "doi": "10.3390/pr13072046",
+  "title": "Multi-Scale Decomposition and Hybrid Deep Learning CEEMDAN-VMD-CNN-BiLSTM Approach for Wind Power Forecasting",
+  "authors": [
+   "Zhanhu Ning",
+   "Guoping Chen",
+   "Jiwu Wang",
+   "Wei Hu"
+  ],
+  "venue": "Processes",
+  "year": 2025,
+  "online": [
+   2025,
+   6,
+   27
+  ],
+  "volume": "13",
+  "issue": "7",
+  "page": "2046",
+  "article": null,
+  "type": "journal-article",
+  "abstract": "To address the challenges posed by the volatility and uncertainty of wind power generation, this study presents a hybrid model combining complete ensemble empirical mode decomposition with adaptive noise (CEEMDAN), variational mode decomposition (VMD), convolutional neural network (CNN), and bidirectional long short-term memory (BiLSTM) for wind power forecasting. The model first employs CEEMDAN to decompose the original wind power sequence into multiple scales, obtaining several intrinsic mode functions (IMFs). These IMFs are then classified using sample entropy and k-means clustering, with high-frequency IMFs further decomposed using VMD. Next, the decomposed signals are processed by a CNN to extract local spatiotemporal features, followed by a BiLSTM network that captures bidirectional temporal dependencies. Experimental results demonstrate the superiority of the proposed model over ARIMA, LSTM, CEEMDAN-LSTM, and VMD-CNN-LSTM models. The proposed model achieves a mean squared error (MSE) of 67.145, a root mean squared error (RMSE) of 8.192, a mean absolute error (MAE) of 6.020, and a coefficient of determination (R2) of 0.9840, indicating significant improvements in forecasting accuracy and reliability. This study offers a new solution for enhancing wind power forecasting precision, which is crucial for efficient grid operation and energy management."
+ },
+ "10.3390/pr13030819": {
+  "doi": "10.3390/pr13030819",
+  "title": "LSTM Model Combined with Rolling Empirical Mode Decomposition and Sample Entropy Reconstruction for Short-Term Wind Speed Forecasting",
+  "authors": [
+   "Sen Yao",
+   "Hong Zhu",
+   "Xin Zhou",
+   "Tingxin Peng",
+   "Jingrui Zhang"
+  ],
+  "venue": "Processes",
+  "year": 2025,
+  "online": [
+   2025,
+   3,
+   11
+  ],
+  "volume": "13",
+  "issue": "3",
+  "page": "819",
+  "article": null,
+  "type": "journal-article",
+  "abstract": "This research introduces a new hybrid forecasting approach based on a rolling decomposition–merging–prediction framework integrating Empirical Mode Decomposition (EMD), sample entropy, and Long Short-Term Memory (LSTM) to further enhance the accuracy of wind speed predictions. To avoid the information leakage issue caused by decomposing wind speed data, a rolling EMD method is applied to the framework to ensure that the data points to be predicted are excluded from the decomposition process. The input speed data of the prediction model are then decomposed into a series of Intrinsic Mode Functions (IMFs) and a residual component, capturing the local variation characteristics of the wind speed data. Next, the sample entropy method is employed to calculate the entropy values of these components, which are then reclassified and aggregated into three components based on their calculated entropy values, corresponding to high, medium, and low frequencies. The three reconstructed components are then employed as input features in an LSTM model for wind speed prediction. To demonstrate the effectiveness of the proposed model, experiments using three different datasets were conducted with wind speed data collected from a wind farm. The statistical experimental results indicate that the proposed EMD-LSTM achieves improvements in metrics of MAE, RMSE, and MAPE by at least 3.64%, 7.25%, and 5.02%, respectively, compared to other methods across the evaluated test datasets. Furthermore, the Wilcoxon test results provide additional evidence, confirming that the EMD-LSTM model exhibits a statistically significant advantage in prediction performance over the ARIMA, GRU, and SVM models."
+ },
+ "10.3390/math13162622": {
+  "doi": "10.3390/math13162622",
+  "title": "A Hybrid Model of Multi-Head Attention Enhanced BiLSTM, ARIMA, and XGBoost for Stock Price Forecasting Based on Wavelet Denoising",
+  "authors": [
+   "Qingliang Zhao",
+   "Hongding Li",
+   "Xiao Liu",
+   "Yiduo Wang"
+  ],
+  "venue": "Mathematics",
+  "year": 2025,
+  "online": [
+   2025,
+   8,
+   15
+  ],
+  "volume": "13",
+  "issue": "16",
+  "page": "2622",
+  "article": null,
+  "type": "journal-article",
+  "abstract": "The stock market plays a crucial role in the financial system, with its price movements reflecting macroeconomic trends. Due to the influence of multifaceted factors such as policy shifts and corporate performance, stock prices exhibit nonlinearity, high noise, and non-stationarity, making them difficult to model accurately using a single approach. To enhance forecasting accuracy, this study proposes a hybrid forecasting framework that integrates wavelet denoising, multi-head attention-based BiLSTM, ARIMA, and XGBoost. Wavelet transform is first employed to enhance data quality. The multi-head attention BiLSTM captures nonlinear temporal dependencies, ARIMA models linear trends in residuals, and XGBoost improves the recognition of complex patterns. The final prediction is obtained by combining the outputs of all models through an inverse-error weighted ensemble strategy. Using the CSI 300 Index as an empirical case, we construct a multidimensional feature set including both market and technical indicators. Experimental results show that the proposed model clearly outperforms individual models in terms of RMSE, MAE, MAPE, and R2. Ablation studies confirm the importance of each module in performance enhancement. The model also performs well on individual stock data (e.g., Fuyao Glass), demonstrating promising generalization ability. This research provides an effective solution for improving stock price forecasting accuracy and offers valuable insights for investment decision-making and market regulation."
+ },
+ "10.3390/electronics14132654": {
+  "doi": "10.3390/electronics14132654",
+  "title": "Resource-Constrained On-Chip AI Classifier for Beat-by-Beat Real-Time Arrhythmia Detection with an ECG Wearable System",
+  "authors": [
+   "Mahfuzur Rahman",
+   "Bashir I. Morshed"
+  ],
+  "venue": "Electronics",
+  "year": 2025,
+  "online": [
+   2025,
+   6,
+   30
+  ],
+  "volume": "14",
+  "issue": "13",
+  "page": "2654",
+  "article": null,
+  "type": "journal-article",
+  "abstract": "The electrocardiogram (ECG) is one of the vital physiological signals for human health. Lightweight neural network (NN) models integrated into a low-resource wearable device can benefit the user with a low-power, real-time edge computing system for continuous and daily monitoring. This work introduces a novel edge-computing wearable device for real-time beat-by-beat ECG arrhythmia classification. The proposed wearable integrates the light AI model into a 32-bit ARM® Cortex™-based custom printed circuit board (PCB). The work analyzes the performance of artificial neural network (ANN), convolutional neural network (CNN), and long short-term memory (LSTM) models for real-time wearable implementation. The wearable is capable of real-time QRS detection and feature extraction from raw ECG data. The QRS detection algorithm offers high reliability with a 99.5% F1 score and R-peak position error (RPE) of 6.3 ms for R-peak-to-R-peak intervals. The proposed method implements a combination of top time series, spectral, and signal-specific features for model development. Lightweight, pretrained models are deployed on the custom wearable and evaluated in real time using mock data from the MIT-BIH dataset. We propose an LSTM model that provides efficient performance over accuracy, inference latency, and memory consumption. The proposed model offers 98.1% accuracy, with 98.2% sensitivity and 99.5% specificity while testing in real time on the wearable. Real-time inferencing takes 20 ms, and the device consumes as low as 5.9 mA of power. The proposed method achieves efficient performance in real-time testing, which indicates the wearable can be effectively used for real-time continuous arrhythmia detection."
+ },
+ "10.3390/app152011169": {
+  "doi": "10.3390/app152011169",
+  "title": "Application of the VMD-CNN-BiLSTM-Attention Model in Daily Price Forecasting of NYMEX Natural Gas Futures",
+  "authors": [
+   "Qiuli Jiang",
+   "Zebei Lin",
+   "Jiao Hu",
+   "Xuhui Liu"
+  ],
+  "venue": "Applied Sciences",
+  "year": 2025,
+  "online": [
+   2025,
+   10,
+   18
+  ],
+  "volume": "15",
+  "issue": "20",
+  "page": "11169",
+  "article": null,
+  "type": "journal-article",
+  "abstract": "As a core clean energy source in the global energy transition, natural gas price fluctuations directly affect the energy market supply demand balance, industrial chain cost control, etc. Thus, accurate natural gas price prediction is crucial for market participants’ decision making and policymakers’ regulation. To tackle the issue that traditional single models fail to capture data patterns of the New York Mercantile Exchange (NYMEX) natural gas futures daily prices—due to their nonlinearity, high volatility, and multi-scale features—this study proposes a hybrid model: VMD-CNN-BiLSTM-attention, integrating Variational Mode Decomposition (VMD), Convolutional Neural Network (CNN), Bidirectional Long Short-Term Memory (BiLSTM), and an attention mechanism. A one-step to four-step forecasting comparison was conducted using NYMEX natural gas futures daily closing prices, with the proposed model vs. CNN-BiLSTM-Attention and Autoregressive Integrated Moving Average (ARIMA) models. The empirical results show that the VMD-CNN-BiLSTM-attention model outperforms the comparison models in terms of Mean Absolute Percentage Error (MAPE), Mean Absolute Error (MAE), etc. Specifically, its four-step forecast MAPE stays ≤3.5% and R2 ≥ 98%, demonstrating a stronger ability to capture complex price fluctuations, better accuracy, and stability than traditional single models and deep learning models without VMD, and provides reliable technical support for short-to-medium-term natural gas price prediction."
+ },
+ "10.1016/j.measurement.2025.116969": {
+  "doi": "10.1016/j.measurement.2025.116969",
+  "title": "Multiplierless QRS detection algorithm for mobile ECG monitoring based on approximate computing",
+  "authors": [
+   "Wojciech Reklewski",
+   "Katarzyna Heryan",
+   "Piotr Augustyniak",
+   "Marek Miśkowicz"
+  ],
+  "venue": "Measurement",
+  "year": 2025,
+  "online": [
+   null
+  ],
+  "volume": "249",
+  "issue": null,
+  "page": "116969",
+  "article": "116969",
+  "type": "journal-article",
+  "abstract": "• The article proposes a multiplierless QRS complex detector for mobile ECG monitoring. • Multiplierless arithmetic is enabled by approximation of real numbers by sum of powers-of-two. • Multiplications or divisions by powers-of-two is executed simply by bit-shift operations. • Multiplierless QRS detector achieves Se = 99.66 %, PPV = 99.52 % and DER = 0.82 % • Methodology to adopt multiplierless arithmetic can be applied to other QRS detectors. The QRS detectors for wearable devices should be energy-efficient, even at the price of some loss of detection accuracy. This paper presents a low-complexity multiplierless QRS complex detection algorithm for mobile long-term ECG monitoring based on arithmetic that approximates real numbers by a sum of power-of-two components. The proposed hardware-friendly computation technique involves only additions, subtractions, and multiplications or divisions by powers-of-two, executed simply by bit-shift operations. The performance of the algorithm, called Multiplierless Dual-Path Preprocessing (ML-DPP) QRS detector, on the MIT-BIH Database is as follows: Se = 99.66 %, PPV = 99.52 %, F 1 = 99.59 %, ACC = 99.18 %, and DER = 0.82 %. The deterioration in detection accuracy of the multiplierless version is negligible compared to the optimal algorithm settings with real numbers, while computational complexity is substantially reduced. The proposed methodology to support the multiplication-free arithmetic can be applied to other QRS detection algorithms."
+ },
+ "10.1016/j.egyr.2022.07.005": {
+  "doi": "10.1016/j.egyr.2022.07.005",
+  "title": "Decomposition-based wind power forecasting models and their boundary issue: An in-depth review and comprehensive discussion on potential solutions",
+  "authors": [
+   "Yinsong Chen",
+   "Samson Yu",
+   "Shama Islam",
+   "Chee Peng Lim",
+   "S.M. Muyeen"
+  ],
+  "venue": "Energy Reports",
+  "year": 2022,
+  "online": [
+   null
+  ],
+  "volume": "8",
+  "issue": null,
+  "page": "8805-8820",
+  "article": null,
+  "type": "journal-article",
+  "abstract": "Recently, numerous forecasting models have been reported in the wind power forecasting field, aiming for reliable integration of renewable energy into the electric grid. Decomposition-based hybrid models have gained significant popularity in recent years. These methods generally disaggregate the original time series data into sub-time-series with better stationarity, and then the target data is predicted based on the sub-series. However, existing studies usually utilize future data during the decomposition process and therefore cannot be appropriately employed for real-world applications, due to the inaccessibility of future data. This problem is usually known as the boundary issue. By ignoring the boundary issue during decomposition, the developed decomposition-based forecasting models will inevitably lead to unrealistically high performance than what is practically achievable. These impractical predictions would compromise the scheduling and control decisions made based on them. In light of this, this study provides an in-depth review of decomposition-based models for wind power forecasting, as well as the existing solutions for resolving the boundary issue. We first categorize decomposition-based models with the consideration of the boundary issue, wherein the treatment of the boundary issue varies over different hybrid model architectures (i.e., direct approach and multi-component approach) and decomposition techniques (i.e., empirical mode decomposition, variational mode decomposition, wavelet transform, singular spectrum analysis and hybrid decomposition). Then, we systematically summarize commonly available boundary issue solutions into three categories, namely algorithm-based solutions, sampling-strategy-based solutions and iteration-based solutions. We also evaluate the strengths and limitations of the existing boundary issue solutions and discuss their applicability to different classification of decomposition-based models for wind power forecasting. This study will provide useful references for a wide range of future studies for developing accurate and practical wind power forecasting models."
+ },
+ "10.1016/j.compeleceng.2024.109528": {
+  "doi": "10.1016/j.compeleceng.2024.109528",
+  "title": "Enhanced QRS detection and ECG compression using adaptive thresholding: A real-time approach for improved monitoring and diagnosis",
+  "authors": [
+   "Zhilvan Habibi",
+   "Karvan Karimizadeh",
+   "Arez Nosratpour",
+   "Iraj Alipourfard"
+  ],
+  "venue": "Computers and Electrical Engineering",
+  "year": 2024,
+  "online": [
+   null
+  ],
+  "volume": "119",
+  "issue": null,
+  "page": "109528",
+  "article": "109528",
+  "type": "journal-article"
+ },
+ "10.1007/s10618-025-01120-8": {
+  "doi": "10.1007/s10618-025-01120-8",
+  "title": "Unpacking the trend: decomposition as a catalyst to enhance time series forecasting models",
+  "authors": [
+   "Tim Kreuzer",
+   "Jelena Zdravkovic",
+   "Panagiotis Papapetrou"
+  ],
+  "venue": "Data Mining and Knowledge Discovery",
+  "year": 2025,
+  "online": [
+   2025,
+   7,
+   21
+  ],
+  "volume": "39",
+  "issue": "5",
+  "page": null,
+  "article": "54",
+  "type": "journal-article",
+  "abstract": "Abstract For the time series forecasting task, several state-of-the-art algorithms employ moving-average decomposition for improved accuracy. However, the potential of decomposition techniques to enhance time series forecasting methods has not been explored in detail. In this work, we comprehensively investigate the use of decomposition methods for the forecasting task, comparing different decomposition techniques and their effect on forecasting accuracy, as well as the possibility of providing model-agnostic interpretability. We rework recent forecasting models to be compatible with any decomposition technique and experimentally evaluate their effectiveness in different forecasting setups. We further propose and assess a model-agnostic framework using decomposition for interpretability. Our results show that decomposition can improve forecasting accuracy, especially for the proposed decomposition-adapted models. Additionally, we demonstrate that the architectural choices of existing forecasting models can be improved by using different decomposition blocks internally. We found that decomposition techniques must be configured with a low number of components to provide model-agnostic interpretability. Our work concludes that decomposition can enhance time series forecasting algorithms, improving both their performance and interpretability."
+ },
+ "10.1016/s0169-2070(00)00065-0": {
+  "doi": "10.1016/s0169-2070(00)00065-0",
+  "title": "Out-of-sample tests of forecasting accuracy: an analysis and review",
+  "authors": [
+   "Leonard J. Tashman"
+  ],
+  "venue": "International Journal of Forecasting",
+  "year": 2000,
+  "online": [
+   null
+  ],
+  "volume": "16",
+  "issue": "4",
+  "page": "437-450",
+  "article": null,
+  "type": "journal-article"
+ },
+ "10.1016/j.ins.2011.12.028": {
+  "doi": "10.1016/j.ins.2011.12.028",
+  "title": "On the use of cross-validation for time series predictor evaluation",
+  "authors": [
+   "Christoph Bergmeir",
+   "José M. Benítez"
+  ],
+  "venue": "Information Sciences",
+  "year": 2012,
+  "online": [
+   null
+  ],
+  "volume": "191",
+  "issue": null,
+  "page": "192-213",
+  "article": null,
+  "type": "journal-article"
+ },
+ "10.1016/j.ijforecast.2006.03.001": {
+  "doi": "10.1016/j.ijforecast.2006.03.001",
+  "title": "Another look at measures of forecast accuracy",
+  "authors": [
+   "Rob J. Hyndman",
+   "Anne B. Koehler"
+  ],
+  "venue": "International Journal of Forecasting",
+  "year": 2006,
+  "online": [
+   null
+  ],
+  "volume": "22",
+  "issue": "4",
+  "page": "679-688",
+  "article": null,
+  "type": "journal-article"
+ },
+ "10.61173/mvydq530": {
+  "doi": "10.61173/mvydq530",
+  "title": "Analysis of Common Window Function Selection Strategies for FIR Filter Design Using Window Function Methods",
+  "authors": [
+   "Junze Xie"
+  ],
+  "venue": "Science and Technology of Engineering, Chemistry and Environmental Protection",
+  "year": 2026,
+  "online": [
+   2026,
+   2,
+   28
+  ],
+  "volume": null,
+  "issue": null,
+  "page": null,
+  "article": null,
+  "type": "journal-article",
+  "abstract": "Digital Signal Processing (DSP) technology, as a crucial discipline in communications and computer processing, has found extensive application across various fields. As a core and fundamental component in the field of digital signal processing technology, the primary function of a filter lies in the effective processing of signals. Based on the characteristics of the unit impulse response over time, filters can be categorized into two main types: finite impulse response (FIR) digital filters and infinite impulse response (IIR) digital filters. This paper first introduces the principles of FIR filters, then explains the window function method for filter design. It subsequently focuses on analyzing the characteristics and advantages/disadvantages of the five commonly used window functions in FIR filter design. By doing so, it identifies the practical applications of each window function and derives selection strategies for choosing the appropriate window function when designing FIR filters under different conditions. This approach better addresses challenges encountered in the practical design of FIR filters. At the same time, this paper looks forward to future optimizations and improvements."
+ },
+ "10.1609/aaai.v37i9.26317": {
+  "doi": "10.1609/aaai.v37i9.26317",
+  "title": "Are Transformers Effective for Time Series Forecasting?",
+  "authors": [
+   "Ailing Zeng",
+   "Muxi Chen",
+   "Lei Zhang",
+   "Qiang Xu"
+  ],
+  "venue": "Proceedings of the AAAI Conference on Artificial Intelligence",
+  "year": 2023,
+  "online": [
+   2023,
+   6,
+   26
+  ],
+  "volume": "37",
+  "issue": "9",
+  "page": "11121-11128",
+  "article": null,
+  "type": "journal-article",
+  "abstract": "Recently, there has been a surge of Transformer-based solutions for the long-term time series forecasting (LTSF) task. Despite the growing performance over the past few years, we question the validity of this line of research in this work. Specifically, Transformers is arguably the most successful solution to extract the semantic correlations among the elements in a long sequence. However, in time series modeling, we are to extract the temporal relations in an ordered set of continuous points. While employing positional encoding and using tokens to embed sub-series in Transformers facilitate preserving some ordering information, the nature of the permutation-invariant self-attention mechanism inevitably results in temporal information loss. To validate our claim, we introduce a set of embarrassingly simple one-layer linear models named LTSF-Linear for comparison. Experimental results on nine real-life datasets show that LTSF-Linear surprisingly outperforms existing sophisticated Transformer-based LTSF models in all cases, and often by a large margin. Moreover, we conduct comprehensive empirical studies to explore the impacts of various design elements of LTSF models on their temporal relation extraction capability. We hope this surprising finding opens up new research directions for the LTSF task. We also advocate revisiting the validity of Transformer-based solutions for other time series analysis tasks (e.g., anomaly detection) in the future."
+ },
+ "10.1162/neco.1997.9.8.1735": {
+  "doi": "10.1162/neco.1997.9.8.1735",
+  "title": "Long Short-Term Memory",
+  "authors": [
+   "Sepp Hochreiter",
+   "Jürgen Schmidhuber"
+  ],
+  "venue": "Neural Computation",
+  "year": 1997,
+  "online": [
+   null
+  ],
+  "volume": "9",
+  "issue": "8",
+  "page": "1735-1780",
+  "article": null,
+  "type": "journal-article",
+  "abstract": "Learning to store information over extended time intervals by recurrent backpropagation takes a very long time, mostly because of insufficient, decaying error backflow. We briefly review Hochreiter's (1991) analysis of this problem, then address it by introducing a novel, efficient, gradient-based method called long short-term memory (LSTM). Truncating the gradient where this does not do harm, LSTM can learn to bridge minimal time lags in excess of 1000 discrete-time steps by enforcing constant error flow through constant error carousels within special units. Multiplicative gate units learn to open and close access to the constant error flow. LSTM is local in space and time; its computational complexity per time step and weight is O(1). Our experiments with artificial data involve local, distributed, real-valued, and noisy pattern representations. In comparisons with real-time recurrent learning, back propagation through time, recurrent cascade correlation, Elman nets, and neural sequence chunking, LSTM leads to many more successful runs, and learns much faster. LSTM also solves complex, artificial long-time-lag tasks that have never been solved by previous recurrent network algorithms."
+ },
+ "10.1142/s1793536909000047": {
+  "doi": "10.1142/s1793536909000047",
+  "title": "ENSEMBLE EMPIRICAL MODE DECOMPOSITION: A NOISE-ASSISTED DATA ANALYSIS METHOD",
+  "authors": [
+   "ZHAOHUA WU",
+   "NORDEN E. HUANG"
+  ],
+  "venue": "Advances in Adaptive Data Analysis",
+  "year": 2009,
+  "online": [
+   2011,
+   11,
+   20
+  ],
+  "volume": "01",
+  "issue": "01",
+  "page": "1-41",
+  "article": null,
+  "type": "journal-article",
+  "abstract": "A new Ensemble Empirical Mode Decomposition (EEMD) is presented. This new approach consists of sifting an ensemble of white noise-added signal (data) and treats the mean as the final true result. Finite, not infinitesimal, amplitude white noise is necessary to force the ensemble to exhaust all possible solutions in the sifting process, thus making the different scale signals to collate in the proper intrinsic mode functions (IMF) dictated by the dyadic filter banks. As EEMD is a time–space analysis method, the added white noise is averaged out with sufficient number of trials; the only persistent part that survives the averaging process is the component of the signal (original data), which is then treated as the true and more physical meaningful answer. The effect of the added white noise is to provide a uniform reference frame in the time–frequency space; therefore, the added noise collates the portion of the signal of comparable scale in one IMF. With this ensemble mean, one can separate scales naturally without any a priori subjective criterion selection as in the intermittence test for the original EMD algorithm. This new approach utilizes the full advantage of the statistical characteristics of white noise to perturb the signal in its true solution neighborhood, and to cancel itself out after serving its purpose; therefore, it represents a substantial improvement over the original EMD and is a truly noise-assisted data analysis (NADA) method."
+ },
+ "10.1109/tsp.2013.2288675": {
+  "doi": "10.1109/tsp.2013.2288675",
+  "title": "Variational Mode Decomposition",
+  "authors": [
+   "Konstantin Dragomiretskiy",
+   "Dominique Zosso"
+  ],
+  "venue": "IEEE Transactions on Signal Processing",
+  "year": 2014,
+  "online": [
+   null
+  ],
+  "volume": "62",
+  "issue": "3",
+  "page": "531-544",
+  "article": null,
+  "type": "journal-article",
+  "abstract": "During the late 1990s, Huang introduced the algorithm called Empirical Mode Decomposition, which is widely used today to recursively decompose a signal into different modes of unknown but separate spectral bands. EMD is known for limitations like sensitivity to noise and sampling. These limitations could only partially be addressed by more mathematical attempts to this decomposition problem, like synchrosqueezing, empirical wavelets or recursive variational decomposition. Here, we propose an entirely non-recursive variational mode decomposition model, where the modes are extracted concurrently. The model looks for an ensemble of modes and their respective center frequencies, such that the modes collectively reproduce the input signal, while each being smooth after demodulation into baseband. In Fourier domain, this corresponds to a narrow-band prior. We show important relations to Wiener filter denoising. Indeed, the proposed method is a generalization of the classic Wiener filter into multiple, adaptive bands. Our model provides a solution to the decomposition problem that is theoretically well founded and still easy to understand. The variational model is efficiently optimized using an alternating direction method of multipliers approach. Preliminary results show attractive performance with respect to existing mode decomposition models. In particular, our proposed model is much more robust to sampling and noise. Finally, we show promising practical decomposition results on a series of artificial and real data."
+ },
+ "10.1109/icnn.1995.488968": {
+  "doi": "10.1109/icnn.1995.488968",
+  "title": "Particle swarm optimization",
+  "authors": [
+   "J. Kennedy",
+   "R. Eberhart"
+  ],
+  "venue": "Proceedings of ICNN'95 - International Conference on Neural Networks",
+  "year": null,
+  "online": [
+   null
+  ],
+  "volume": "4",
+  "issue": null,
+  "page": "1942-1948",
+  "article": null,
+  "type": "proceedings-article",
+  "abstract": "A concept for the optimization of nonlinear functions using particle swarm methodology is introduced. The evolution of several paradigms is outlined, and an implementation of one of the paradigms is discussed. Benchmark testing of the paradigm is described, and applications, including nonlinear function optimization and neural network training, are proposed. The relationships between particle swarm optimization and both artificial life and genetic algorithms are described."
+ },
+ "10.1109/icassp.2011.5947265": {
+  "doi": "10.1109/icassp.2011.5947265",
+  "title": "A complete ensemble empirical mode decomposition with adaptive noise",
+  "authors": [
+   "Maria E. Torres",
+   "Marcelo A. Colominas",
+   "Gaston Schlotthauer",
+   "Patrick Flandrin"
+  ],
+  "venue": "2011 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)",
+  "year": 2011,
+  "online": [
+   null
+  ],
+  "volume": null,
+  "issue": null,
+  "page": "4144-4147",
+  "article": null,
+  "type": "proceedings-article",
+  "abstract": "In this paper an algorithm based on the ensemble empirical mode decomposition (EEMD) is presented. The key idea on the EEMD relies on averaging the modes obtained by EMD applied to several realizations of Gaussian white noise added to the original signal. The resulting decomposition solves the EMD mode mixing problem, however it introduces new ones. In the method here proposed, a particular noise is added at each stage of the decomposition and a unique residue is computed to obtain each mode. The resulting decomposition is complete, with a numerically negligible error. Two examples are presented: a discrete Dirac delta function and an electrocardiogram signal. The results show that, compared with EEMD, the new method here presented also provides a better spectral separation of the modes and a lesser number of sifting iterations is needed, reducing the computational cost."
+ },
+ "10.1109/78.650093": {
+  "doi": "10.1109/78.650093",
+  "title": "Bidirectional recurrent neural networks",
+  "authors": [
+   "M. Schuster",
+   "K.K. Paliwal"
+  ],
+  "venue": "IEEE Transactions on Signal Processing",
+  "year": 1997,
+  "online": [
+   null
+  ],
+  "volume": "45",
+  "issue": "11",
+  "page": "2673-2681",
+  "article": null,
+  "type": "journal-article",
+  "abstract": "In the first part of this paper, a regular recurrent neural network (RNN) is extended to a bidirectional recurrent neural network (BRNN). The BRNN can be trained without the limitation of using input information just up to a preset future frame. This is accomplished by training it simultaneously in positive and negative time direction. Structure and training procedure of the proposed network are explained. In regression and classification experiments on artificial data, the proposed structure gives better results than other approaches. For real data, classification experiments for phonemes from the TIMIT database show the same tendency. In the second part of this paper, it is shown how the proposed bidirectional structure can be easily modified to allow efficient estimation of the conditional posterior probability of complete symbol sequences without making any explicit assumption about the shape of the distribution. For this part, experiments on real data are reported."
+ },
+ "10.1098/rspa.1998.0193": {
+  "doi": "10.1098/rspa.1998.0193",
+  "title": "The empirical mode decomposition and the Hilbert spectrum for nonlinear and non-stationary time series analysis",
+  "authors": [
+   "Norden E. Huang",
+   "Zheng Shen",
+   "Steven R. Long",
+   "Manli C. Wu",
+   "Hsing H. Shih",
+   "Quanan Zheng",
+   "Nai-Chyuan Yen",
+   "Chi Chao Tung",
+   "Henry H. Liu"
+  ],
+  "venue": "Proceedings of the Royal Society of London. Series A: Mathematical, Physical and Engineering Sciences",
+  "year": 1998,
+  "online": [
+   1998,
+   3,
+   8
+  ],
+  "volume": "454",
+  "issue": "1971",
+  "page": "903-995",
+  "article": null,
+  "type": "journal-article",
+  "abstract": "International audience"
+ },
+ "10.1080/07350015.1995.10524599": {
+  "doi": "10.1080/07350015.1995.10524599",
+  "title": "Comparing Predictive Accuracy",
+  "authors": [
+   "Francis X. Diebold",
+   "Roberto S. Mariano"
+  ],
+  "venue": "Journal of Business &amp; Economic Statistics",
+  "year": 1995,
+  "online": [
+   null
+  ],
+  "volume": "13",
+  "issue": "3",
+  "page": "253-263",
+  "article": null,
+  "type": "journal-article",
+  "abstract": "We propose and evaluate explicit tests of the null hypothesis of no difference in the accuracy of two competing forecasts. In contrast to previously developed tests, a wide variety of accuracy measures can be used (in particular, the loss function need not be quadratic and need not even be symmetric), and forecast errors can be non-Gaussian, nonzero mean, serially correlated, and contemporaneously correlated. Asymptotic and exact finite-sample tests are proposed, evaluated, and illustrated."
+ },
+ "10.1016/s0169-2070(96)00719-4": {
+  "doi": "10.1016/s0169-2070(96)00719-4",
+  "title": "Testing the equality of prediction mean squared errors",
+  "authors": [
+   "David Harvey",
+   "Stephen Leybourne",
+   "Paul Newbold"
+  ],
+  "venue": "International Journal of Forecasting",
+  "year": 1997,
+  "online": [
+   null
+  ],
+  "volume": "13",
+  "issue": "2",
+  "page": "281-291",
+  "article": null,
+  "type": "journal-article"
+ },
+ "10.1016/j.neunet.2005.06.042": {
+  "doi": "10.1016/j.neunet.2005.06.042",
+  "title": "Framewise phoneme classification with bidirectional LSTM and other neural network architectures",
+  "authors": [
+   "Alex Graves",
+   "Jürgen Schmidhuber"
+  ],
+  "venue": "Neural Networks",
+  "year": 2005,
+  "online": [
+   null
+  ],
+  "volume": "18",
+  "issue": "5-6",
+  "page": "602-610",
+  "article": null,
+  "type": "journal-article"
+ },
+ "10.1016/j.bspc.2014.06.009": {
+  "doi": "10.1016/j.bspc.2014.06.009",
+  "title": "Improved complete ensemble EMD: A suitable tool for biomedical signal processing",
+  "authors": [
+   "Marcelo A. Colominas",
+   "Gastón Schlotthauer",
+   "María E. Torres"
+  ],
+  "venue": "Biomedical Signal Processing and Control",
+  "year": 2014,
+  "online": [
+   null
+  ],
+  "volume": "14",
+  "issue": null,
+  "page": "19-29",
+  "article": null,
+  "type": "journal-article"
+ },
+ "10.1016/j.asoc.2024.112393": {
+  "doi": "10.1016/j.asoc.2024.112393",
+  "title": "Predicting the highest and lowest stock price indices: A combined BiLSTM-SAM-TCN deep learning model based on re-decomposition",
+  "authors": [
+   "Hao Gong",
+   "Haiyang Xing"
+  ],
+  "venue": "Applied Soft Computing",
+  "year": 2024,
+  "online": [
+   null
+  ],
+  "volume": "167",
+  "issue": null,
+  "page": "112393",
+  "article": "112393",
+  "type": "journal-article"
+ },
+ "10.3390/s24123789": {
+  "doi": "10.3390/s24123789",
+  "title": "Artificial Intelligence-Based Atrial Fibrillation Recognition Method for Motion Artifact-Contaminated Electrocardiogram Signals Preprocessed by Adaptive Filtering Algorithm",
+  "authors": [
+   "Huanqian Zhang",
+   "Hantao Zhao",
+   "Zhang Guo"
+  ],
+  "venue": "Sensors",
+  "year": 2024,
+  "online": [
+   2024,
+   6,
+   11
+  ],
+  "volume": "24",
+  "issue": "12",
+  "page": "3789",
+  "article": null,
+  "type": "journal-article",
+  "abstract": "Atrial fibrillation (AF) is a common arrhythmia, and out-of-hospital, wearable, long-term electrocardiogram (ECG) monitoring can help with the early detection of AF. The presence of a motion artifact (MA) in ECG can significantly affect the characteristics of the ECG signal and hinder early detection of AF. Studies have shown that (a) using reference signals with a strong correlation with MAs in adaptive filtering (ADF) can eliminate MAs from the ECG, and (b) artificial intelligence (AI) algorithms can recognize AF when there is no presence of MAs. However, no literature has been reported on whether ADF can improve the accuracy of AI for recognizing AF in the presence of MAs. Therefore, this paper investigates the accuracy of AI recognition for AF when ECGs are artificially introduced with MAs and processed by ADF. In this study, 13 types of MA signals with different signal-to-noise ratios ranging from +8 dB to -16 dB were artificially added to the AF ECG dataset. Firstly, the accuracy of AF recognition using AI was obtained for a signal with MAs. Secondly, after removing the MAs by ADF, the signal was further identified using AI to obtain the accuracy of the AF recognition. We found that after undergoing ADF, the accuracy of AI recognition for AF improved under all MA intensities, with a maximum improvement of 60%."
+ },
+ "10.3390/s25030801": {
+  "doi": "10.3390/s25030801",
+  "title": "Fully-Gated Denoising Auto-Encoder for Artifact Reduction in ECG Signals",
+  "authors": [
+   "Ahmed Shaheen",
+   "Liang Ye",
+   "Chrishni Karunaratne",
+   "Tapio Seppänen"
+  ],
+  "venue": "Sensors",
+  "year": 2025,
+  "online": [
+   2025,
+   1,
+   29
+  ],
+  "volume": "25",
+  "issue": "3",
+  "page": "801",
+  "article": null,
+  "type": "journal-article",
+  "abstract": "Cardiovascular diseases (CVDs) are the primary cause of death worldwide. For accurate diagnosis of CVDs, robust and efficient ECG denoising is particularly critical in ambulatory cases where various artifacts can degrade the quality of the ECG signal. None of the present denoising methods preserve the morphology of ECG signals adequately for all noise types, especially at high noise levels. This study proposes a novel Fully-Gated Denoising Autoencoder (FGDAE) to significantly reduce the effects of different artifacts on ECG signals. The proposed FGDAE utilizes gating mechanisms in all its layers, including skip connections, and employs Self-organized Operational Neural Network (self-ONN) neurons in its encoder. Furthermore, a multi-component loss function is proposed to learn efficient latent representations of ECG signals and provide reliable denoising with maximal morphological preservation. The proposed model is trained and benchmarked on the QT Database (QTDB), degraded by adding randomly mixed artifacts collected from the MIT-BIH Noise Stress Test Database (NSTDB). The FGDAE showed the best performance on all seven error metrics used in our work in different noise intensities and artifact combinations compared with state-of-the-art algorithms. Moreover, FGDAE provides reliable denoising in extreme conditions and for varied noise compositions. The significantly reduced model size, 61% to 73% reduction, compared with the state-of-the-art algorithm, and the inference speed of the FGDAE model provide evident benefits in various practical applications. While our model performs best compared with other models tested in this study, more improvements are needed for optimal morphological preservation, especially in the presence of electrode motion artifacts."
+ },
+ "10.3905/jfds.2023.1.143": {
+  "doi": "10.3905/jfds.2023.1.143",
+  "title": "Assessing Look-Ahead Bias in Stock Return Predictions Generated by GPT Sentiment Analysis",
+  "authors": [
+   "Paul Glasserman",
+   "Caden Lin"
+  ],
+  "venue": "The Journal of Financial Data Science",
+  "year": 2024,
+  "online": [
+   2023,
+   12,
+   16
+  ],
+  "volume": "6",
+  "issue": "1",
+  "page": "25-42",
+  "article": null,
+  "type": "journal-article",
+  "abstract": "Large language models (LLMs), including ChatGPT, can extract profitable trading signals from the sentiment in news text. However, backtesting such strategies poses a challenge because LLMs are trained on many years of data, and backtesting produces biased results if the training and backtesting periods overlap. This bias can take two forms: a look-ahead bias, in which the LLM may have specific knowledge of the stock returns that followed a news article, and a distraction effect, in which general knowledge of the companies named interferes with the measurement of a text’s sentiment. The authors investigate these sources of bias through trading strategies driven by the sentiment of financial news headlines. They compare trading performance based on the original headlines with debiased strategies in which they remove the relevant company’s identifiers from the text. In-sample (within the LLM training window), the authors find, surprisingly, that the anonymized headlines outperform, indicating that the distraction effect has a greater impact than look-ahead bias. This tendency is particularly strong for larger companies—companies about which the authors expect an LLM to have greater general knowledge. Out-of-sample, look-ahead bias is not a concern but distraction remains possible. The authors’ proposed anonymization procedure is therefore potentially useful in out-of-sample implementation, as well as for debiased backtesting."
+ },
+ "10.3390/wind5040029": {
+  "doi": "10.3390/wind5040029",
+  "title": "A Systematic Review of Wind Energy Forecasting Models Based on Deep Neural Networks",
+  "authors": [
+   "Edgar A. Manzano",
+   "Ruben E. Nogales",
+   "Alberto Rios"
+  ],
+  "venue": "Wind",
+  "year": 2025,
+  "online": [
+   2025,
+   11,
+   3
+  ],
+  "volume": "5",
+  "issue": "4",
+  "page": "29",
+  "article": null,
+  "type": "journal-article",
+  "abstract": "The present study focuses on wind power forecasting (WPF) models based on deep neural networks (DNNs), aiming to evaluate current approaches, identify gaps, and provide insights into their importance for the integration of Renewable Energy Sources (RESs). The systematic review was conducted following the methodology of Kitchenham and Charters, including peer-reviewed articles from 2020 to 2024 that focused on WPF using deep learning (DL) techniques. Searches were conducted in the ACM Digital Library, IEEE Xplore, ScienceDirect, Springer Link, and Wiley Online Library, with the last search updated in April 2024. After the first phase of screening and then filtering using inclusion and exclusion criteria, risk of bias was assessed using a Likert-scale evaluation of methodological quality, validity, and reporting. Data extraction was performed for 120 studies. The synthesis established that the state of the art is dominated by hybrid architectures (e.g., CNN-LSTM) integrated with signal decomposition techniques like VMD and optimization algorithms such as GWO and PSO, demonstrating high predictive accuracy for short-term horizons. Despite these advancements, limitations include the variability in datasets, the heterogeneity of model architectures, and a lack of standardization in performance metrics, which complicate direct comparisons across studies. Overall, WPF models based on DNNs demonstrate substantial promise for renewable energy integration, though future work should prioritize standardization and reproducibility. This review received no external funding and was not prospectively registered."
+ },
+ "10.1088/2631-8695/adede3": {
+  "doi": "10.1088/2631-8695/adede3",
+  "title": "Optimized adaptive filtering using genetic algorithm and signal quality index for practical motion artefact reduction in ambulatory ECG",
+  "authors": [
+   "Fotsing Kuetche",
+   "Noura Alexendre",
+   "Ntsama Eloundou Pascal",
+   "Simo Thierry"
+  ],
+  "venue": "Engineering Research Express",
+  "year": 2025,
+  "online": [
+   2025,
+   7,
+   24
+  ],
+  "volume": "7",
+  "issue": "3",
+  "page": "035316",
+  "article": null,
+  "type": "journal-article",
+  "abstract": "Abstract Motion artefact (MA) is the most challenging noise to remove during electrocardiogram (ECG) signal pre-processing. Its presence can cause incorrect detection of QRS complexes, P and T wave distortion, and, as a result, misdiagnosis. While adaptive noise cancelers are a widely used practical solution for MA removal, their performance depends heavily on selecting optimal parameters, such as step size and filter length. In this study, we propose an automated approach for optimizing these parameters to enhance MA removal. We introduce a two-step knowledge-based genetic algorithm (k-GA) framework comprising (1) knowledge acquisition and (2) filter optimization. Instead of using mean squared error as the fitness function, the k-GA employs template signal quality indices (tSQI), making it suitable for real-world ECG signals. We explored the k-ga with the sign LMS (k-gaSLMS), sign-sign LMS (k-gaSSLMS), and sign data LMS (k-gaSDLMS). We simulated noisy ECG signals using the MIT-BIH arrhythmia database and the Noise Stress Test Database. The BRNO University of Technology ECG quality database provides real-world noisy ECGs and accelerometer data that are pre-processed to serve as the input reference of the adaptive filter. Compared to the LMS, SDLMS, and NLMS, our results show that the proposed method (k-gaSDLMS) gives higher improvement in signal-to-noise ratio (14.36~15.82 dB), lower root-mean-square-error (0.04~0.06), and higher correlation coefficient (97~99%) on simulated data. For real-life data, the tSQI passes from 0.49 to 0.63, showing that the k-gaSDLMS can automatically select filtering parameters and efficiently remove MA. The average execution time (~0.30 s per 6−s segment) supports its integration into near-real-time or offline wearable ECG applications. Thus, the proposed method enables more reliable signal pre-processing in ambulatory monitoring and may contribute to improved downstream diagnostic accuracy."
+ },
+ "10.1002/acs.3970": {
+  "doi": "10.1002/acs.3970",
+  "title": "Variable Step‐Size\n                    <scp>LMS</scp>\n                    Algorithm Based on Variational Versoria Function and Variational Gaussian Function",
+  "authors": [
+   "Baoshui Zhao",
+   "Yancai Xiao",
+   "Haikuo Shen",
+   "Shaodan Zhi"
+  ],
+  "venue": "International Journal of Adaptive Control and Signal Processing",
+  "year": 2025,
+  "online": [
+   2025,
+   1,
+   20
+  ],
+  "volume": "39",
+  "issue": "4",
+  "page": "709-723",
+  "article": null,
+  "type": "journal-article",
+  "abstract": "ABSTRACT Aiming at the noise interference problem in wing fatigue tests, this paper improves the traditional LMS algorithm using the variational Versoria function and the variational Gaussian function. Additionally, this paper proposes a variable step‐size LMS (VSS‐LMS) filtering algorithm based on the composite function (CVSS‐LMS). The composite function combines the variational Versoria function and the variational Gaussian function to describe the nonlinear relationship between the iteration step size and the error. To adapt to environments with different signal‐to‐noise ratios, the algorithm replaces the fixed parameters with a combination of current and previous errors, thus enabling adaptive adjustment of the parameters. Moreover, a step‐size dynamic constraint rule is proposed to further improve the stability of the algorithm. The algorithm is normalized using a combination of the cumulative sum of error squares, the mean square error (MSE), and the power of the input signal, which reduces the sensitivity to the input signal amplitude. The above parts finally constitute the adaptive CVSS‐LMS (ACVSS‐LMS) filtering algorithm. The convergence of the ACVSS‐LMS algorithm is verified through theoretical derivation. The ACVSS‐LMS algorithm is experimentally analyzed by using the simulation data generated by MATLAB and the actual data collected from the wing fatigue test, and the results show that the ACVSS‐LMS algorithm proposed in this paper has a faster convergence speed and lower steady‐state error compared to other algorithms."
+ },
+ "10.1038/s44360-026-00096-z": {
+  "doi": "10.1038/s44360-026-00096-z",
+  "title": "PhysioNet as a global platform for biomedical research",
+  "authors": [
+   "Tom Pollard",
+   "Benjamin E. Moody",
+   "Li-wei H. Lehman",
+   "Brian J. Gow",
+   "Chrystinne Fernandes",
+   "Chen Xie",
+   "Alistair Johnson",
+   "Roger G. Mark",
+   "Thomas Heldt"
+  ],
+  "venue": "Nature Health",
+  "year": 2026,
+  "online": [
+   2026,
+   3,
+   26
+  ],
+  "volume": "1",
+  "issue": "8",
+  "page": "792-795",
+  "article": null,
+  "type": "journal-article"
+ },
+ "10.3390/sym17081222": {
+  "doi": "10.3390/sym17081222",
+  "title": "Variable Step-Size FxLMS Algorithm Based on Cooperative Coupling of Double Nonlinear Functions",
+  "authors": [
+   "Jialong Wang",
+   "Jian Liao",
+   "Lin He",
+   "Xiaopeng Tan",
+   "Zongbin Chen"
+  ],
+  "venue": "Symmetry",
+  "year": 2025,
+  "online": [
+   2025,
+   8,
+   2
+  ],
+  "volume": "17",
+  "issue": "8",
+  "page": "1222",
+  "article": null,
+  "type": "journal-article",
+  "abstract": "Based on the principle of symmetry, we propose a variable step-size FxLMS algorithm with double nonlinear functions cooperative coupling (DNVSS-FxLMS), aiming to optimize the contradiction between convergence rate and steady-state error in the active pressure pulsation control system of hydraulic systems. The algorithm innovatively couples two types of nonlinear mechanisms (rational-fractional and exponential-function-based), constructing a refined error-step mapping relationship to achieve a balance between rapid convergence and low steady-state error. Simulation experiments were conducted considering the complex time-varying operating environment of a simulation-based hydraulic system. The results demonstrate that, when the system undergoes unstable random changes, the DNVSS-FxLMS algorithm converges at least twice as fast as traditional and existing variable step size algorithms, while reducing steady-state error by 2–5 dB. The proposed DNVSS-FxLMS algorithm exhibits significant advantages in convergence rate, steady-state error reduction, and tracking capability, providing a highly efficient and robust solution for real-time active control of hydraulic system pressure pulsation under complex operating conditions."
+ },
+ "10.7717/peerj-cs.1795": {
+  "doi": "10.7717/peerj-cs.1795",
+  "title": "Decomposition aided attention-based recurrent neural networks for multistep ahead time-series forecasting of renewable power generation",
+  "authors": [
+   "Robertas Damaševičius",
+   "Luka Jovanovic",
+   "Aleksandar Petrovic",
+   "Miodrag Zivkovic",
+   "Nebojsa Bacanin",
+   "Dejan Jovanovic",
+   "Milos Antonijevic"
+  ],
+  "venue": "PeerJ Computer Science",
+  "year": 2024,
+  "online": [
+   2024,
+   1,
+   18
+  ],
+  "volume": "10",
+  "issue": null,
+  "page": "e1795",
+  "article": "e1795",
+  "type": "journal-article",
+  "abstract": "Renewable energy plays an increasingly important role in our future. As fossil fuels become more difficult to extract and effectively process, renewables offer a solution to the ever-increasing energy demands of the world. However, the shift toward renewable energy is not without challenges. While fossil fuels offer a more reliable means of energy storage that can be converted into usable energy, renewables are more dependent on external factors used for generation. Efficient storage of renewables is more difficult often relying on batteries that have a limited number of charge cycles. A robust and efficient system for forecasting power generation from renewable sources can help alleviate some of the difficulties associated with the transition toward renewable energy. Therefore, this study proposes an attention-based recurrent neural network approach for forecasting power generated from renewable sources. To help networks make more accurate forecasts, decomposition techniques utilized applied the time series, and a modified metaheuristic is introduced to optimized hyperparameter values of the utilized networks. This approach has been tested on two real-world renewable energy datasets covering both solar and wind farms. The models generated by the introduced metaheuristics were compared with those produced by other state-of-the-art optimizers in terms of standard regression metrics and statistical analysis. Finally, the best-performing model was interpreted using SHapley Additive exPlanations."
+ },
+ "10.1007/s11760-024-03196-z": {
+  "doi": "10.1007/s11760-024-03196-z",
+  "title": "A novel approach to geometric algebra-based variable step-size LMS adaptive filtering algorithm",
+  "authors": [
+   "Khurram Shahzad",
+   "Rui Wang",
+   "Junaid Jamshid"
+  ],
+  "venue": "Signal, Image and Video Processing",
+  "year": 2024,
+  "online": [
+   2024,
+   4,
+   27
+  ],
+  "volume": "18",
+  "issue": "S1",
+  "page": "837-846",
+  "article": null,
+  "type": "journal-article"
+ },
+ "10.48550/arxiv.2510.04871": {
+  "doi": "10.48550/arxiv.2510.04871",
+  "title": "Less is More: Recursive Reasoning with Tiny Networks",
+  "authors": [
+   "Jolicoeur-Martineau, Alexia"
+  ],
+  "year": 2025,
+  "venue": "arXiv",
+  "abstract": "Hierarchical Reasoning Model (HRM) is a novel approach using two small neural networks recursing at different frequencies. This biologically inspired method beats Large Language models (LLMs) on hard puzzle tasks such as Sudoku, Maze, and ARC-AGI while trained with small models (27M parameters) on small data (around 1000 examples). HRM holds great promise for solving hard problems with small networks, but it is not yet well understood and may be suboptimal. We propose Tiny Recursive Model (TRM), a much simpler recursive reasoning approach that achieves significantly higher generalization than HRM, while using a single tiny network with only 2 layers. With only 7M parameters, TRM obtains 45% test-accuracy on ARC-AGI-1 and 8% on ARC-AGI-2, higher than most LLMs (e.g., Deepseek R1, o3-mini, Gemini 2.5 Pro) with less than 0.01% of the parameters."
+ },
+ "10.48550/arxiv.1803.01271": {
+  "doi": "10.48550/arxiv.1803.01271",
+  "title": "An Empirical Evaluation of Generic Convolutional and Recurrent Networks for Sequence Modeling",
+  "authors": [
+   "Bai, Shaojie",
+   "Kolter, J. Zico",
+   "Koltun, Vladlen"
+  ],
+  "year": 2018,
+  "venue": "arXiv",
+  "abstract": "For most deep learning practitioners, sequence modeling is synonymous with recurrent networks. Yet recent results indicate that convolutional architectures can outperform recurrent networks on tasks such as audio synthesis and machine translation. Given a new sequence modeling task or dataset, which architecture should one use? We conduct a systematic evaluation of generic convolutional and recurrent architectures for sequence modeling. The models are evaluated across a broad range of standard tasks that are commonly used to benchmark recurrent networks. Our results indicate that a simple convolutional architecture outperforms canonical recurrent networks such as LSTMs across a diverse range of tasks and datasets, while demonstrating longer effective memory. We conclude that the common association between sequence modeling and recurrent networks should be reconsidered, and convolutional networks should be regarded as a natural starting point for sequence modeling tasks. To assist related work, we have made code available at http://github.com/locuslab/TCN ."
+ },
+ "10.48550/arxiv.1706.03762": {
+  "doi": "10.48550/arxiv.1706.03762",
+  "title": "Attention Is All You Need",
+  "authors": [
+   "Vaswani, Ashish",
+   "Shazeer, Noam",
+   "Parmar, Niki",
+   "Uszkoreit, Jakob",
+   "Jones, Llion",
+   "Gomez, Aidan N.",
+   "Kaiser, Lukasz",
+   "Polosukhin, Illia"
+  ],
+  "year": 2017,
+  "venue": "arXiv"
+ },
+ "10.48550/arxiv.1412.6980": {
+  "doi": "10.48550/arxiv.1412.6980",
+  "title": "Adam: A Method for Stochastic Optimization",
+  "authors": [
+   "Kingma, Diederik P.",
+   "Ba, Jimmy"
+  ],
+  "year": 2014,
+  "venue": "arXiv",
+  "abstract": "We introduce Adam, an algorithm for first-order gradient-based optimization of stochastic objective functions, based on adaptive estimates of lower-order moments. The method is straightforward to implement, is computationally efficient, has little memory requirements, is invariant to diagonal rescaling of the gradients, and is well suited for problems that are large in terms of data and/or parameters. The method is also appropriate for non-stationary objectives and problems with very noisy and/or sparse gradients. The hyper-parameters have intuitive interpretations and typically require little tuning. Some connections to related algorithms, on which Adam was inspired, are discussed. We also analyze the theoretical convergence properties of the algorithm and provide a regret bound on the convergence rate that is comparable to the best known results under the online convex optimization framework. Empirical results demonstrate that Adam works well in practice and compares favorably to other stochastic optimization methods. Finally, we discuss AdaMax, a variant of Adam based on the infinity norm."
+ },
+ "10.1038/s41598-024-80018-9": {
+  "doi": "10.1038/s41598-024-80018-9",
+  "title": "Research on information leakage in time series prediction based on empirical mode decomposition",
+  "authors": [
+   "Xinyi Yang",
+   "Jingyi Li",
+   "Xuchu Jiang"
+  ],
+  "venue": "Scientific Reports",
+  "year": 2024,
+  "online": [
+   2024,
+   11,
+   16
+  ],
+  "volume": "14",
+  "issue": "1",
+  "page": null,
+  "article": "28362",
+  "type": "journal-article",
+  "abstract": "Time series analysis predicts the future based on existing historical data and has a wide range of applications in finance, economics, meteorology, biology, engineering, and other fields. Although the combination of decomposition techniques and machine learning algorithms can effectively solve the problem of predicting nonstationary sequences, this kind of decomposition-integration-prediction strategy of the prediction method has serious defects. After the decomposition of the division of the training set and the test set, the information of the test set in the process of decomposition of the information leakage ultimately shows a high accuracy of the prediction of the illusionary. This paper proposes three improvement strategies for this type of “information leakage” problem: sliding window decomposition (SW-EMD), single training and multiple decomposition (STMP-EMD), and multiple training and multiple decomposition (MTMP-EMD). They are combined with a bidirectional multiscale temporal convolutional network (MSBTCN), bidirectional long- and short-term memory network (BiLSTM), and attention mechanism (DMAttention), which introduces a dependency matrix based on cosine similarity to be applied to water quality prediction. The experimental results show that the model achieves good performance in the prediction of three water quality indicators (pH, DO and KMnO 4 ), and the accuracies of the three models proposed in this paper are improved by 1.958% and 0.853% in terms of the RMSE and MAPE, respectively, compared with those of the mainstream LSTM models. The key contributions of this study include the following: (1) three methods are proposed to improve the class EMD decomposition, which can effectively solve the problem of “information leakage” that exists in the current models via class EMD decomposition; (2) the CEEMDAN-MSBTCN-BiLSTM-DMAttention model structure is innovated by combining improved class EMD decomposition methods; and (3) the three improved decomposition methods proposed in this paper can effectively solve the problem of “information leakage” and optimize the prediction model at the same time. This study provides an effective experimental method for water quality prediction and can effectively address the problem of “overfitting” models via class EMD decompositions during model training and testing."
+ },
+ "10.1007/s10618-022-00894-5": {
+  "doi": "10.1007/s10618-022-00894-5",
+  "title": "Forecast evaluation for data scientists: common pitfalls and best practices",
+  "authors": [
+   "Hansika Hewamalage",
+   "Klaus Ackermann",
+   "Christoph Bergmeir"
+  ],
+  "venue": "Data Mining and Knowledge Discovery",
+  "year": 2023,
+  "online": [
+   2022,
+   12,
+   2
+  ],
+  "volume": "37",
+  "issue": "2",
+  "page": "788-832",
+  "article": null,
+  "type": "journal-article",
+  "abstract": "Recent trends in the Machine Learning (ML) and in particular Deep Learning (DL) domains have demonstrated that with the availability of massive amounts of time series, ML and DL techniques are competitive in time series forecasting. Nevertheless, the different forms of non-stationarities associated with time series challenge the capabilities of data-driven ML models. Furthermore, due to the domain of forecasting being fostered mainly by statisticians and econometricians over the years, the concepts related to forecast evaluation are not the mainstream knowledge among ML researchers. We demonstrate in our work that as a consequence, ML researchers oftentimes adopt flawed evaluation practices which results in spurious conclusions suggesting methods that are not competitive in reality to be seemingly competitive. Therefore, in this work we provide a tutorial-like compilation of the details associated with forecast evaluation. This way, we intend to impart the information associated with forecast evaluation to fit the context of ML, as means of bridging the knowledge gap between traditional methods of forecasting and adopting current state-of-the-art ML techniques.We elaborate the details of the different problematic characteristics of time series such as non-normality and non-stationarities and how they are associated with common pitfalls in forecast evaluation. Best practices in forecast evaluation are outlined with respect to the different steps such as data partitioning, error calculation, statistical testing, and others. Further guidelines are also provided along selecting valid and suitable error measures depending on the specific characteristics of the dataset at hand."
+ },
+ "10.1016/j.patter.2023.100804": {
+  "doi": "10.1016/j.patter.2023.100804",
+  "title": "Leakage and the reproducibility crisis in machine-learning-based science",
+  "authors": [
+   "Sayash Kapoor",
+   "Arvind Narayanan"
+  ],
+  "venue": "Patterns",
+  "year": 2023,
+  "online": [
+   null
+  ],
+  "volume": "4",
+  "issue": "9",
+  "page": "100804",
+  "article": "100804",
+  "type": "journal-article",
+  "abstract": "Machine-learning (ML) methods have gained prominence in the quantitative sciences. However, there are many known methodological pitfalls, including data leakage, in ML-based science. We systematically investigate reproducibility issues in ML-based science. Through a survey of literature in fields that have adopted ML methods, we find 17 fields where leakage has been found, collectively affecting 294 papers and, in some cases, leading to wildly overoptimistic conclusions. Based on our survey, we introduce a detailed taxonomy of eight types of leakage, ranging from textbook errors to open research problems. We propose that researchers test for each type of leakage by filling out model info sheets, which we introduce. Finally, we conduct a reproducibility study of civil war prediction, where complex ML models are believed to vastly outperform traditional statistical models such as logistic regression (LR). When the errors are corrected, complex ML models do not perform substantively better than decades-old LR models."
+ },
+ "10.3390/en16124616": {
+  "doi": "10.3390/en16124616",
+  "title": "Short-Term Power Load Forecasting Based on PSO-Optimized VMD-TCN-Attention Mechanism",
+  "authors": [
+   "Guanchen Geng",
+   "Yu He",
+   "Jing Zhang",
+   "Tingxiang Qin",
+   "Bin Yang"
+  ],
+  "venue": "Energies",
+  "year": 2023,
+  "online": [
+   2023,
+   6,
+   9
+  ],
+  "volume": "16",
+  "issue": "12",
+  "page": "4616",
+  "article": null,
+  "type": "journal-article",
+  "abstract": "A new prediction framework is proposed to improve short-term power load forecasting accuracy. The framework is based on particle swarm optimization (PSO)-variational mode decomposition (VMD) combined with a time convolution network (TCN) embedded attention mechanism (Attention). The framework follows a two-step process. In the first step, PSO is applied to optimize the VMD decomposition method. The original electricity load sequence is decomposed, and the fitness function uses sample entropy to describe the complexity of the time series. The decomposed sub-sequences are combined with relevant features, such as meteorological data, to form the input sequence of the prediction model. In the second step, TCN is selected as the prediction model, and it is embedded with an attention mechanism to improve prediction accuracy. The above input sequence is fed to the model to obtain the PSO-VMD-TCN-Attention prediction framework. Load datasets and various prediction models validate the PSO-optimized VMD decomposition method and the TCN-Attention prediction model. Simulation results demonstrate that the PSO-optimized VMD decomposition method enhances the model’s prediction accuracy, and the TCN-Attention prediction model outperforms other prediction models in terms of prediction accuracy and ability."
+ },
+ "10.1109/access.2022.3142859": {
+  "doi": "10.1109/access.2022.3142859",
+  "title": "Particle Swarm Optimization: A Comprehensive Survey",
+  "authors": [
+   "Tareq M. Shami",
+   "Ayman A. El-Saleh",
+   "Mohammed Alswaitti",
+   "Qasem Al-Tashi",
+   "Mhd Amen Summakieh",
+   "Seyedali Mirjalili"
+  ],
+  "venue": "IEEE Access",
+  "year": 2022,
+  "online": [
+   null
+  ],
+  "volume": "10",
+  "issue": null,
+  "page": "10031-10061",
+  "article": null,
+  "type": "journal-article",
+  "abstract": "Particle swarm optimization (PSO) is one of the most well-regarded swarm-based algorithms in the literature. Although the original PSO has shown good optimization performance, it still severely suffers from premature convergence. As a result, many researchers have been modifying it resulting in a large number of PSO variants with either slightly or significantly better performance. Mainly, the standard PSO has been modified by four main strategies: modification of the PSO controlling parameters, hybridizing PSO with other well-known meta-heuristic algorithms such as genetic algorithm (GA) and differential evolution (DE), cooperation and multi-swarm techniques. This paper attempts to provide a comprehensive review of PSO, including the basic concepts of PSO, binary PSO, neighborhood topologies in PSO, recent and historical PSO variants, remarkable engineering applications of PSO, and its drawbacks. Moreover, this paper reviews recent studies that utilize PSO to solve feature selection problems. Finally, eight potential research directions that can help researchers further enhance the performance of PSO are provided."
+ },
+ "10.1186/s40854-024-00644-0": {
+  "doi": "10.1186/s40854-024-00644-0",
+  "title": "Forecasting relative returns for S&amp;P 500 stocks using machine learning",
+  "authors": [
+   "Htet Htet Htun",
+   "Michael Biehl",
+   "Nicolai Petkov"
+  ],
+  "venue": "Financial Innovation",
+  "year": 2024,
+  "online": [
+   2024,
+   4,
+   20
+  ],
+  "volume": "10",
+  "issue": "1",
+  "page": null,
+  "article": "118",
+  "type": "journal-article",
+  "abstract": "Abstract Forecasting changes in stock prices is extremely challenging given that numerous factors cause these prices to fluctuate. The random walk hypothesis and efficient market hypothesis essentially state that it is not possible to systematically, reliably predict future stock prices or forecast changes in the stock market overall. Nonetheless, machine learning (ML) techniques that use historical data have been applied to make such predictions. Previous studies focused on a small number of stocks and claimed success with limited statistical confidence. In this study, we construct feature vectors composed of multiple previous relative returns and apply the random forest (RF), support vector machine (SVM), and long short-term memory (LSTM) ML methods as classifiers to predict whether a stock can return 2% more than its index in the following 10 days. We apply this approach to all S&P 500 companies for the period 2017–2022. We assess performance using accuracy, precision, and recall and compare our results with a random choice strategy. We observe that the LSTM classifier outperforms RF and SVM, and the data-driven ML methods outperform the random choice classifier ( p = 8 . 46 e −17 for accuracy of LSTM). Thus, we demonstrate that the probability that the random walk and efficient market hypotheses hold in the considered context is negligibly small."
+ },
+ "10.3390/info15090517": {
+  "doi": "10.3390/info15090517",
+  "title": "Recurrent Neural Networks: A Comprehensive Review of Architectures, Variants, and Applications",
+  "authors": [
+   "Ibomoiye Domor Mienye",
+   "Theo G. Swart",
+   "George Obaido"
+  ],
+  "venue": "Information",
+  "year": 2024,
+  "online": [
+   2024,
+   8,
+   25
+  ],
+  "volume": "15",
+  "issue": "9",
+  "page": "517",
+  "article": null,
+  "type": "journal-article",
+  "abstract": "Recurrent neural networks (RNNs) have significantly advanced the field of machine learning (ML) by enabling the effective processing of sequential data. This paper provides a comprehensive review of RNNs and their applications, highlighting advancements in architectures, such as long short-term memory (LSTM) networks, gated recurrent units (GRUs), bidirectional LSTM (BiLSTM), echo state networks (ESNs), peephole LSTM, and stacked LSTM. The study examines the application of RNNs to different domains, including natural language processing (NLP), speech recognition, time series forecasting, autonomous vehicles, and anomaly detection. Additionally, the study discusses recent innovations, such as the integration of attention mechanisms and the development of hybrid models that combine RNNs with convolutional neural networks (CNNs) and transformer architectures. This review aims to provide ML researchers and practitioners with a comprehensive overview of the current state and future directions of RNN research."
+ },
+ "10.3390/app13031429": {
+  "doi": "10.3390/app13031429",
+  "title": "Prediction of Complex Stock Market Data Using an Improved Hybrid EMD-LSTM Model",
+  "authors": [
+   "Muhammad Ali",
+   "Dost Muhammad Khan",
+   "Huda M. Alshanbari",
+   "Abd Al-Aziz Hosni El-Bagoury"
+  ],
+  "venue": "Applied Sciences",
+  "year": 2023,
+  "online": [
+   2023,
+   1,
+   21
+  ],
+  "volume": "13",
+  "issue": "3",
+  "page": "1429",
+  "article": null,
+  "type": "journal-article",
+  "abstract": "Because of the complexity, nonlinearity, and volatility, stock market forecasting is either highly difficult or yields very unsatisfactory outcomes when utilizing traditional time series or machine learning techniques. To cope with this problem and improve the complex stock market’s prediction accuracy, we propose a new hybrid novel method that is based on a new version of EMD and a deep learning technique known as long-short memory (LSTM) network. The forecasting precision of the proposed hybrid ensemble method is evaluated using the KSE-100 index of the Pakistan Stock Exchange. Using a new version of EMD that uses the Akima spline interpolation technique instead of cubic spline interpolation, the noisy stock data are first divided into multiple components technically known as intrinsic mode functions (IMFs) varying from high to low frequency and a single monotone residue. The highly correlated sub-components are then used to build the LSTM network. By comparing the proposed hybrid model with a single LSTM and other ensemble models such as the support vector machine (SVM), Random Forest, and Decision Tree, its prediction performance is thoroughly evaluated. Three alternative statistical metrics, namely root means square error (RMSE), mean absolute error (MAE) and mean absolute percentage error (MAPE), are used to compare the aforementioned techniques. The empirical results show that the suggested hybrid Akima-EMD-LSTM model beats all other models taken into consideration for this study and is therefore recommended as an effective model for the prediction of non-stationary and nonlinear complex financial time series data."
+ },
+ "10.3390/app13127104": {
+  "doi": "10.3390/app13127104",
+  "title": "GRU Neural Network Based on CEEMDAN–Wavelet for Stock Price Prediction",
+  "authors": [
+   "Chenyang Qi",
+   "Jiaying Ren",
+   "Jin Su"
+  ],
+  "venue": "Applied Sciences",
+  "year": 2023,
+  "online": [
+   2023,
+   6,
+   14
+  ],
+  "volume": "13",
+  "issue": "12",
+  "page": "7104",
+  "article": null,
+  "type": "journal-article",
+  "abstract": "Stock indices are considered to be an important indicator of financial market volatility in various countries. Therefore, the stock market forecast is one of the challenging issues to decrease the uncertainty of the future direction of financial markets. In recent years, many scholars attempted to use different conventional statistical and deep learning methods to predict stock indices. However, the non-linear financial noise data will usually cause stochastic deterioration and time lag in forecast results, resulting in existing neural networks that do not demonstrate good prediction results. For this reason, we propose a novel framework to combine the gated recurrent unit (GRU) neural network with the complete ensemble empirical mode decomposition of adaptive noise (CEEMDAN) to predict the stock indices with better accuracy, in which the wavelet threshold method is especially used to denoise high-frequency noises in the sub-signals to exclude noise interference for future data predictions. Firstly, we choose representative datasets collected from the closing prices of S&P500 and CSI 300 stock indices to evaluate the proposed GRU-CEEMDAN–wavelet model. Additionally, we compare the improved model to the traditional ARIMA and several modified neural network models using different gate structures. The result shows that the mean values of MSE and MAE for GRU based on CEEMDAN–wavelet are the smallest by significance analysis. Overall, we found that our model could improve prediction accuracy and alleviates the time lag problem."
+ },
+ "10.1088/1361-6501/ac8c63": {
+  "doi": "10.1088/1361-6501/ac8c63",
+  "title": "An adaptive spectrum segmentation-based optimized VMD method and its application in rolling bearing fault diagnosis",
+  "authors": [
+   "Zong Meng",
+   "Xinyu Wang",
+   "Jingbo Liu",
+   "Fengjie Fan"
+  ],
+  "venue": "Measurement Science and Technology",
+  "year": 2022,
+  "online": [
+   2022,
+   9,
+   14
+  ],
+  "volume": "33",
+  "issue": "12",
+  "page": "125107",
+  "article": null,
+  "type": "journal-article",
+  "abstract": "Abstract Variational mode decomposition (VMD) is a signal decomposition algorithm with excellent denoising ability. However, the drawback that VMD is unable to determine the input parameters adaptively seriously affects the decomposition results. For this issue, an optimized VMD method based on modified scale-space representation (MSSR-VMD) is proposed. Firstly, MSSR is proposed to segment the fault signal spectrum, acquiring modes’ number and the initial center frequency for each mode adaptively. Moreover, a pre-decomposition step is added to the original VMD, which selects a target mode from divided frequency bands. Finally, the penalty factor of the target mode is adjusted during the iterative update of the VMD to achieve accurate extraction for the fault features. MSSR-VMD and other adaptive decomposition algorithms are employed to handle the simulated and experimental signals separately. By comparing the analysis results, the method has certain superiority in rolling bearing fault feature extraction."
+ },
+ "10.1109/access.2023.3307628": {
+  "doi": "10.1109/access.2023.3307628",
+  "title": "Tutorial on Empirical Mode Decomposition: Basis Decomposition and Frequency Adaptive Graduation in Non-Stationary Time Series",
+  "authors": [
+   "Cole van Jaarsveldt",
+   "Gareth W. Peters",
+   "Matthew Ames",
+   "Mike Chantler"
+  ],
+  "venue": "IEEE Access",
+  "year": 2023,
+  "online": [
+   null
+  ],
+  "volume": "11",
+  "issue": null,
+  "page": "94442-94478",
+  "article": null,
+  "type": "journal-article",
+  "abstract": "This tutorial explores the class of non-parametric time series basis decomposition methods particularly suited for nonstationary time series known as Empirical Mode Decomposition (EMD). In outlining a statistical perspective of the EMD method, it will be contrasted and combined (for the betterment of both methods) with other existing nonstationary basis decomposition methods. Some such techniques are functional Independent Component Analysis (ICA), Empirical Fourier Decomposition (EFD) (nonstationary extension of the Short-Time Fourier Transform (STFT), Empirical Wavelet Transform (EWT) (nonstationary extension of Morlet Wavelet Transform (MWT)), and Singular Spectrum Decomposition (SSD) (nonstationary extension and refinement of Singular Spectrum Analysis (SSA)). A detailed review of this time series basis decomposition approach is presented that explores 3 core aspects for a statistical audience: 1) the basis functions (Intrinsic Mode Functions (IMFs)) representation and estimation methods including robustness and optimal spline representations including smoothing and knot placements; 2) the computational and numerical robustness of various aspects of the iterative algorithmic design for EMD basis extraction, including treating carefully boundary effects; and 3) the first attempt at a population-based characterisation of EMD that provides a novel stochastic embedding of the EMD method within a stochastic model framework. Furthermore, the basis representations considered will be connected to local frequency graduation smoothing methods, demonstrating that these can be adapted to a local frequency adaptive framework within the EMD context. This will provide new practical insights into the interface between time series basis decomposition and graduation-smoothed representations."
+ },
+ "10.1002/stc.2966": {
+  "doi": "10.1002/stc.2966",
+  "title": "Bridge damage detection via improved completed ensemble empirical mode decomposition with adaptive noise and machine learning algorithms",
+  "authors": [
+   "Rick M. Delgadillo",
+   "Joan R. Casas"
+  ],
+  "venue": "Structural Control and Health Monitoring",
+  "year": 2022,
+  "online": [
+   2022,
+   3,
+   25
+  ],
+  "volume": "29",
+  "issue": "8",
+  "page": null,
+  "article": null,
+  "type": "journal-article",
+  "abstract": "Structural health monitoring field is growing in the use of more modern techniques and tools in order to identify damages in civil structures. The improvements in signal processing techniques and data mining have, recently, been employed due to their powerful computational ability to detect damage in bridges. Despite the majority of researchers have been studying laboratory-scale implementations and theoretical developments, the limited data to identify structural faults in real bridges are still a problem. The current study presents a novel approach for damage identification by using two improved methods such as decomposition techniques and machine learning algorithms. Since the data obtained from the traffic vibration in real bridges are non-linear and time varying, the Hilbert–Huang transform is used to process the vibration data. Additionally, a phenomenon of mode mixing is presented in the current decomposition methods, such as empirical mode decomposition (EMD). Therefore, a novel improved completed ensemble EMD with adaptive noise (ICEEMDAN) was adopted. After the signal decomposition and identification of the damage parameter, a symbolic data analysis and clustering-based approach were developed. Additionally, an unsupervised machine learning algorithm was used to group substructures with similar behavior and then detect damages. This learning method was used for automatically classifying the damages using a moving windows process sequentially applied to the structural response of the bridge. The validity of the approach is demonstrated using real data collected from a truss bridge. The results show that the proposed mixed method was effective and can endow better results in bridge health monitoring."
+ },
+ "10.3390/s22176599": {
+  "doi": "10.3390/s22176599",
+  "title": "Bearing Fault Diagnosis Using Piecewise Aggregate Approximation and Complete Ensemble Empirical Mode Decomposition with Adaptive Noise",
+  "authors": [
+   "Lei Hu",
+   "Ligui Wang",
+   "Yanlu Chen",
+   "Niaoqing Hu",
+   "Yu Jiang"
+  ],
+  "venue": "Sensors",
+  "year": 2022,
+  "online": [
+   2022,
+   9,
+   1
+  ],
+  "volume": "22",
+  "issue": "17",
+  "page": "6599",
+  "article": null,
+  "type": "journal-article",
+  "abstract": "Complete ensemble empirical mode decomposition with adaptive noise (CEEMDAN) effectively separates the fault vibration signals of rolling bearings and improves the diagnosis of rolling bearing faults. However, CEEMDAN has high memory requirements and low computational efficiency. In each iteration of CEEMDAN, fault vibration signals are added with noises, both the vibration signals added with noises and the added noises are decomposed with classical empirical mode decomposition (EMD). This paper proposes a rolling bearing fault diagnosis method that combines piecewise aggregate approximation (PAA) with CEEMDAN. PAA enables CEEMDAN to decompose long signals and to achieve enhanced diagnosis. In particular, the method first yields the vibration envelope using bandpass filtering and demodulation, then compresses the envelope using PAA, and finally decomposes the compressed signal with CEEMDAN. Test data verification results show that the proposed method is more effective and more efficient than CEEMDAN."
+ },
+ "10.1016/j.nexus.2023.100210": {
+  "doi": "10.1016/j.nexus.2023.100210",
+  "title": "China mainland new energy index price forecasting with the neural network",
+  "authors": [
+   "Xiaojie Xu",
+   "Yun Zhang"
+  ],
+  "venue": "Energy Nexus",
+  "year": 2023,
+  "online": [
+   null
+  ],
+  "volume": "10",
+  "issue": null,
+  "page": "100210",
+  "article": "100210",
+  "type": "journal-article",
+  "abstract": "For policymakers and investors, forecasting prices of energy indices has always been an important task. The present work focuses on the Chinese market and explores the daily price forecasting problem for the new energy index in the mainland during the period spanning January 4, 2016 – December 31, 2020. Our analysis is facilitated through the nonlinear autoregressive neural network model and one hundred and twenty model settings are tested in the fields of the algorithm for training the model, the number of hidden neurons utilized, the number of delays utilized, and the ratio utilized for segmenting the price series into different phases. Analysis here leads to the construction of a rather simple model based upon four delays and two hidden neurons with the Levenberg-Marquardt algorithm for training, which generates accurate and stable forecast results, with relative root mean square errors below 1.80% and mean absolute percentage errors below 1.30% across training, validation, and testing phases and for the overall sample. This constructed model also leads to statistically significantly better forecasting performance than a linear autoregressive model at the 1% significance level based upon the modified Diebold-Mariano test. The model built could be used as part of policy analysis for policymakers and decision making for investors. The forecasting results might also benefit design of similar energy indices by offering reference information in terms of price paths projected through the model."
+ },
+ "10.1155/jama/7706431": {
+  "doi": "10.1155/jama/7706431",
+  "title": "Stock Market Index Prediction Using CEEMDAN‐LSTM‐BPNN‐Decomposition Ensemble Model",
+  "authors": [
+   "John Kamwele Mutinda",
+   "Abebe Geletu"
+  ],
+  "venue": "Journal of Applied Mathematics",
+  "year": 2025,
+  "online": [
+   2025,
+   3,
+   3
+  ],
+  "volume": "2025",
+  "issue": "1",
+  "page": null,
+  "article": "7706431",
+  "type": "journal-article",
+  "abstract": "This study investigates the forecasting of the Deutscher Aktienindex (DAX) market index by addressing the nonlinear and nonstationary nature of financial time series data using the CEEMDAN decomposition method. The CEEMDAN technique is used to decompose the time series into intrinsic mode functions (IMFs) and residuals, which are classified into low‐frequency (LF), medium‐frequency (MF), and high‐frequency (HF) components. Long short‐term memory (LSTM) networks are applied to the MF and HF components, while the backpropagation neural network (BPNN) is utilized for the LF components, resulting in a robust hybrid model termed CEEMDAN‐LSTM‐BPNN. To evaluate the performance of the proposed model, we compare it against several benchmark models, including ARIMA, RNN, LSTM, GRU, BIGRU, BILSTM, BPNN, CEEMDAN‐LSTM, CEEMDAN‐GRU, CEEMDAN‐BPNN, and CEEMDAN‐GRU‐BPNN, across different training–testing splits (70% training/30% testing, 80% training/20% testing, and 90% training/10% testing). The model’s predictive accuracy is measured using six metrics: root mean squared error (RMSE), mean absolute error (MAE), mean absolute percentage error (MAPE), symmetric mean absolute percentage error (SMAPE), root mean squared logarithmic error (RMSLE), and R ‐squared. To further assess model performance, we conduct the Diebold–Mariano (DM) test to compare forecast accuracy between the proposed and benchmark models and the model confidence set (MCS) test to evaluate the statistical significance of the improvement. The results demonstrate that the CEEMDAN‐LSTM‐BPNN model significantly outperforms other methods in terms of accuracy, with the DM and MCS tests confirming the superiority of the proposed model across multiple evaluation metrics. The findings highlight the importance of combining advanced decomposition methods and deep learning models for financial forecasting. This research contributes to the development of more accurate forecasting techniques, offering valuable implications for financial decision‐making and risk management."
+ },
+ "10.1016/j.eswa.2022.116659": {
+  "doi": "10.1016/j.eswa.2022.116659",
+  "title": "Machine learning techniques and data for stock market forecasting: A literature review",
+  "authors": [
+   "Mahinda Mailagaha Kumbure",
+   "Christoph Lohrmann",
+   "Pasi Luukka",
+   "Jari Porras"
+  ],
+  "venue": "Expert Systems with Applications",
+  "year": 2022,
+  "online": [
+   null
+  ],
+  "volume": "197",
+  "issue": null,
+  "page": "116659",
+  "article": "116659",
+  "type": "journal-article",
+  "abstract": "In this literature review, we investigate machine learning techniques that are applied for stock market prediction. A focus area in this literature review is the stock markets investigated in the literature as well as the types of variables used as input in the machine learning techniques used for predicting these markets. We examined 138 journal articles published between 2000 and 2019. The main contributions of this review are: (1) an extensive examination of the data, in particular, the markets and stock indices covered in the predictions, as well as the 2173 unique variables used for stock market predictions, including technical indicators, macro-economic variables, and fundamental indicators, and (2) an in-depth review of the machine learning techniques and their variants deployed for the predictions. In addition, we provide a bibliometric analysis of these journal articles, highlighting the most influential works and articles."
+ },
+ "10.1007/s10462-022-10226-0": {
+  "doi": "10.1007/s10462-022-10226-0",
+  "title": "Deep learning in the stock market—a systematic survey of practice, backtesting, and applications",
+  "authors": [
+   "Kenniy Olorunnimbe",
+   "Herna Viktor"
+  ],
+  "venue": "Artificial Intelligence Review",
+  "year": 2023,
+  "online": [
+   2022,
+   6,
+   30
+  ],
+  "volume": "56",
+  "issue": "3",
+  "page": "2057-2109",
+  "article": null,
+  "type": "journal-article",
+  "abstract": "The widespread usage of machine learning in different mainstream contexts has made deep learning the technique of choice in various domains, including finance. This systematic survey explores various scenarios employing deep learning in financial markets, especially the stock market. A key requirement for our methodology is its focus on research papers involving backtesting. That is, we consider whether the experimentation mode is sufficient for market practitioners to consider the work in a real-world use case. Works meeting this requirement are distributed across seven distinct specializations. Most studies focus on trade strategy, price prediction, and portfolio management, with a limited number considering market simulation, stock selection, hedging strategy, and risk management. We also recognize that domain-specific metrics such as \"returns\" and \"volatility\" appear most important for accurately representing model performance across specializations. Our study demonstrates that, although there have been some improvements in reproducibility, substantial work remains to be done regarding model explainability. Accordingly, we suggest several future directions, such as improving trust by creating reproducible, explainable, and accountable models and emphasizing prediction of longer-term horizons-potentially via the utilization of supplementary data-which continues to represent a significant unresolved challenge."
+ },
+ "10.1080/01605682.2022.2118629": {
+  "doi": "10.1080/01605682.2022.2118629",
+  "title": "Statistical, machine learning and deep learning forecasting methods: Comparisons and ways forward",
+  "authors": [
+   "Spyros Makridakis",
+   "Evangelos Spiliotis",
+   "Vassilios Assimakopoulos",
+   "Artemios-Anargyros Semenoglou",
+   "Gary Mulder",
+   "Konstantinos Nikolopoulos"
+  ],
+  "venue": "Journal of the Operational Research Society",
+  "year": 2023,
+  "online": [
+   2022,
+   9,
+   5
+  ],
+  "volume": "74",
+  "issue": "3",
+  "page": "840-859",
+  "article": null,
+  "type": "journal-article",
+  "abstract": "The purpose of this paper is to test empirically the value currently added by Deep Learning (DL) approaches in time series forecasting by comparing the accuracy of some state-of-the-art DL methods with that of popular Machine Learning (ML) and statistical ones. The paper consists of three main parts. The first part summarizes the results of a past study that compared statistical with ML methods using a subset of the M3 data, extending however its results to include DL models, developed using the GluonTS toolkit. The second part widens the study by considering all M3 series and comparing the results obtained with that of other studies that have used the same data for evaluating new forecasting methods. We find that combinations of DL models perform better than most standard models, both statistical and ML, especially for the case of monthly series and long-term forecasts. However, these improvements come at the cost of significantly increased computational time. Finally, the third part describes the advantages and drawbacks of DL methods, discussing the implications of our findings to the practice of forecasting. We conclude the paper by discussing how the field of forecasting has evolved over time and proposing some directions for future research."
+ },
+ "10.1007/s11135-025-02052-7": {
+  "doi": "10.1007/s11135-025-02052-7",
+  "title": "Random walks, Hurst exponent, and market efficiency",
+  "authors": [
+   "Giuseppe Pernagallo"
+  ],
+  "venue": "Quality &amp; Quantity",
+  "year": 2025,
+  "online": [
+   2025,
+   1,
+   24
+  ],
+  "volume": "59",
+  "issue": "S2",
+  "page": "1097-1119",
+  "article": null,
+  "type": "journal-article",
+  "abstract": "Abstract Market efficiency assumes that prices in financial markets are perfectly informative and, therefore, it is not possible to design trading strategies that outperform the market. The concept of efficiency has important implications for financial stability and, consequently, for financial policies. If asset returns exhibit persistent or anti-persistent behavior, then predictability based on past returns might be possible, which would be a clear violation of the weak form of efficiency. Many studies rely on the Hurst exponent to evaluate the level of memory of financial returns, and the purpose of this paper is to show that long memory or anti-persistence of financial returns is not incompatible with the random walk model or the efficient market hypothesis (EMH). The use of the Hurst exponent to demonstrate the inefficiency of financial markets using common estimators is troublesome, especially when applied to financial returns, since values of $$\\hat{H} \\ne 0.5$$ H ^ ≠ 0.5 are not evidence against the random walk model or the EMH. Moreover, the high variability of Hurst exponent estimates and their dependence on the chosen algorithm should motivate careful use of this tool. This study proposes a simple theoretical explanation and an extensive simulation study to show that $$\\hat{H} \\ne 0.5$$ H ^ ≠ 0.5 for financial returns is perfectly compatible with the random walk model. As a robustness check, both the traditional rescaled range and the wavelet lifting algorithms are used. Applications to real data are also discussed to show that the empirical values of the Hurst exponent are in the range suggested by the simulations, providing evidence that over-reliance on the Hurst exponent could lead to erroneous rejection of the random walk model. Specifically, the paper presents an application to the daily returns of stock market indices (DJIA and S&P 500) over a period of more than 30 years and cryptocurrencies (Bitcoin and Ethereum) over a period of more than 5 years."
+ }
+}

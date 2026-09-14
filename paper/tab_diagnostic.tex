@@ -1,0 +1,19 @@
+\begin{table}[ht]
+\caption{Information about the next day's price change in the model inputs, measured without any network. $r$ is the correlation between the high frequency group at day $t-1$ and the change from $t-1$ to $t$; skill is the out of sample reduction in squared error that a linear regression on three input features achieves over persistence.}
+\label{tab:diagnostic}
+\centering
+\begin{tabular}{@{}llrrr@{}}
+\toprule
+Series & Protocol & $r$ & $p$ & Skill \\
+\midrule
+S\&P~500 high & full series & ${-}0.526$ & $<0.001$ & $0.552$ \\
+ & walk forward & $0.056$ & 0.21 & ${-}0.014$ \\
+S\&P~500 low & full series & ${-}0.552$ & $<0.001$ & $0.509$ \\
+ & walk forward & $0.045$ & 0.32 & ${-}0.030$ \\
+SSEC high & full series & ${-}0.580$ & $<0.001$ & $0.596$ \\
+ & walk forward & $0.098$ & 0.03 & ${-}0.015$ \\
+SSEC low & full series & ${-}0.579$ & $<0.001$ & $0.556$ \\
+ & walk forward & $0.002$ & 0.97 & ${-}0.009$ \\
+\botrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,22 @@
+{
+ "walkforward_SPX_High": {
+  "n_test_windows": 489,
+  "n_test_expected": 497,
+  "n_components": 16
+ },
+ "walkforward_SPX_Low": {
+  "n_test_windows": 318,
+  "n_test_expected": 497,
+  "n_components": 16
+ },
+ "walkforward_SSEC_High": {
+  "n_test_windows": 17,
+  "n_test_expected": 479,
+  "n_components": 16
+ },
+ "walkforward_SSEC_Low": {
+  "n_test_windows": 427,
+  "n_test_expected": 479,
+  "n_components": 17
+ }
+}

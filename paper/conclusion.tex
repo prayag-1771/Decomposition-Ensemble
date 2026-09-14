@@ -1,0 +1,18 @@
+\section{Conclusion}\label{sec:conclusion}
+We reproduced a published decomposition ensemble stock forecaster, corrected
+twelve implementation issues along the way, and evaluated it on the daily
+highest and lowest prices of the S\&P~500 and the SSEC under two protocols that
+differ only in whether the decomposition may see the future. With the series
+decomposed once in full, both network heads reached the accuracy the
+literature reports, MAPE near $0.1\%$ and $R^2$ above $0.999$, and beat
+persistence on every series with $p<0.001$; a linear regression on the raw
+inputs already explained half of the next day's price change, which is the
+signature of information from day $t$ inside the features for day $t-1$. With
+the decomposition restricted to the available history, the error rose by a
+factor of $4.9$ to $10.4$, every forecast fell significantly behind
+persistence, and the reported advantage of the convolutional head over the
+recursive head disappeared. Decomposition ensemble results for daily index
+levels should therefore be read as claims about the evaluation protocol until
+they are shown to survive a causal decomposition and a persistence benchmark,
+and the two checks proposed here, the input diagnostic and the leakage ratio,
+make that demonstration inexpensive.

@@ -1,0 +1,63 @@
+\title[Causal Evaluation of Decomposition Ensemble Stock Index Forecasting]{Causal Evaluation of Decomposition Ensemble Stock Index Forecasting: Reported Accuracy Depends on the Decomposition Seeing the Future}
+
+%% AUTHORS: copied from the original Group 17 submission as a placeholder.
+%% Confirm the list and order, add the members who carried out this study,
+%% and supply every e-mail address (the \email lines marked TODO) before
+%% submission. No address below has been invented
+
+\author[1]{\fnm{Prayag} \sur{Sharma}}
+\email{prayag.sharma2024@vitstudent.ac.in}
+
+\author[1]{\fnm{Veer Vikram} \sur{Saxena}}
+\email{veer.vikramsaxena2024@vitstudent.ac.in}
+
+\author[1]{\fnm{Ayush} \sur{Srivastava}}
+\email{ayush.srivastava2024@vitstudent.ac.in}
+
+\author*[2]{\fnm{Ravi} \sur{Tiwari}}
+\email{ravi.tiwari@vit.ac.in}
+
+\affil[1]{%
+\orgdiv{School of Computer Science and Engineering (SCOPE)},
+\orgname{Vellore Institute of Technology (VIT)},
+\orgaddress{\city{Chennai}, \state{Tamil Nadu}, \country{India}}%
+}
+
+\affil[2]{%
+\orgdiv{School of Electronics Engineering (SENSE)},
+\orgname{Vellore Institute of Technology (VIT)},
+\orgaddress{\city{Chennai}, \state{Tamil Nadu}, \country{India}}%
+}
+
+\abstract{Decomposition ensemble models, which split a price series into
+components with empirical or variational mode decomposition and forecast each
+component with a neural network, report daily index forecasts with percentage
+errors well below one tenth of one percent. A decomposition is not causal,
+however: the value of a component on a given day depends on the days that
+follow it, so a series decomposed in full before the training and test split
+carries the test prices into the test inputs. We measure how much of the
+reported accuracy depends on this. Reproducing a published model that combines
+improved complete ensemble empirical mode decomposition with adaptive noise, a
+second variational mode decomposition stage tuned by particle swarm
+optimisation, and a bidirectional long short term memory network with self
+attention feeding either a temporal convolutional head or a tiny recursive
+head, we compare full series decomposition with a walk forward protocol that
+redecomposes the available history at every forecast origin, on the daily
+highest and lowest prices of the S\&P~500 and the Shanghai Stock Exchange
+Composite Index over ten years. Before any network is trained, a linear
+regression on the full series inputs explains 51 to 60 percent of the next
+day's price change, and none of it under walk forward decomposition. Trained
+on identical code, seeds and budgets, the networks reach a mean absolute
+percentage error of 0.07 to 0.13 percent and a coefficient of determination
+above 0.999 under full series decomposition and beat persistence on every
+series by the modified Diebold and Mariano test; under walk forward
+decomposition their error is 4.9 to 10.4 times larger and they fall
+significantly behind persistence on every series. The reported advantage of
+the convolutional head over the recursive head holds only under full series
+decomposition. The evidence covers two indices, a one day horizon and one seed
+per network. In reproducing the pipeline we identified and corrected twelve
+implementation issues, which we document, and we propose two inexpensive
+checks, an input diagnostic and a leakage ratio, that make the dependence of a
+headline result on its protocol visible.}
+
+\keywords{Deep learning, Financial time series, Look ahead bias, Boundary issue, Walk forward validation, Diebold and Mariano test}

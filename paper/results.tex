@@ -1,0 +1,220 @@
+\section{Results}\label{sec:results}
+
+Five subsections follow: the information present in the inputs before any
+network is trained, the accuracy of the forecasts under the two protocols, the
+ratio between them, the comparison with benchmarks, and the comparison between
+the two heads.
+
+\subsection{Information about the next day in the inputs}
+Before any network is trained, the inputs themselves already show how the two
+protocols differ. Table~\ref{tab:diagnostic} relates the high frequency group,
+the sum of the $K$ VMD modes on the last day of each input window, to the price
+change that the forecast has to predict. Under full series decomposition the
+two are strongly and negatively correlated on every series, with $r$ between
+$-0.58$ and $-0.53$ ($p<10^{-35}$), and a linear regression on three input
+features, fitted on half of the test dates and scored on the other half,
+removes between $51\%$ and $60\%$ of the squared error of persistence. Daily
+index changes should not allow anything of the kind. Fig.~\ref{fig:mechanism}
+shows why it happens: when the full series is decomposed, the high frequency
+value at day $t-1$ is shaped by the price at day $t$, so a rise on the next day
+leaves day $t-1$ looking like a local trough and pulls its high frequency value
+down. Under walk forward decomposition the same correlation lies between
+$0.00$ and $0.10$, and the regression does worse than persistence on all four
+series, by $0.9\%$ to $3.0\%$. The one correlation that reaches nominal
+significance, $r=0.10$ for the SSEC highest price ($p=0.03$), carries no value
+out of sample. The walk forward high frequency group is also $2.5$ to $3.3$
+times more variable on the last day of the history than the full series group
+on the same dates, which is the boundary behaviour that sifting is known to
+need care with~\cite{emdtutorial2023}. Those large end values are noise rather
+than signal, and a forecaster that works from history alone has to live with
+them.
+
+%%TABLE:tab_diagnostic%%
+
+\begin{figure}[ht]
+\centering
+\figorbox{\textwidth}{figs/fig_mechanism.png}
+\caption{Next day change of the S\&P~500 highest price plotted against the
+high frequency group on the last day of the input window, for the $496$ test
+dates both protocols share. Left, full series decomposition; right, walk
+forward decomposition. The figure shows the shape of the relation that
+Table~\ref{tab:diagnostic} summarises with one coefficient per series.}
+\label{fig:mechanism}
+\end{figure}
+
+\subsection{Forecast accuracy under the two protocols}
+Table~\ref{tab:accuracy} reports the accuracy of both heads under both
+protocols, with persistence alongside, on the $496$ (S\&P~500) and $478$
+(SSEC) test dates that the protocols share. Under full series decomposition
+the forecasts are very accurate by any of the usual measures: RMSE between
+$5.0$ and $10.7$ index points, MAPE between $0.066\%$ and $0.134\%$, and $R^2$
+between $0.9992$ and $0.9999$. These values are typical of what decomposition
+ensemble studies report. Under walk forward decomposition the same networks,
+trained with the same code, seeds and budgets, reach RMSE between $42.5$ and
+$68.5$ points, MAPE between $0.72\%$ and $0.83\%$, and $R^2$ between $0.981$
+and $0.991$. Persistence sits between the two, with RMSE from $36.2$ to $57.9$
+points and MAPE from $0.52\%$ to $0.67\%$. Fig.~\ref{fig:trace} shows the
+first hundred test days of two series, where the difference is visible without
+any statistic: the full series forecast lies on top of the price and turns
+when the price turns, which is only possible because its inputs were computed
+from the price it is forecasting, while the walk forward forecast follows the
+price with a delay, as persistence does, and with additional error of its own.
+
+%%TABLE:tab_accuracy%%
+
+\begin{figure}[ht]
+\centering
+\figorbox{\textwidth}{figs/fig_trace.png}
+\caption{Price, persistence and the two TCN forecasts over the first $100$
+shared test days of the S\&P~500 highest price (top) and the SSEC highest price
+(bottom). The figure adds the timing of the forecasts, which the error
+measures in Table~\ref{tab:accuracy} do not show.}
+\label{fig:trace}
+\end{figure}
+
+\subsection{How much of the accuracy depends on the protocol}
+Table~\ref{tab:leakage} and Fig.~\ref{fig:rho} give the leakage inflation
+ratio of Eq.~\eqref{eq:rho} for each series and head. Restricting the
+decomposition to the past multiplies the RMSE by a factor between $4.9$ and
+$10.4$, with a geometric mean of $7.2$ over the eight cases. The MDM statistic
+of Eq.~\eqref{eq:mdm} for the walk forward forecast against the full series
+forecast lies between $+4.5$ and $+12.4$, so every one of the eight
+differences is significant at any conventional level. The ratio is larger for
+the TCN head than for the TRM head on every series ($6.4$ to $10.4$ against
+$4.9$ to $8.3$), because the TCN head achieved the lower full series error
+while the two heads reach almost the same walk forward error.
+
+%%TABLE:tab_leakage%%
+
+\begin{figure}[ht]
+\centering
+\figorbox{0.8\textwidth}{figs/fig_rho.png}
+\caption{Leakage inflation ratio $\rho$ by series and head. A star marks a
+significant MDM test of the walk forward forecast against the full series
+forecast ($p<0.05$); the line at $\rho=1$ is where decomposing the full series
+would give no advantage. The figure makes the consistency of the effect across
+series and heads visible at a glance, which the rows of Table~\ref{tab:leakage}
+do not.}
+\label{fig:rho}
+\end{figure}
+
+\subsection{Comparison with benchmarks}
+Table~\ref{tab:baselines} gives the RMSE of the five benchmarks. Persistence
+and the drift forecast are indistinguishable, within $0.3\%$ of each other on
+every series, and both are far ahead of any smoothing benchmark: the five day
+moving average is $1.5$ to $1.6$ times worse, exponential smoothing $1.8$ to
+$1.9$ times, and the twenty day moving average $2.7$ to $2.9$ times. On daily
+index levels, the last observed price is the benchmark to beat.
+Table~\ref{tab:dm} tests each model against it. Under full series
+decomposition both heads beat persistence on all four series, with MDM
+statistics between $-4.5$ and $-10.1$ and $p<0.001$ in every case. Under walk
+forward decomposition both heads lose to persistence on all four series, with
+MDM statistics between $+3.5$ and $+7.4$, again $p<0.001$ in every case. In
+terms of RMSE, the causal forecasts are between $13\%$ and $30\%$ worse than
+persistence. Of the eight model and series combinations, all eight beat
+persistence when the decomposition sees the future and none does when it does
+not.
+
+%%TABLE:tab_baselines%%
+
+%%TABLE:tab_dm%%
+
+\subsection{TCN and TRM heads}
+Table~\ref{tab:heads} compares the two heads under each protocol, using the
+MDM statistic of the TCN forecast against the TRM forecast. Under full series
+decomposition the TCN head is significantly better on all four series (MDM
+between $-2.9$ and $-6.1$, $p<0.01$), which is the ranking the source
+comparison reported. Under walk forward decomposition the picture changes: on
+three series the difference is not significant ($p=0.56$, $0.52$ and $0.97$),
+and on the fourth, the S\&P~500 lowest price, the TRM head is significantly
+better (MDM $+4.2$, $p<0.001$). The two heads reach walk forward RMSE values
+that differ by less than $0.7\%$ on three of the four series.
+
+%%TABLE:tab_heads%%
+
+\section{Discussion}\label{sec:discussion}
+
+The discussion has five parts: what the full series numbers measure, why the
+causal forecasts trail persistence, what the head comparison shows, the
+practices we recommend, and the limits of the evidence.
+
+\subsection{What the full series numbers measure}
+The full series results in Table~\ref{tab:accuracy} are of the same order as
+those reported for this family of models: percentage errors around one tenth
+of one percent and coefficients of determination above $0.999$. They were
+produced by a pipeline whose implementation we audited line by line, with no
+test data in any scaler, training set or stopping rule. They are nonetheless
+not forecasts. Table~\ref{tab:diagnostic} shows that the inputs alone, with no
+network, explain half of the next day's price change under this protocol, and
+Table~\ref{tab:leakage} shows that the whole advantage over persistence
+disappears when the decomposition is restricted to the past. The number that a
+full series protocol measures is how efficiently a network can read the future
+out of components that already contain it.
+
+\subsection{Why the causal forecasts trail persistence}
+The walk forward forecasts were not merely no better than persistence; they
+were significantly worse on every series, by $13\%$ to $30\%$ in RMSE. Two
+measurements locate the cause. First, the components at the newest end of a
+freshly decomposed history are $2.5$ to $3.3$ times more variable than the same
+components inside a full decomposition, which is the boundary behaviour of
+sifting~\cite{emdtutorial2023}. Second, a forecaster that simply copied the
+last value of each component window and summed the copies would have matched
+persistence to within $0.7\%$ under either protocol, because the components
+reconstruct the price. The trained networks therefore lost between $12\%$ and
+$29\%$ relative to copying their own inputs. They were trained on windows from
+the interior of the training decomposition, where component dynamics are
+smooth, and applied to windows that end at a boundary, where they are not. This
+is a mismatch between training and test inputs that the walk forward protocol
+exposes rather than creates, and it applies equally to the source model and to
+the many published variants that decompose the training portion once. Closing
+it would require training on windows built the same way as the test windows,
+at the cost of one extra decomposition per training day, roughly two thousand
+per series, or an explicit boundary treatment inside the decomposition.
+
+\subsection{The head comparison}
+Under full series decomposition the TCN head was significantly more accurate
+than the TRM head on all four series, which is the conclusion the source
+comparison reached. Under walk forward decomposition the difference vanished
+on three series and reversed on the fourth. The ranking of the two heads is
+therefore a property of the evaluation protocol, not of the heads: when the
+inputs contain the answer, the architecture that reads it out more efficiently
+wins, and when they do not, the two are equivalent. This is consistent with the
+observation that simple models hold their own against elaborate architectures
+when forecasts are evaluated carefully~\cite{zeng2023,hewamalage2022}.
+
+\subsection{Recommendations}
+Three practices would have made the source result, and results like it,
+interpretable.
+\begin{enumerate}
+\item Decompose only data that would have been available at the forecast
+origin, and say so. Table~\ref{tab:diagnostic} gives a check that takes a few
+seconds and needs no model.
+\item Report persistence and the MDM statistic against it, since on daily
+index levels it is the benchmark that matters.
+\item Report the ratio $\rho$ of causal to noncausal error, so that readers
+can see how much of a headline number depends on the protocol.
+\end{enumerate}
+
+\subsection{Limitations}
+Five choices bound these conclusions.
+\begin{enumerate}
+\item The noise amplitude and the swarm objective were kept from the source
+model, so the decomposition studied is ICEEMDAN at a small, fixed noise level
+with $K$ and $\alpha$ at the bounds of their search ranges. Other settings
+could change the size of the effect, although not the fact that a
+decomposition of the full series has seen the prices it is asked to forecast.
+\item The forecast horizon is one day, and the evidence covers two indices
+over one ten year window with one seed per network.
+\item Early stopping monitors the training loss, which keeps every network
+away from test data but may leave individual components over or under
+trained.
+\item Input windows are expressed relative to their last value rather than
+min max scaled, a change the S\&P~500 required but one that departs from the
+source model, so our absolute errors are not directly comparable with the
+errors reported there.
+\item Walk forward training windows come from the interior of the training
+decomposition while walk forward test windows end at a boundary, as discussed
+above. The causal results therefore describe the protocol as it is commonly
+run, and whether a boundary matched training scheme would narrow the gap to
+persistence is untested here.
+\end{enumerate}

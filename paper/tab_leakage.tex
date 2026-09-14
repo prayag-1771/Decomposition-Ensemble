@@ -1,0 +1,19 @@
+\begin{table}[ht]
+\caption{Effect of the decomposition protocol. $\rho$ is the walk forward RMSE (protocol B) divided by the full series RMSE (protocol A); a positive MDM statistic means the walk forward forecast has the larger squared error.}
+\label{tab:leakage}
+\centering
+\begin{tabular}{@{}llrrrrr@{}}
+\toprule
+Series & Head & RMSE$_{\mathrm{A}}$ & RMSE$_{\mathrm{B}}$ & $\rho$ & MDM & $p$ \\
+\midrule
+S\&P~500 high & TCN & 5.83 & 60.66 & 10.40 & ${+}12.33$ & $<0.001$ \\
+ & TRM & 7.25 & 60.47 & 8.34 & ${+}12.42$ & $<0.001$ \\
+S\&P~500 low & TCN & 7.53 & 68.52 & 9.10 & ${+}10.08$ & $<0.001$ \\
+ & TRM & 10.74 & 65.25 & 6.07 & ${+}10.22$ & $<0.001$ \\
+SSEC high & TCN & 7.13 & 45.60 & 6.40 & ${+}4.81$ & $<0.001$ \\
+ & TRM & 9.29 & 45.30 & 4.88 & ${+}4.51$ & $<0.001$ \\
+SSEC low & TCN & 4.99 & 42.52 & 8.52 & ${+}6.24$ & $<0.001$ \\
+ & TRM & 7.82 & 42.54 & 5.44 & ${+}5.96$ & $<0.001$ \\
+\botrule
+\end{tabular}
+\end{table}

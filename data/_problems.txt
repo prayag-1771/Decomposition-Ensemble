@@ -1,0 +1,263 @@
+The work package says the code should not need modifying. It did. Thirteen
+defects were found and fixed, four of them severe enough to invalidate the
+study's central comparison, and one required file was missing from the
+package altogether. Every change is listed below with the reason, because the two
+protocols have to stay comparable. All fixes live in the shared modules, so
+Protocol A and Protocol B are affected identically and the comparison between
+them is preserved.
+
+## Missing file: shared/_selftest.py
+
+Part 2 of the work package instructs "cd shared / python _selftest.py" to
+confirm the environment. No such file was in the package. It was written from
+scratch and is included with these results. It checks the interpreter and
+libraries, imports both project modules, verifies the numerical core on a
+400-point synthetic series, runs both protocols end to end, and round-trips
+save(). It exits non-zero if any check fails. Its output is in section 1.1.
+
+## Defect 1 -- ICEEMDAN returned its components in reverse order (severe)
+
+iceemdan() ended with "return out[:, ::-1]". Its own docstring promises
+"highest frequency first", and decompose() takes column 0 as the
+high-frequency component to hand to the PSO-VMD stage. The reversal made
+column 0 the lowest-frequency residual instead. The pipeline was therefore
+re-decomposing the trend, not the highest-frequency IMF -- the opposite of
+what the Gong and Xing pipeline specifies.
+
+Measured on a 400-point synthetic series, zero-crossings per column were
+[199, 1, 4, 23, 67, 213] before the fix -- monotonically increasing, so
+column 0 was the smoothest component. After removing the reversal they are
+[213, 67, 23, 4, 1, 199], highest frequency first as documented. The
+self-test now asserts this ordering so the defect cannot return silently.
+
+Fix: the reversal was removed. Note that _iceemdan_original() in
+run_decompositions.py keeps its own "[:, ::-1]" untouched, because Task 1
+check 3 must run the submission's code verbatim.
+
+## Defect 2 -- ensemble padding put zeros after the residual
+
+When a realisation produced fewer IMFs than the common depth, iceemdan()
+padded it with "np.vstack([imfs_r, np.zeros(...)])". That appends the zeros
+after the residual, so the residual sat at level k-1 while the last level
+averaged this run's zeros against another run's trend -- the exact
+level-mixing the surrounding comment says the correction was written to
+prevent. The "exact residual" line at the end then had to absorb the whole
+discrepancy into the final column, turning it into a noise term.
+
+Fix: the zeros are inserted between the final IMF and the residual, so the
+residual stays in the last slot and every level is averaged over the same
+runs.
+
+## Defect 3 -- the PSO swarm leader could never improve
+
+pso_vmd() updated the global best with "if f < pbest_fit[g]", but pbest_fit[i]
+had already been overwritten with f on the line above. Whenever the improving
+particle was itself the current leader (i == g) the test reduced to f < f,
+which is always false, so the leader's position froze even as it kept finding
+better values.
+
+Fix: the global best fitness is tracked in its own variable, gbest_fit, and
+compared against that. The returned K is also clamped to at least 2 to match
+the clamp already applied inside the fitness function.
+
+## Defect 4 -- VMD left the DC bin unconjugated
+
+When rebuilding Hermitian symmetry before the inverse transform, index 0 of
+the shifted spectrum was never set, so one bin of every mode was wrong.
+
+Fix: full_hat[0] = np.conj(full_hat[-1]) added. Small in effect, but it is one
+line and it makes the symmetry complete.
+
+## Defect 5 -- walk-forward targets were a copy of the last input (severe)
+
+protocol_walk_forward() built its component targets as
+"yte = [W[:, -1, c] ...]" from the same window W it had just used for X_test.
+y_test[c][i] was therefore bit-identical to X_test[c][i, -1, 0] for every row.
+Confirmed before the fix: the fraction of identical rows was 1.000. A model
+scores perfectly on that target by copying its last input, so every
+component-level number from Protocol B would have been meaningless, and the
+leakage comparison that this whole study exists to make would have been run
+against a degenerate target.
+
+Fix: the decomposition of history[0:t+1] provides the component value at t as
+its last row, and that is the target; X_test still comes from history[0:t], so
+no value at or after t enters the features. Concretely, the refit schedule now
+also computes the point one step past each refit, and the target is read from
+there. At stride 1 this costs one extra decomposition per series in total, not
+per point. The same check now reads 0.000 for both protocols, and the
+self-test asserts it.
+
+## Defect 6 -- _spline_envelope ignored its own argument
+
+The function takes default_val and then returns np.full(len(signal),
+np.mean(signal)) instead. Both call sites pass np.mean(h), which is the same
+value, so behaviour is unchanged -- but the parameter was dead and the next
+caller to pass something else would have been silently ignored.
+
+Fix: the argument is used.
+
+## Defect 7 -- the price download was broken against current yfinance
+
+fetch() did "d['High'].dropna().values.ravel()". Current yfinance (1.7.0 here)
+returns MultiIndex columns even for a single ticker, and High and Low were
+dropped independently, which can desynchronise the two series so that High[i]
+and Low[i] are different trading days.
+
+Fix: the MultiIndex is flattened when present, High and Low are dropped
+jointly so the rows stay aligned, auto_adjust is pinned explicitly rather than
+relying on a default that has changed between versions, and an empty response
+raises instead of failing later.
+
+## Defect 8 -- validation.json could not be written
+
+json.dump(res, f, indent=1) had no default handler, so any numpy scalar
+reaching res would raise TypeError after the computation had already been
+done.
+
+Fix: default=float, matching what save() in walkforward.py already did.
+
+## Defect 9 -- Task 1 printed a literal double percent sign
+
+Two lines in task_validate() contain "0.01%%" but have no % operator applied,
+so the console showed "0.01%%". Cosmetic only.
+
+Fix: single percent signs on those two literals.
+
+## Defect 10 -- missing guards on empty inputs
+
+protocol_walk_forward() called np.stack on a possibly empty list, and save()
+indexed d['X_train'][0] without checking. Both would have failed with an
+opaque IndexError or ValueError on a series too short for WINDOW=30.
+
+Fix: explicit errors that name the cause. get_series() also now rejects an
+unknown index name or an invalid High/Low argument up front.
+
+## Defect 11 -- the walk-forward test set was reduced silently (severe)
+
+protocol_walk_forward() skips a test point whenever the decomposition of its
+own history returns a different number of components than the training
+decomposition fixed, because the row cannot then be stacked with the others.
+It did this without recording anything. Part 3 of the work package says in as
+many words: "Do not silently reduce the test set." It was being reduced
+silently.
+
+Measured on the first run, walkforward_SPX_High produced 489 test rows where
+497 test indices exist -- 8 dropped, about 1.6%. Protocol A drops none. Worse
+than the count, nothing recorded WHICH indices survived, so Protocol A and
+Protocol B could not be lined up against each other by date -- and that
+comparison is the entire point of the study.
+
+Fix, in two parts. The code now records the surviving indices as test_index,
+records dropped_indices, and prints a NOTE line naming the dropped points.
+For the files already produced before that change, the indices were recovered
+exactly rather than re-running 30 minutes of compute per series:
+recover_test_indices.py matches every value in target_test back against the
+cached price series in increasing order, checks the match is exact and the
+result strictly increasing, and writes test_index into the .npz and the
+counts into the _meta.json. verify_outputs.py then re-checks that
+series[test_index] equals target_test element for element. Both protocols now
+carry the key.
+
+## Defect 13 -- the component count is not stable, so Protocol B threw away up
+## to 36% of its test set (severe)
+
+This is the same drop as defect 11, but the scale of it only became visible
+once a second series had run, and the cause is worth separating.
+
+Fixing K and alpha does NOT fix the number of components. C is K plus the
+number of ICEEMDAN IMFs minus one, and the IMF count drifts as the history
+grows. Measured directly on SPX Low, decomposing history[0:t] gives 7 IMFs at
+t = 2016, 2100, 2200, 2400 and 2512, but 8 IMFs at t = 2300. Every test point
+that lands on the other count produced a differently shaped row and was
+discarded.
+
+The damage was severe and very uneven between series. Before the fix:
+
+    walkforward_SPX_High    489 of 497 test points kept      8 dropped   1.6%
+    walkforward_SPX_Low     318 of 497 test points kept    179 dropped  36.0%
+    walkforward_SSEC_High    17 of 479 test points kept    462 dropped  96.5%
+    walkforward_SSEC_Low    427 of 479 test points kept     52 dropped  10.9%
+
+SSEC High retained seventeen test points out of 479. An RMSE computed on
+seventeen dates is noise, and a leakage comparison built on it would have been
+meaningless. The missing dates are also not random: they are exactly the
+stretches where the decomposition depth changes, which are the volatile
+stretches -- the ones that matter most for the comparison.
+
+After the fix, all four series keep every test point:
+
+    walkforward_SPX_High    497 of 497      walkforward_SSEC_High   479 of 479
+    walkforward_SPX_Low     497 of 497      walkforward_SSEC_Low    479 of 479
+
+Fix: shared/walkforward.py gains fit_components(sub, C), which forces each
+decomposition to exactly the C the training decomposition fixed. Surplus
+low-frequency columns are folded into the residual; a shortfall is zero-padded
+immediately before the residual. This is the same reconciliation iceemdan()
+already applies across its own realisations, and it leaves every row sum
+untouched, so the components still add back to the price exactly. Verified:
+row sums preserved for k = 14, 15, 16, 17 and 20 against C = 16, and a
+walk-forward run that previously dropped rows now keeps 58 of 58.
+
+Task 3 was re-run from scratch with this in place, which is why the Task 3
+wall clock in section 6 counts two passes. The per-series counts of the
+first, uncorrected pass are preserved in data/_uncorrected_drop_counts.json
+and are the source of the before table above. Its console log was also
+copied to data/_task3_output_uncorrected.txt, but that copy raced with the
+log still being written and captured only the first line; the JSON holds the
+numbers and is the authoritative record. The delivered .npz files are all
+from the corrected pass.
+
+## Defect 12 -- the two protocols do not test the same dates
+
+protocol_one_time() computes train_end from n = subseqs.shape[0], which is the
+length AFTER the VMD stage has trimmed the series to an even length.
+protocol_walk_forward() computes it from n_full, the untrimmed length. For SPX
+that is 2513 vs 2512, so Protocol A splits at index 2015 and Protocol B splits
+at 2016. The two protocols therefore report on overlapping but non-identical
+sets of dates, before the dropped points above are even counted.
+
+This is NOT fixed in the code, deliberately. Correcting it changes the split
+point, which would invalidate the Protocol A files already produced and
+require re-running both protocols on all four series. That is a scope decision
+for the group, not one to take unilaterally, and the work package is explicit
+that the two protocols must stay comparable. What has been done instead is to
+make the discrepancy exactly measurable: every file now carries test_index,
+and recover_test_indices.py prints the per-series overlap between A and B. The
+numbers are in section 4.
+
+Whoever computes the metrics must join Protocol A to Protocol B on test_index,
+not on row position. Comparing row i of A against row i of B compares
+different dates.
+
+## Other changes
+
+- run_decompositions.py imported decompose and vmd but never used them; both
+  were dropped.
+- Task 2 previously hardcoded num_realizations=50 while --realizations only
+  affected Task 3. A separate --onetime-realizations flag now exposes it. It
+  was left at its default of 50 for these runs, so Task 2 is unchanged from
+  what the work package specifies.
+- walkforward.py relied on the caller having already put shared/ on sys.path;
+  it now inserts its own directory, so it can be imported directly.
+- Task 1 check 3 is wrapped so that a download failure reports itself and
+  still writes checks 1 and 2, instead of discarding work already done.
+
+## Notes, not defects
+
+- The work package's Windows warning about multiprocessing is out of date. The
+  shipped walkforward.py runs a plain loop and its docstring says the
+  multiprocessing was deliberately removed. Nothing in the package spawns
+  processes, so the number of processes used is 1.
+- The estimate of "about 2.7 seconds per decomposition at 20 realisations on a
+  2500-point series" matched this machine closely. What the package does not
+  mention is the PSO search that runs once per series before the loop, which
+  on a 2500-point series takes several minutes on its own. It is included in
+  the wall-clock times in section 6.
+- yfinance was not installed on this machine and had to be added with
+  pip install yfinance. Version 1.7.0 was used.
+- Task 1 completed in about 5 seconds, not the 10 minutes the work package
+  estimates.
+- PSO saturates at the bounds, returning K at its upper bound of 10 and alpha
+  at its lower bound of 100 on every run. The code comment in pso_vmd already
+  predicts this and says the objective is not well posed. Reported here as
+  observed; not interpreted.
